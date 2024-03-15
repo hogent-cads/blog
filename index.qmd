@@ -1,5 +1,5 @@
 ---
-title: "CADS blog posts"
+title: "CADS Data Blog"
 listing:
   contents: posts
   sort: "date desc"
