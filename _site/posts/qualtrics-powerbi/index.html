@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="CADS">
-<meta name="dcterms.date" content="2024-03-14">
+<meta name="author" content="Willem De Keyzer">
+<meta name="dcterms.date" content="2024-03-15">
 
-<title>Home - Welcome to our Data Blog!</title>
+<title>Home - Integrating Qualtrics survey results into Power BI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -123,9 +157,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome to our Data Blog!</h1>
+      <h1 class="title">Integrating Qualtrics survey results into Power BI</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">data engineering</div>
+                <div class="quarto-category">business analytics</div>
               </div>
                   </div>
   </div>
@@ -136,14 +171,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>CADS </p>
+               <p>Willem De Keyzer </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 14, 2024</p>
+        <p class="date">March 15, 2024</p>
       </div>
     </div>
     
@@ -154,7 +189,19 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#setting-up-an-api-token-in-qualtrics" id="toc-setting-up-an-api-token-in-qualtrics" class="nav-link" data-scroll-target="#setting-up-an-api-token-in-qualtrics">Setting up an API Token in Qualtrics</a></li>
+  <li><a href="#downloading-and-installing-r-and-the-qualtrics-package" id="toc-downloading-and-installing-r-and-the-qualtrics-package" class="nav-link" data-scroll-target="#downloading-and-installing-r-and-the-qualtrics-package">Downloading and installing R and the <code>{qualtRics}</code> package</a></li>
+  <li><a href="#setting-power-bi-to-work-with-r" id="toc-setting-power-bi-to-work-with-r" class="nav-link" data-scroll-target="#setting-power-bi-to-work-with-r">Setting Power BI to work with R</a></li>
+  <li><a href="#writing-a-query-in-power-bi-to-fetch-data-from-surveys" id="toc-writing-a-query-in-power-bi-to-fetch-data-from-surveys" class="nav-link" data-scroll-target="#writing-a-query-in-power-bi-to-fetch-data-from-surveys">Writing a query in Power BI to fetch data from surveys</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -162,13 +209,113 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Welcome to the inaugural post of the Centre for Applied Data Science at HOGENT. We are a dedicated team of data experts committed to advancing the field of data science through innovative research, education, and application. Our journey into the digital expanse is fuelled by a passion for uncovering insights and fostering knowledge that drives progress and transformation across various domains.</p>
-<p>At the heart of our centre lies a profound appreciation for the power of data. In a world increasingly driven by information, we see endless opportunities to leverage data in ways that are both groundbreaking and beneficial to society. Our blog serves as a platform to share our discoveries, challenges, and the lessons we learn along the way.</p>
-<p>As we embark on this exciting journey, we invite you to join us. Whether you’re a data science professional, a student eager to learn, or simply curious about the impact of data in our world, our blog aims to provide valuable content that informs, inspires, and ignites discussion.</p>
-<p>Through our posts, we’ll delve into all things data-related, from the latest trends and technologies to in-depth analyses and case studies. We’re here to share our expertise, explore new frontiers, and build a community of like-minded individuals passionate about harnessing the potential of data.</p>
-<p>So, welcome aboard. We’re thrilled to have you with us and can’t wait to see where this journey takes us together.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Imagine you’re tasked with integrating Qualtrics survey results into Power BI for interactive dashboards and reports, data visualization, or combining multiple data sources. At first, this seems like a straightforward task. You dive into Power BI, expecting to find a ready-to-use connector for Qualtrics, only to realise none exists.</p>
+<p>Your journey takes an unexpected turn as you begin to explore alternative solutions. You discover that while some companies offer integration services, they charge exorbitant fees, up to $200 per month. This discovery propels you to look for a more cost-effective and efficient solution.</p>
+<p>Through diligent research and exploration, you come across the R package <code>{qualtRics}</code>, a beacon of hope in your quest. This package, specifically designed for R, offers functions that allow you to fetch survey results directly from Qualtrics through an API. It’s a game-changer, offering a direct line to the data you need without the hefty price tag.</p>
+<p>Your next steps are clear but require careful planning and execution:</p>
+<ol type="1">
+<li><p><strong>Setting up an API token in Qualtrics</strong>: You’ll navigate the Qualtrics interface to generate an API token. This token is essential for authenticating your requests and securing the data transfer.</p></li>
+<li><p><strong>Downloading and installing R and the <code>{qualtRics}</code> package</strong>: R will serve as the backbone for data manipulation and analysis. The <code>{qualtRics}</code> package will be the tool that bridges Qualtrics and R, enabling you to pull the data into an environment where you can manipulate it freely.</p></li>
+<li><p><strong>Setting Power BI to work with R</strong>: Power BI’s versatility allows it to integrate with R scripts, a feature you plan to leverage. You’ll configure Power BI to recognise R, setting the stage for seamless data integration.</p></li>
+<li><p><strong>Writing a query in Power BI to fetch data from surveys</strong>: The final piece of the puzzle involves crafting a query within Power BI that utilises R and the <code>{qualtRics}</code> package to fetch your desired survey data. This query will be your key to unlocking the insights hidden within your survey responses.</p></li>
+</ol>
+</section>
+<section id="setting-up-an-api-token-in-qualtrics" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-an-api-token-in-qualtrics">Setting up an API Token in Qualtrics</h3>
+<p>Your first step in this data integration journey is to obtain an API token from Qualtrics. This token acts as a key, granting you access to your survey data through the API. It ensures secure communication between Qualtrics and any external applications, like R in your case, that you might use for data analysis. Here’s how you can go about setting up an API token in Qualtrics:</p>
+<ol type="1">
+<li><p><strong>Accessing the Qualtrics interface</strong>: Begin by logging into your Qualtrics account. Navigate to the “Account Settings” under “My Account” at the top right corner of the page.</p></li>
+<li><p><strong>Finding the API section</strong>: Within the “User Settings”, look for a section called “API”. Qualtrics continuously updates its interface, so the exact naming might vary, but you’re looking for the area where API-related settings are managed.</p></li>
+<li><p><strong>Generating the API token</strong>: In the API section, there should be an option to “Generate Token”. Clicking on this option will either generate a new token for you or take you to a screen where you can request a token.</p></li>
+<li><p><strong>Securing the token</strong>: Once your token is generated, it’s crucial to keep it secure. Treat it like a password, as it provides access to your Qualtrics data. Store it in a safe place, and avoid sharing it unnecessarily.</p></li>
+<li><p><strong>Get your Data centre ID</strong>: You will also need to know your Data centre ID. You can find this under the “Account Settings” in the Qualtrics interface when you look for the section “User”.</p></li>
+</ol>
+<p>By successfully setting up an API token in Qualtrics, you’ve taken the first significant step towards integrating your survey data with Power BI. This token will be used in subsequent steps to authenticate your data requests and ensure a seamless flow of information between Qualtrics and your analysis tools.</p>
+</section>
+<section id="downloading-and-installing-r-and-the-qualtrics-package" class="level3">
+<h3 class="anchored" data-anchor-id="downloading-and-installing-r-and-the-qualtrics-package">Downloading and installing R and the <code>{qualtRics}</code> package</h3>
+<p>After securing your API token from Qualtrics, the next step is to set up the tools you’ll use for fetching survey results: R and the <code>{qualtRics}</code> package. R is a powerful programming language used extensively in data analysis and statistical computing. The <code>{qualtRics}</code> package, specifically designed for R, facilitates the connection to Qualtrics, allowing you to fetch and work with your survey data seamlessly. Here’s how you can do this:</p>
+<ol type="1">
+<li><p><strong>Downloading R</strong>:</p>
+<ul>
+<li>Visit the Comprehensive R Archive Network (CRAN) at <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>.</li>
+<li>Select the download link that corresponds to your operating system (Windows, Mac, or Linux).</li>
+<li>Follow the instructions to download and install R on your computer. The installation process is straightforward, typically involving a series of clicks through the setup wizard.</li>
+</ul></li>
+<li><p><strong>Running R and installing the <code>{qualtRics}</code> package</strong>: While R can be ran using a graphical interface, we will use command-line tools to install the <code>{qualtRics}</code> package. Here’s how you can do this:</p>
+<ul>
+<li><strong>For Windows users</strong>:
+<ul>
+<li>Open the Command Prompt by typing <code>cmd</code> in the Windows search bar.</li>
+<li>Type <code>R</code> and press Enter to start an R session within the Command Prompt.</li>
+<li>In the R session within the Command Prompt, type the following command and press Enter: <code>install.packages("qualtRics")</code>.</li>
+</ul></li>
+<li><strong>For Mac users</strong>:
+<ul>
+<li>Open the Terminal application (you can find it using Spotlight with <code>Cmd + Space</code> and then typing “Terminal”).</li>
+<li>Type <code>R</code> and press Enter to start an R session within the Terminal.</li>
+<li>In the R session within the Terminal, type the following command and press Enter: <code>install.packages("qualtRics")</code>.</li>
+</ul></li>
+</ul></li>
+</ol>
+<p>For both Windows and Mac, after installing the <code>{qualtRics}</code> package, you can load it in any R session by typing <code>library(qualtRics)</code>. This will enable you to use the package’s functions to connect to and fetch data from Qualtrics.</p>
+<ol start="3" type="1">
+<li><strong>Setting up Qualtrics API credentials in R</strong>:
+<ul>
+<li><p>To ensure R can communicate with Qualtrics using your API token, set your credentials within R. This involves using a command in the Command Prompt (Windows) or Terminal (Mac) such as in the example below (don’t mind the new lines, they are just for readability).</p></li>
+<li><p>Replace <code>"your_api_token_here"</code> with the actual API token you obtained from Qualtrics and <code>"your_data_centre_id_here"</code> with the appropriate name for your Qualtrics data centre ID.</p></li>
+</ul></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>qualtRics<span class="sc">::</span><span class="fu">qualtrics_api_credentials</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">api_key =</span> <span class="st">"your_api_token_here"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_url =</span> <span class="st">"your_data_centre_id_here.qualtrics.com"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">install =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">overwrite =</span> <span class="cn">TRUE</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>By completing these steps, you’ve successfully set up R and the <code>{qualtRics}</code> package, and you’ve configured R to communicate with Qualtrics using your API token. <strong>All the above should be done only once</strong>, and you’re now ready to use R to fetch survey data from Qualtrics and integrate it with Power BI.</p>
+</section>
+<section id="setting-power-bi-to-work-with-r" class="level3">
+<h3 class="anchored" data-anchor-id="setting-power-bi-to-work-with-r">Setting Power BI to work with R</h3>
+<p>To unlock the power of R scripting Power BI, you first need to ensure that R is correctly referenced in your Power BI application. Open Power BI Desktop, navigate to <code>File</code> &gt; <code>Options and settings</code> &gt; <code>Options</code> to open the Options menu. Here, find the <code>R scripting</code> tab where you’ll inform Power BI about your R installation. This setup requires specifying the path to the R executable in the R home directory field. Usually, Power BI will automatically detect the R installation, but if it doesn’t, you can manually specify the path to the R executable. Once you’ve set up R in Power BI, you’re ready to start integrating your survey data with Power BI.</p>
+</section>
+<section id="writing-a-query-in-power-bi-to-fetch-data-from-surveys" class="level3">
+<h3 class="anchored" data-anchor-id="writing-a-query-in-power-bi-to-fetch-data-from-surveys">Writing a query in Power BI to fetch data from surveys</h3>
+<p>The final step in integrating Qualtrics survey results into Power BI involves writing a query in Power BI to fetch the data. This step leverages the work you’ve done so far. Here’s how you can write and execute a query to fetch your survey data:</p>
+<ol type="1">
+<li><strong>Open Power BI and Start a New Query</strong>:
+<ul>
+<li>Launch Power BI Desktop and create a new report. Navigate to the <code>Home</code> tab, and select <code>Get Data</code>. Choose <code>More</code> to see all data connection options.</li>
+</ul></li>
+<li><strong>Select R Script as the Data Source</strong>:
+<ul>
+<li>In the <code>Get Data</code> window, scroll down or search for <code>R script</code>, then select it and click <code>Connect</code>. This opens a dialog box where you can input your R script.</li>
+</ul></li>
+<li><strong>Craft Your R Script</strong>:
+<ul>
+<li>In the R script input box, you’ll write an R script that utilizes the <code>{qualtRics}</code> package to fetch survey data from Qualtrics. R will use the API token you set up earlier to authenticate the request and fetch the data. You just need one additional parameter, and that’s the survey ID. This is the unique identifier for the survey you want to fetch data from. You can find the survey ID in the Qualtrics interface, typically in the URL when you’re viewing the survey. The survey ID is a long string of characters and numbers, and it’s unique to each survey. Here’s an example of an R script that fetches survey data using the <code>{qualtRics}</code> package:</li>
+</ul></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(qualtRics)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>my_table <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    qualtRics<span class="sc">::</span><span class="fu">fetch_survey</span>(<span class="at">surveyID =</span> <span class="st">"your_survey_ID"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Replace <code>"your_survey_ID"</code> with the actual survey ID you want to fetch data from. This R script will fetch the survey data and store it in a data frame called <code>my_table</code>. You can then use this data frame to work with the survey data in Power BI.</p>
+<ol start="4" type="1">
+<li><strong>Execute the R Script</strong>:
+<ul>
+<li>After writing your R script, click <code>OK</code> to execute the script. Power BI will run the R script and fetch the survey data from Qualtrics. The data will be loaded into Power BI, and you can start working with it in the Power BI interface!</li>
+</ul></li>
+</ol>
+<p>By writing a query in Power BI to fetch data from your Qualtrics surveys, you’ve effectively bridged the gap between these powerful platforms. This integration not only streamlines your workflow but also opens up new possibilities for analyzing and visualizing survey data to inform data-driven decisions.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

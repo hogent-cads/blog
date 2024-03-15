@@ -1,0 +1,114 @@
+---
+title: "Integrating Qualtrics survey results into Power BI"
+author: "Willem De Keyzer"
+date: "2024-03-15"
+categories: [data engineering, business analytics]
+image: "DALL-E 2024-03-15.png"
+toc: true
+draft: true
+---
+
+### Introduction
+
+Imagine you're tasked with integrating Qualtrics survey results into Power BI for interactive dashboards and reports, data visualization, or combining multiple data sources. At first, this seems like a straightforward task. You dive into Power BI, expecting to find a ready-to-use connector for Qualtrics, only to realise none exists.
+
+Your journey takes an unexpected turn as you begin to explore alternative solutions. You discover that while some companies offer integration services, they charge exorbitant fees, up to \$200 per month. This discovery propels you to look for a more cost-effective and efficient solution.
+
+Through diligent research and exploration, you come across the R package `{qualtRics}`, a beacon of hope in your quest. This package, specifically designed for R, offers functions that allow you to fetch survey results directly from Qualtrics through an API. It's a game-changer, offering a direct line to the data you need without the hefty price tag.
+
+Your next steps are clear but require careful planning and execution:
+
+1.  **Setting up an API token in Qualtrics**: You'll navigate the Qualtrics interface to generate an API token. This token is essential for authenticating your requests and securing the data transfer.
+
+2.  **Downloading and installing R and the `{qualtRics}` package**: R will serve as the backbone for data manipulation and analysis. The `{qualtRics}` package will be the tool that bridges Qualtrics and R, enabling you to pull the data into an environment where you can manipulate it freely.
+
+3.  **Setting Power BI to work with R**: Power BI's versatility allows it to integrate with R scripts, a feature you plan to leverage. You'll configure Power BI to recognise R, setting the stage for seamless data integration.
+
+4.  **Writing a query in Power BI to fetch data from surveys**: The final piece of the puzzle involves crafting a query within Power BI that utilises R and the `{qualtRics}` package to fetch your desired survey data. This query will be your key to unlocking the insights hidden within your survey responses.
+
+### Setting up an API Token in Qualtrics
+
+Your first step in this data integration journey is to obtain an API token from Qualtrics. This token acts as a key, granting you access to your survey data through the API. It ensures secure communication between Qualtrics and any external applications, like R in your case, that you might use for data analysis. Here's how you can go about setting up an API token in Qualtrics:
+
+1.  **Accessing the Qualtrics interface**: Begin by logging into your Qualtrics account. Navigate to the "Account Settings" under "My Account" at the top right corner of the page.
+
+2.  **Finding the API section**: Within the "User Settings", look for a section called "API". Qualtrics continuously updates its interface, so the exact naming might vary, but you're looking for the area where API-related settings are managed.
+
+3.  **Generating the API token**: In the API section, there should be an option to "Generate Token". Clicking on this option will either generate a new token for you or take you to a screen where you can request a token.
+
+4.  **Securing the token**: Once your token is generated, it's crucial to keep it secure. Treat it like a password, as it provides access to your Qualtrics data. Store it in a safe place, and avoid sharing it unnecessarily.
+
+5.  **Get your Data centre ID**: You will also need to know your Data centre ID. You can find this under the "Account Settings" in the Qualtrics interface when you look for the section "User".
+
+By successfully setting up an API token in Qualtrics, you've taken the first significant step towards integrating your survey data with Power BI. This token will be used in subsequent steps to authenticate your data requests and ensure a seamless flow of information between Qualtrics and your analysis tools.
+
+### Downloading and installing R and the `{qualtRics}` package
+
+After securing your API token from Qualtrics, the next step is to set up the tools you'll use for fetching survey results: R and the `{qualtRics}` package. R is a powerful programming language used extensively in data analysis and statistical computing. The `{qualtRics}` package, specifically designed for R, facilitates the connection to Qualtrics, allowing you to fetch and work with your survey data seamlessly. Here's how you can do this:
+
+1.  **Downloading R**:
+
+    -   Visit the Comprehensive R Archive Network (CRAN) at <https://cran.r-project.org/>.
+    -   Select the download link that corresponds to your operating system (Windows, Mac, or Linux).
+    -   Follow the instructions to download and install R on your computer. The installation process is straightforward, typically involving a series of clicks through the setup wizard.
+
+2.  **Running R and installing the `{qualtRics}` package**: While R can be ran using a graphical interface, we will use command-line tools to install the `{qualtRics}` package. Here's how you can do this:
+
+    -   **For Windows users**:
+        -   Open the Command Prompt by typing `cmd` in the Windows search bar.
+        -   Type `R` and press Enter to start an R session within the Command Prompt.
+        -   In the R session within the Command Prompt, type the following command and press Enter: `install.packages("qualtRics")`.
+    -   **For Mac users**:
+        -   Open the Terminal application (you can find it using Spotlight with `Cmd + Space` and then typing "Terminal").
+        -   Type `R` and press Enter to start an R session within the Terminal.
+        -   In the R session within the Terminal, type the following command and press Enter: `install.packages("qualtRics")`.
+
+For both Windows and Mac, after installing the `{qualtRics}` package, you can load it in any R session by typing `library(qualtRics)`. This will enable you to use the package's functions to connect to and fetch data from Qualtrics.
+
+3.  **Setting up Qualtrics API credentials in R**:
+    -   To ensure R can communicate with Qualtrics using your API token, set your credentials within R. This involves using a command in the Command Prompt (Windows) or Terminal (Mac) such as in the example below (don't mind the new lines, they are just for readability).
+
+    -   Replace `"your_api_token_here"` with the actual API token you obtained from Qualtrics and `"your_data_centre_id_here"` with the appropriate name for your Qualtrics data centre ID.
+
+```{r credentials, warning=FALSE, message=FALSE, eval=FALSE}
+qualtRics::qualtrics_api_credentials(
+    api_key = "your_api_token_here", 
+    base_url = "your_data_centre_id_here.qualtrics.com",
+    install = TRUE,
+    overwrite = TRUE
+    )
+```
+
+By completing these steps, you've successfully set up R and the `{qualtRics}` package, and you've configured R to communicate with Qualtrics using your API token. **All the above should be done only once**, and you're now ready to use R to fetch survey data from Qualtrics and integrate it with Power BI.
+
+
+### Setting Power BI to work with R
+
+To unlock the power of R scripting Power BI, you first need to ensure that R is correctly referenced in your Power BI application. Open Power BI Desktop, navigate to `File` > `Options and settings` > `Options` to open the Options menu. Here, find the `R scripting` tab where you'll inform Power BI about your R installation. This setup requires specifying the path to the R executable in the R home directory field. Usually, Power BI will automatically detect the R installation, but if it doesn't, you can manually specify the path to the R executable. Once you've set up R in Power BI, you're ready to start integrating your survey data with Power BI.
+
+### Writing a query in Power BI to fetch data from surveys
+
+The final step in integrating Qualtrics survey results into Power BI involves writing a query in Power BI to fetch the data. This step leverages the work you've done so far. Here's how you can write and execute a query to fetch your survey data:
+
+1. **Open Power BI and Start a New Query**:
+   - Launch Power BI Desktop and create a new report. Navigate to the `Home` tab, and select `Get Data`. Choose `More` to see all data connection options.
+
+2. **Select R Script as the Data Source**:
+   - In the `Get Data` window, scroll down or search for `R script`, then select it and click `Connect`. This opens a dialog box where you can input your R script.
+
+3. **Craft Your R Script**:
+   - In the R script input box, you'll write an R script that utilizes the `{qualtRics}` package to fetch survey data from Qualtrics. R will use the API token you set up earlier to authenticate the request and fetch the data. You just need one additional parameter, and that's the survey ID. This is the unique identifier for the survey you want to fetch data from. You can find the survey ID in the Qualtrics interface, typically in the URL when you're viewing the survey. The survey ID is a long string of characters and numbers, and it's unique to each survey. Here's an example of an R script that fetches survey data using the `{qualtRics}` package: 
+
+```{r powerbi_query, warning=FALSE, message=FALSE, eval=FALSE}
+library(qualtRics)
+my_table <- as.data.frame(
+    qualtRics::fetch_survey(surveyID = "your_survey_ID")
+)
+```
+
+Replace `"your_survey_ID"` with the actual survey ID you want to fetch data from. This R script will fetch the survey data and store it in a data frame called `my_table`. You can then use this data frame to work with the survey data in Power BI.
+
+4. **Execute the R Script**:
+   - After writing your R script, click `OK` to execute the script. Power BI will run the R script and fetch the survey data from Qualtrics. The data will be loaded into Power BI, and you can start working with it in the Power BI interface!
+   
+By writing a query in Power BI to fetch data from your Qualtrics surveys, you've effectively bridged the gap between these powerful platforms. This integration not only streamlines your workflow but also opens up new possibilities for analyzing and visualizing survey data to inform data-driven decisions. 

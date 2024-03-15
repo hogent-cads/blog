@@ -9,22 +9,15 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "Welcome to our Data Blog!",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome to the inaugural post of the Centre for Applied Data Science at HOGENT. We are a dedicated team of data experts committed to advancing the field of data science through innovative research, education, and application. Our journey into the digital expanse is fuelled by a passion for uncovering insights and fostering knowledge that drives progress and transformation across various domains.\nAt the heart of our centre lies a profound appreciation for the power of data. In a world increasingly driven by information, we see endless opportunities to leverage data in ways that are both groundbreaking and beneficial to society. Our blog serves as a platform to share our discoveries, challenges, and the lessons we learn along the way.\nAs we embark on this exciting journey, we invite you to join us. Whether you’re a data science professional, a student eager to learn, or simply curious about the impact of data in our world, our blog aims to provide valuable content that informs, inspires, and ignites discussion.\nThrough our posts, we’ll delve into all things data-related, from the latest trends and technologies to in-depth analyses and case studies. We’re here to share our expertise, explore new frontiers, and build a community of like-minded individuals passionate about harnessing the potential of data.\nSo, welcome aboard. We’re thrilled to have you with us and can’t wait to see where this journey takes us together."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "CADS_blog",
+    "title": "CADS blog posts",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 15, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 12, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to our Data Blog!\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 14, 2024\n\n\nCADS\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -2,18 +2,22 @@ project:
   type: website
 
 website:
-  title: "CADS_blog"
+  title: "Home"
   navbar:
+    logo: logo_cads_white.png
     right:
       - about.qmd
+      - icon: globe
+        href: https://www.hogent.be/onderzoekscentra/cads
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/hogent-cads/
+      - icon: linkedin
+        href: https://www.linkedin.com/showcase/centre-for-applied-data-science/about/
 format:
   html:
-    theme: cosmo
+    theme: minty
     css: styles.css
+
 
 
 
