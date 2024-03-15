@@ -5,7 +5,7 @@ date: "2024-03-15"
 categories: [data engineering, business analytics]
 image: "DALL-E 2024-03-15.png"
 toc: true
-draft: true
+draft: false
 ---
 
 ### Introduction

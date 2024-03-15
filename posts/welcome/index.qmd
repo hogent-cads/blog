@@ -2,11 +2,10 @@
 title: "Welcome to our Data Blog!"
 author: "CADS"
 date: "2024-03-14"
-image: 
- "thumbnail_square.jpeg"
 categories: [news]
 ---
 
+![](thumbnail_square.jpeg){fig-align="center"}
 
 Welcome to the inaugural post of the Centre for Applied Data Science at HOGENT. We are a dedicated team of data experts committed to advancing the field of data science through innovative research, education, and application. Our journey into the digital expanse is fuelled by a passion for uncovering insights and fostering knowledge that drives progress and transformation across various domains.
 
