@@ -1,0 +1,196 @@
+---
+title: "Duplicate Detection"
+author: "Stijn Lievens"
+date: "2024-06-21"
+categories: [data cleaning, duplicate detection, fuzzy matching]
+image: "TO DO"
+toc: true
+toc-depth: 4
+number-sections: true
+shift-heading-level-by: -2
+draft: true
+---
+
+### Introduction
+
+A common problem with master data is that different records refer to the same real world entity. This can occur, for example, when a customer was registered twice (once when first contacting the company and a second time when an order was actually placed), or when a product was created twice.
+
+At first sight, discovering duplicates seems easy to solve: go through all record pairs and verify whether they are the same or not. In practice, however, this is much more difficult because duplicate records are often **similar** but **not identical**. The question is then to identify these similar record pairs. 
+
+### Comparing a Single Column 
+
+Before starting to compare entire records, it seems obvious to look into how to compare values in a single column. Here we assume that the values in a column are of "string" type. What one typically wants then is a **similarity measure** that indicates how similar two strings are. Such a similarity measure takes as input two strings and has as output a number indicating how similar the two strings are, where the value 1 usually stands for "perfectly similar" and the value 0 for "not at all similar". Sometimes **distance measures** are used: with a distance measure, the meaning is exactly reversed: a distance equal to zero means that the strings are similar, and the larger the (value of the) distance the more different the strings are.
+
+The various ways in which the similarity of (or distance between) two strings can be determined can be divided into a number of categories:
+
+- Character-based methods
+- Token-based methods
+- Methods based on the pronunciation of the words/strings
+- Methods based on word semantics
+
+#### Character-based methods
+
+As the name suggests, character-based methods work at the level of individual characters. These methods give good results when the cause of the errors is expected to be small typing errors, e.g. swapping two letters or accidentally adding a small number of characters. Within this category, we recognise the following distance measures:
+
+- **Edit distance**: this distance function is good at recognising small typographical errors.
+- **Affine gap distance**: this distance function takes into account that once one has inserted an extra character one is likely to insert additional extra characters.
+- **Distance based on n-grams**: this considers how many $n$-grams two strings have in common, the intuition being that similar strings have many $n$-grams in common but strings that differ a lot do not.
+
+Below we give a brief explanation of each of these 3 distance measures, along with additional references where you can find more detail.
+
+##### Edit distance
+
+The [edit or Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) is the minimum number of substitutions, insertions and deletions required to convert two strings into each other. For example, the Levenshtein distance between "CADS" and "LAST" is equal to three.
+
+```
+CADS (substitute C by L) -> LADS (delete D) -> LAS (insert T) -> LAST
+```
+
+##### Affine gap distance
+
+When strings were abbreviated or shortened, the edit distance sometimes shows a large value even though they are about the same entity. An example would be the strings "John R. Smith" and "Jonathan Richard Smith". With the affine gap distance, one adjusts the Levenshtein distance by introducing two additional operations, namely "opening" a hole and "expanding" a hole, where typically opening a hole has a greater cost (i.e. will give rise to a greater distance) than expanding a hole. The reasoning is that once one has introduced an additional first character one might add several more.
+
+By way of example we show the affine gap distance between 
+the words "Boulevard" and "Blvd".
+
+```
+Boulevard (1 deletion) => Bulevard
+Bulevard (0.5 subsequent deletetion) => "Blevard"
+Blevard (1 deletion) => Blvard
+Blvard (1 deletion) => Blvrd
+Blvrd (0.5 subsequent deletion) => Blvd 
+```
+The affine gap distance between "Boulevard" and "Blvd" is 4 whereas 
+the regular edit distance would yield a value of 5.
+
+##### Distance based on n-grams
+
+An $n$-gram of a string is nothing but a sequence of $n$ characters of that string. E.g. all 2-grams of "books" are "bo", "oo", "ok" and "ks". The 2-grams of "boots" are "bo", "oo", "ot" and "ts". 
+
+To calculate the distance based on 2-grams between two words, one looks at all 2-grams occurring in at least one of the words and considers the absolute value of the difference between the number of occurrences in the two words. For the example above this becomes:
+
+| 2-gram | books | boots | difference |
+|--------|:-----:|:-----:|:----------:|
+| bo     |   1   |   1   |     0      |
+| oo     |   1   |   1   |     0      |
+| ok     |   1   |   0   |     1      |
+| ks     |   1   |   0   |     1      |
+| ot     |   0   |   1   |     1      |
+| ts     |   0   |   1   |     1      |
+
+: Table 1: 2-grams and their occurrences in the words "books" and "boots"
+
+Hence, the distance based on 2-grams between "books" and "boots" is 4.
+
+#### Token-based methods
+
+When words are swapped places in two strings, character-based methods will typically attribute a large distance (or low similarity) to these 
+two strings. Methods based on "tokens" attempt to address this.
+
+We list some token-based methods below:
+
+- Method based on "atomic strings". This method will typically work well when certain words are sometimes abbreviated.
+- A method combining n-grams with "tf.idf"
+
+##### Method based on "atomic strings"
+
+In this context, an "atomic string" refers to a sequence of alphanumeric characters bounded by other characters. We say that two "atomic strings" produce a match when they are equal or when one of them is a prefix of the other. E.g. "Univ" and "University" match because the former is a prefix of the latter.
+
+In this method, the similarity between two strings A and B is defined as the number of atomic strings of A that yield a match to an atomic string of B divided by the average number of atomic strings in strings A and B.
+
+By way of example, suppose that:
+
+- string A equals "Comput. Sci. & Eng. Dept., University of California, San Diego"
+- and that string B equals "Department of Computer Science, Univ. Calif., San Diego"
+
+The atomic strings of A and B are:
+- for string A: "Comput", "Sci", "Eng", "Dept", "University", "of", "California", "San", "Diego"
+- for string B: "Department", "of", "Computer", "Science", "Univ", "Calif", "San", "Diego"
+
+The following atomic strings of A match with an atomic string of B:
+
+- "Comput" matches with "Computer"
+- "Sci" matches with "Science"
+- "University" matches with "Univ"
+- "of" matches with "of"
+- "California" matches with "Calif"
+- "San" matches with "San"
+- "Diego" matches with "Diego"
+
+Consequently, the number of atomic strings of A that match an atomic string of B equals 7. On average, strings A and B have $(9 + 8)/2 = 8.5$ atomic strings. Consequently, the similarity, based on this method of atomic strings, between A and B is: $7/8.5 = 0.82$.
+
+If one were to remove the stop word "of" the similarity would become
+$6/7.5 = 0.8$.
+
+##### Method combining n-grams with "tf.idf"
+
+tf.idf, which stands for "term frequency, inverse document frequency" is a number indicating how important a word is to the content of a document compared to a collection of documents. Terms that occur frequently in a document have a high "term frequency". However, if a term occurs in many documents then it also has a high "document frequency". To determine the tf.idf of a word in a document, the "term frequency" is divided by the "document frequency". So one only gets a high "tf.idf" for word in a document if this word occurs frequently in this document and does not occur in many other documents.
+
+As a next step, one can put all terms (words) appearing in all documents in a certain order (e.g. alphabetically). A single document can then be summarised by a (very long) list of numbers, each number being the 
+tf.idf of a given term.
+
+Comparing long lists of numbers (i.e. of vectors) is a problem that has been studied extensively. One of the typical ways of comparing such lists of numbers is the so-called cosine similarity. When two lists of numbers are exactly equal then it gives a value equal to +1, when they are exactly opposite the value is equal to -1. Thus, if one wants to identify similar documents, one looks for documents for which the cosine similarity of their tf.idf lists is "large".
+
+Within the context of database tables, there are few fields that contain enough different words to calculate the tf.idf in a meaningful way. The trick now is to apply the above procedure to the $n$-grams of the  fields. Hence, to apply this technique to compare two strings (in a column) we also need the contents of all (other) strings in the same column.
+
+#### Phonetic Methods
+
+These methods are typically highly language-dependent. Here, words are compared based on their pronunciation. Words with similar pronunciation are assigned higher similarity.
+
+#### Methods Based on Word Semantics
+
+But what if we compare words that are not syntactically similar at all, but which mean the same thing? For example, the words "Car" and "Automobile" are synonyms of each other, but would have little or no similarity with the methods discussed above. We can determine the similarity of words by comparing their word vectors, or **word embeddings**. Word embeddings can be generated with an algorithm like word2vec: As the name suggests, word2vec represents each individual word with a list of numbers, called a vector. The vectors are carefully constructed so that a simple mathematical function (the cosine equality between the vectors) indicates the degree of semantic similarity between the words represented by those vectors. In essence, a word is transformed into a sequence of some 300 numbers and these sequences of numbers will be very similar when comparing words that have the same meaning.
+
+These methods will work well when the words in a column are common words; when it comes to a specific jargon then the words may not be recognised or the vectors with which they are represented will not necessarily show the right behaviour in terms of similarity.
+
+### Comparing Records
+
+Applying the previous single-column methods to pairs of records, we get a (large number of) records whose fields are numbers. In this post, we call such a record a  **comparison record**. Each field in such a comparison record indicates how similar or different the original values in the corresponding columns are.
+
+For each such comparison record, we now want to indicate whether it is a possible duplicate or not, i.e. whether the original records are duplicates or not. This problem can be tackled in several ways.
+
+On the one hand, there are **supervised methods** where we train a binary classification algorithm to detect the duplicates. The problem with this is that such an algorithm typically requires *a large amount of labelled data*. This is not very interesting because creating such a labelled dataset requires a large effort.
+
+It is more interesting  to recognise duplicates based on an **unsupervised method**, i.e. a method that can work *without labelled data*. The underlying idea is that the comparison records will look "different" for duplicates compared to "non-duplicates". Intuitively, we can expect duplicates to have many high similarities, while non-duplicates probably do not.
+
+A first unsupervised method one can try is a (hard) **clustering method** such as the **k-means algorithm**. In this case, we would typically work with 2 classes. After the algorithm has been run, the comparison records will be divided into two classes. We can assume that the smallest class is the class containing the duplicates (since we assume that there are far fewer duplicates than non-duplicates). These can then be presented to the user for verification.
+
+The main disadvantage of hard clustering methods is that they give a yes/no answer and cannot indicate how "certain" they are about their answer. For that, other methods are needed that can indicate the (un)certainty in their answer.
+
+A **Gaussian mixture model** can be seen as a "soft" version of the (hard) k-means clustering algorithm. After running this algorithm, each record has a certain "probability" of belonging to a particular cluster. The mathematical details are relatively complicated but again, we can assume that the "smallest" cluster is the one that represents the duplicates. In this case, we can only show the most "obvious" (candidate) duplicates to the user for verification.
+
+Supervised learning has the problem of requiring a large amount of labelled data; in unsupervised learning this is not the case but here it is also not always clear whether a record (pair) is a duplicate or not. In **active learning**, the algorithm itself searches for record pairs that are most informative (to the algorithm); these will typically be record pairs that are rather "ambiguous". These records are then shown to the user with a request to label them.
+
+#### Limiting the Number of Record Comparisons
+
+When running algorithms, it is important that they finish executing within a reasonable time. This is where there can be a catch with duplicate detection. If one has e.g. $1000$ records then the number of pairs is about 500,000! (The exact number is $1000 \times 999 / 2 = 499,500$ but $500,000$ is obviously easier to work with). For a dataset with $10,000$ records, the number of pairs is already about $50,000,000$! Even for fast and powerful computers, this can quickly become a problem. If one wants to express this technically, one says that the number of pairs is of order $n^2$, where $n$ represents the number of records.
+
+In certain cases, however, one may have domain knowledge that allows one to deduce that records that differ in a particular column (or in the initial letters of a column value) are most likely not duplicates. One can then use this to dramatically reduce the number of records to be compared.
+
+By way of example, suppose one has a customer list and one has stored the gender of the customer. To keep the example simple, we assume that there are only two possible values, i.e. 'M' and 'F'. While it is possible that the gender was noted incorrectly and thus duplicates occur between 'M' and 'F' this seems unlikely. Now if we assume that there are $1000$ customers of which $500$ are 'M' and $500$ are 'F', and we compare only *within* 'M' and *within* 'F' then the number of records to be compared is about $125,000$ (for 'M') and $125,000$ (for 'V'). Together this is $250,000$, and thus about half of what the number of records to compare would be without this division.
+
+If we can partition even more, the gains become even greater. Suppose there is a certain column with $10$ different values that occur $100$ times each (i.e. there are still 1000 records) and it is very unlikely that any two records are duplicates when they have a different value for this column. If, as already mentioned, we assume that each value occurs $100$ times then the number of records to compare is roughly equal to $10 \times 5000$ which is equal to $50,000$. Compare this with the $500,000$ records we have to compare without this division.
+
+The technical name for this partitioning is **blocking**, and it is a crucial technique for making duplicate detection scalable.
+
+### Python Libraries for Duplicate Detection
+
+By now, it should be clear that implementing an algorithm for duplicate detection from scratch will require a fair amount of work. Fortunately, implementations of these various methods are already available in easy-to-use Python libraries. Some examples are:
+
+- [Dedupe.io](https://docs.dedupe.io/en/latest/) According to their website, dedupe will help you to:
+  - remove duplicates from a spreadsheet of names and addresses
+  - link a list of customer information to order, even if no unique customer ID is present.
+- [deduplipy](https://www.deduplipy.com/) A Python library that uses active learning to detect duplicates and can be used "out-of-the-box" but at the same time allows advanced users to tune the algorithm to their own needs, according to the website.
+- [zeroER](https://github.com/chu-data-lab/zeroer)  is the implementation that goes with the research paper "ZeroER: Entity Resolution using Zero Labeled Examples" which, as the title indicates, does not require any labelled example to do "entity resolution" (which is another name for duplicate detection). This code is very much of "research quality" and is not supported by a (fancy) website or a finished product.
+- [The Python Record Linkage Toolkit](https://github.com/J535D165/recordlinkage)  is a library for linking records within or between data sources. According to information on their website, the toolkit offers most of the tools needed for record linkage and deduplication. The package includes indexing methods, record comparison functions and classifiers. The package is designed for research and linking small or medium-sized files.
+Again according to the information provided by this library, its main features are:
+  - Creating pairs of records with smart indexing methods such as blocking and sorted neighbourhood indexing
+  - The toolkit includes various classification algorithms, both supervised and unsupervised.
+
+### Conclusion
+
+Duplicate detection is essential for maintaining data accuracy, as they identify records referring to the same entity despite variations. This guide outlined various methods for comparing columns, such as character-based, token-based, phonetic, and semantic approaches. It also explored techniques for comparing entire records using supervised and unsupervised methods. Additionally, the use of blocking reduces computational load by limiting comparisons. Python libraries like Dedupe.io, deduplipy and the Python Record Linkage Toolkit provide practical tools to implement these techniques efficiently, ensuring reliable and actionable data.
+
+
+| *This blog post is mainly a translation of a blog post written in Dutch. The original blog post can be found [here](https://ai-assisted-mdm.be/node/32)*
+
