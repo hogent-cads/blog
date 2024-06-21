@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/duplicate-detection/index.html",
       "/posts/qualtrics-powerbi/index.html",
       "/posts/welcome/index.html"
     ]
