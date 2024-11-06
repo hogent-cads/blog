@@ -81,23 +81,20 @@ qualtRics::qualtrics_api_credentials(
 
 By completing these steps, you've successfully set up R and the `{qualtRics}` package, and you've configured R to communicate with Qualtrics using your API token. **All the above should be done only once**, and you're now ready to use R to fetch survey data from Qualtrics and integrate it with Power BI.
 
-
 ### Setting Power BI to work with R
 
-To unlock the power of R scripting Power BI, you first need to ensure that R is correctly referenced in your Power BI application. Open Power BI Desktop, navigate to `File` > `Options and settings` > `Options` to open the Options menu. Here, find the `R scripting` tab where you'll inform Power BI about your R installation. This setup requires specifying the path to the R executable in the R home directory field. Usually, Power BI will automatically detect the R installation, but if it doesn't, you can manually specify the path to the R executable. Once you've set up R in Power BI, you're ready to start integrating your survey data with Power BI.
+To unlock the power of R scripting Power BI, you first need to ensure that R is correctly referenced in your Power BI application. Open Power BI Desktop, navigate to `File` \> `Options and settings` \> `Options` to open the Options menu. Here, find the `R scripting` tab where you'll inform Power BI about your R installation. This setup requires specifying the path to the R executable in the R home directory field. Usually, Power BI will automatically detect the R installation, but if it doesn't, you can manually specify the path to the R executable. Once you've set up R in Power BI, you're ready to start integrating your survey data with Power BI.
 
 ### Writing a query in Power BI to fetch data from surveys
 
 The final step in integrating Qualtrics survey results into Power BI involves writing a query in Power BI to fetch the data. This step leverages the work you've done so far. Here's how you can write and execute a query to fetch your survey data:
 
-1. **Open Power BI and Start a New Query**:
-   - Launch Power BI Desktop and create a new report. Navigate to the `Home` tab, and select `Get Data`. Choose `More` to see all data connection options.
-
-2. **Select R Script as the Data Source**:
-   - In the `Get Data` window, scroll down or search for `R script`, then select it and click `Connect`. This opens a dialog box where you can input your R script.
-
-3. **Craft Your R Script**:
-   - In the R script input box, you'll write an R script that utilizes the `{qualtRics}` package to fetch survey data from Qualtrics. R will use the API token you set up earlier to authenticate the request and fetch the data. You just need one additional parameter, and that's the survey ID. This is the unique identifier for the survey you want to fetch data from. You can find the survey ID in the Qualtrics interface, typically in the URL when you're viewing the survey. The survey ID is a long string of characters and numbers, and it's unique to each survey. Here's an example of an R script that fetches survey data using the `{qualtRics}` package: 
+1.  **Open Power BI and Start a New Query**:
+    -   Launch Power BI Desktop and create a new report. Navigate to the `Home` tab, and select `Get Data`. Choose `More` to see all data connection options.
+2.  **Select R Script as the Data Source**:
+    -   In the `Get Data` window, scroll down or search for `R script`, then select it and click `Connect`. This opens a dialog box where you can input your R script.
+3.  **Craft Your R Script**:
+    -   In the R script input box, you'll write an R script that utilizes the `{qualtRics}` package to fetch survey data from Qualtrics. R will use the API token you set up earlier to authenticate the request and fetch the data. You just need one additional parameter, and that's the survey ID. This is the unique identifier for the survey you want to fetch data from. You can find the survey ID in the Qualtrics interface, typically in the URL when you're viewing the survey. The survey ID is a long string of characters and numbers, and it's unique to each survey. Here's an example of an R script that fetches survey data using the `{qualtRics}` package:
 
 ```{r powerbi_query, warning=FALSE, message=FALSE, eval=FALSE}
 library(qualtRics)
@@ -108,7 +105,7 @@ my_table <- as.data.frame(
 
 Replace `"your_survey_ID"` with the actual survey ID you want to fetch data from. This R script will fetch the survey data and store it in a data frame called `my_table`. You can then use this data frame to work with the survey data in Power BI.
 
-4. **Execute the R Script**:
-   - After writing your R script, click `OK` to execute the script. Power BI will run the R script and fetch the survey data from Qualtrics. The data will be loaded into Power BI, and you can start working with it in the Power BI interface!
-   
-By writing a query in Power BI to fetch data from your Qualtrics surveys, you've effectively bridged the gap between these powerful platforms. This integration not only streamlines your workflow but also opens up new possibilities for analyzing and visualizing survey data to inform data-driven decisions. 
+4.  **Execute the R Script**:
+    -   After writing your R script, click `OK` to execute the script. Power BI will run the R script and fetch the survey data from Qualtrics. The data will be loaded into Power BI, and you can start working with it in the Power BI interface!
+
+By writing a query in Power BI to fetch data from your Qualtrics surveys, you've effectively bridged the gap between these powerful platforms. This integration not only streamlines your workflow but also opens up new possibilities for analyzing and visualizing survey data to inform data-driven decisions.

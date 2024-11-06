@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes">
+<meta name="dcterms.date" content="2024-11-06">
 
-<title>Home - CADS Data Blog</title>
+<title>Home - Spraakherkenning van Vlaamse dialecten tot algemeen Nederlands</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,80 +68,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./logo_cads_white.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo_cads_white.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Home</span>
     </a>
   </div>
@@ -152,7 +94,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -180,191 +122,71 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">CADS Data Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Spraakherkenning van Vlaamse dialecten tot algemeen Nederlands</h1>
+            <p class="subtitle lead">Der is nog vree veel werk aan de winkel!</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">spraakherkenning</div>
+                <div class="quarto-category">AI</div>
+                <div class="quarto-category">ASR</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Jens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 6, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="AI">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ASR">ASR <span class="quarto-category-count">(1)</span></div><div class="category" data-category="business analytics">business analytics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data cleaning">data cleaning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data engineering">data engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="duplicate detection">duplicate detection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="fuzzy matching">fuzzy matching <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="spraakherkenning">spraakherkenning <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="inleiding" class="level1">
+<h1>Inleiding</h1>
+<p>Spraakherkenning is cruciaal voor toepassingen zoals automatische ondertiteling en spraakgestuurde systemen (bijvoorbeeld de voice assistent in je auto of op je smartphone). Ondanks de snelle ontwikkeling van deze technologie blijft spraakherkenning een uitdaging voor minder voorkomende talen zoals het Nederlands. Regionale variaties van de taal zorgen bovendien voor een bijkomende complexiteit. In de praktijk vertaalt zich dat in frustraties bij gebruikers wanneer ze in het Vlaams hun systemen proberen te bedienen.</p>
+<p>In zijn bachelorproef onderzocht Jens Coetsiers de prestaties van huidige spraakherkenningssystemen op de Vlaamse spreektaal om hun bruikbaarheid te beoordelen. Slagen huidige speech-to-text-modellen erin een dialoog tussen twee sprekers in het Vlaams voldoende accuraat om te zetten in geschreven taal? Hoe presteren de modellen voor het Vlaams vergeleken met het Nederlands? Zijn er significante verschillen in de transcriptie van Vlaamse standaardtaal en Vlaamse regiolecten? Welke tool komt als Vlaamse spraakherkenningskampioen uit de bus voor de gegeven casus?</p>
+</section>
+<section id="onderzoek" class="level1">
+<h1>Onderzoek</h1>
+<p>Op basis van een literatuurstudie werd een keuze gemaakt uit de beschikbare data die kon gebruikt worden om de onderzoeksvragen te beantwoorden. De specifieke casus die aanleiding gaf tot het onderzoek – nl. de vraag naar een spraakherkenningsmodel dat bruikbare transcripties oplevert voor Vlaamse één-op-ééngesprekken – was doorslaggevend voor de gemaakte keuzes.</p>
+<p>Er werden twee datasets geselecteerd. Enerzijds gebruikte Jens de telefoondialogen en face-to-face-gesprekken uit de Corpus Gesproken Nederlands. Deze bevatten ongeveer 27 uur aan Nederlandse en Vlaamse audiodata van zowel voorbereide als spontane conversaties, ook in bepaalde regionale variaties (de zogenaamde Vlaamse tussentaal). Dit komt overeen met ongeveer 406.000 woorden. Deze gesprekken worden gekenmerkt door hun spontaniteit en indirect karakter. Anderzijds werden ook voor 4 uur aan geluidsfragmenten uit de corpus Variatie in Nederlandse Taal en Sprekers gebruikt (ongeveer 38.000 woorden), meer bepaald de set met betekenisvolle en met betekenisloze zinnen. De variatie in voorspelbaarheid van deze zinnen verhoogt hun meerwaarde voor het onderzoek. Belangrijk om op te merken is dat in beide datasets enkel één-op-ééngesprekken voorkomen en dat de geluidsfragmenten gekozen of aangepast werden zodat bepaalde verstoringen zoals ruis of slikken minder voorkwamen.</p>
+<p>Om te bepalen hoe goed de modellen de audio kunnen omzetten naar tekst, werd de herkende tekst vergeleken met gecontroleerde transcripties die als gold standard gelden. Per fragment werd de zogenoemde Word Error Rate (WER) berekend. Dit is een relatieve weergave van het aantal foutief herkende woorden, waarbij bijgehouden wordt hoeveel woorden worden toegevoegd, weggelaten of aangepast in een automatische transcriptie ten opzichte van de controletranscriptie. De geteste geluidsfragmenten lieten zich opsplitsen in verschillende categorieën: Algemeen Nederlands, Vlaamse standaardtaal en Vlaamse tussentaal. Die laatste categorie werd verder opgesplitst volgens regio: West-Vlaanderen, Oost-Vlaanderen, Antwerpen en Vlaams-Brabant, en Limburg. Per categorie werd vervolgens de gemiddelde WER berekend. Algemeen wordt aangenomen dat een WER van 5% tot 10% goed en van 10% tot 20% acceptabel is. Een nadeel van de gevolgde werkwijze is dat deze maat nogal streng wordt toegepast. Zo wordt bijvoorbeeld “er op” niet als correcte weergave van het tussentalige “d’rop” beschouwd. Ook worden modellen die getallen in cijfers weergeven benadeeld, aangezien de correcte tekst de getallen als voluit geschreven woorden bevat.</p>
+<p>Naast de keuze voor de testdata, werd ook een selectie gemaakt van de meest veelbelovende spraakmodellen voor de gegeven casus. Mee bepalend voor de keuze waren criteria zoals de mogelijkheid om Nederlandstalige audio te transcriberen – niet alle publiek beschikbare modellen kunnen dit – en het bijhorende prijskaartje. In de studie werden uiteindelijk SeamlessM4T-v2 (van Meta), Whisper Large-v3 (OpenAI), Nova-2 (Deepgram), Google STT (Google) en Chirp (Google) met elkaar vergeleken. Dit zijn allemaal zogenaamde multilinguale (meertalige) modellen. Daarom is het belangrijk om te weten op basis van welke (Nederlandstalige) data deze modellen getraind werden. Volgens de beschikbare documentatie werd Seamless getraind op 6363 uren en Whisper 2077 uren aan Nederlandse tekst (geen Vlaams). Voor de andere modellen is geen precieze informatie over specifieke Nederlandstalige training van de modellen bekend.</p>
+</section>
+<section id="resultaten" class="level1">
+<h1>Resultaten</h1>
+<p><img src="./resultaten.png" class="img-fluid"></p>
+<p>Bovenstaande grafieken tonen dat de onderzochte spraakmodellen <strong>niet goed presteren op Nederlandstalige audiofragmenten</strong>, met een gemiddelde WER tot 77%! Voorts valt op dat de WER voor Vlaamse fragmenten consistent hoger ligt dan voor Nederlandse (uit Nederland), met verschillen tussen de 5 en 12 procentpunten. Dat betekent dus dat de modellen slechter presteren op Vlaamse audio. Als we verder inzoomen op regionale verschillen in Vlaanderen, stellen we vast dat de geteste spraakherkenningsmodellen <strong>het meeste moeite hebben met West-Vlaamse fragmenten</strong>. Het model dat het beste presteert voor Vlaamse spraakherkenning is Chirp van Google.</p>
+<p>Wat betekenen deze resultaten nu concreet voor de bruikbaarheid van huidige state-of-the-art spraakherkenningsmodellen voor het Vlaams? In ieder geval maakt dit onderzoek duidelijk dat de technologie nog geen echt bruikbare herkenning van Vlaamse (tussen)taal oplevert. Betekent dit dat we gewoon moeten wachten tot er betere modellen op de markt komen? Niet noodzakelijk. Zo is het – zonder te technisch te willen worden – mogelijk om bestaande taalmodellen te verbeteren voor specifieke doeleinden zonder ze volledig opnieuw te moeten trainen. Dit proces heet finetunen en is bijvoorbeeld mogelijk wanneer de broncode van de modellen die we willen verbeteren beschikbaar is. Van de geteste modellen in het onderzoek zijn Seamless van Meta en Whisper van OpenAI open source en dus modellen die in aanmerking komen om te finetunen. Een eerste poging om Whisper te finetunen specifiek voor de Vlaamse taal leverde alvast een substantiële verbetering op: de WER verminderde van 76% tot 52%. Dit is niet helemaal verrassend aangezien er voor Whisper in de trainingsfase geen gebruik gemaakt werd van Vlaamse trainingsdata. Toch valt op dat zelfs deze verbetering niet genoeg is om <strong>Chirp van Google als Nederlandse spraakherkenningskampioen</strong> van de troon te stoten.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="spraakherkenning,AI,ASR" data-listing-date-sort="1730847600000" data-listing-file-modified-sort="1730892168141" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="917">
-<div class="thumbnail">
-<p><a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external"></a></p><a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external">
-<p><img src="./posts/vlaamse-spraakherkenning/ASR.jpeg" class="thumbnail-image"></p>
-</a><p><a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external">Spraakherkenning van Vlaamse dialecten tot algemeen Nederlands</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external">Der is nog vree veel werk aan de winkel!</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('spraakherkenning'); return false;">
-spraakherkenning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('AI'); return false;">
-AI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ASR'); return false;">
-ASR
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external">Spraakherkenning is cruciaal voor toepassingen zoals automatische ondertiteling en spraakgestuurde systemen (bijvoorbeeld de voice assistent in je auto of op je smartphone).…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external">
-<div class="listing-date">
-Nov 6, 2024
-</div>
-<div class="listing-author">
-Jens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="data cleaning,duplicate detection,fuzzy matching" data-listing-date-sort="1718920800000" data-listing-file-modified-sort="1718982097636" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2983">
-<div class="thumbnail">
-<p><a href="./posts/duplicate-detection/index.html" class="no-external"></a></p><a href="./posts/duplicate-detection/index.html" class="no-external">
-<p><img src="./posts/duplicate-detection/duplicate-detection-image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/duplicate-detection/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/duplicate-detection/index.html" class="no-external">Duplicate Detection</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/duplicate-detection/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data cleaning'); return false;">
-data cleaning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('duplicate detection'); return false;">
-duplicate detection
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('fuzzy matching'); return false;">
-fuzzy matching
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/duplicate-detection/index.html" class="no-external">A common problem with master data is that different records refer to the same real world entity. This can occur, for example, when a customer was registered twice (once when…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/duplicate-detection/index.html" class="no-external">
-<div class="listing-date">
-Jun 21, 2024
-</div>
-<div class="listing-author">
-Stijn Lievens
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="data engineering,business analytics" data-listing-date-sort="1710457200000" data-listing-file-modified-sort="1718982721684" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1729">
-<div class="thumbnail">
-<p><a href="./posts/qualtrics-powerbi/index.html" class="no-external"></a></p><a href="./posts/qualtrics-powerbi/index.html" class="no-external">
-<p><img src="./posts/qualtrics-powerbi/DALL-E 2024-03-15.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/qualtrics-powerbi/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/qualtrics-powerbi/index.html" class="no-external">Integrating Qualtrics survey results into Power BI</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/qualtrics-powerbi/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data engineering'); return false;">
-data engineering
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('business analytics'); return false;">
-business analytics
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/qualtrics-powerbi/index.html" class="no-external">Imagine you’re tasked with integrating Qualtrics survey results into Power BI for interactive dashboards and reports, data visualization, or combining multiple data sources.…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/qualtrics-powerbi/index.html" class="no-external">
-<div class="listing-date">
-Mar 15, 2024
-</div>
-<div class="listing-author">
-Willem De Keyzer
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="news" data-listing-date-sort="1710370800000" data-listing-file-modified-sort="1710525229070" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="228">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/welcome/thumbnail_square.jpeg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome to our Data Blog!</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">Welcome to the inaugural post of the Centre for Applied Data Science at HOGENT. We are a dedicated team of data experts committed to advancing the field of data science…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Mar 14, 2024
-</div>
-<div class="listing-author">
-CADS
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/vlaamse-spraakherkenning/index.html",
       "/posts/duplicate-detection/index.html",
       "/posts/qualtrics-powerbi/index.html",
       "/posts/welcome/index.html"

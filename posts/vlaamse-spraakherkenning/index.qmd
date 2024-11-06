@@ -1,11 +1,10 @@
 ---
-title: "Spraakherkenning van Vlaamse dialecten 
-tot algemeen Nederlands"
+title: "Spraakherkenning van Vlaamse dialecten tot algemeen Nederlands"
 subtitle: "Der is nog vree veel werk aan de winkel!"
 author: "Jens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes"
 date: "2024-11-06"
 categories: [spraakherkenning, AI, ASR]
-image: "ASR.jpg"
+image: "ASR.jpeg"
 toc: false
 toc-depth: 4
 number-sections: false
