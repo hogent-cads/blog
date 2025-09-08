@@ -2,7 +2,7 @@
 title: "Integrating Qualtrics survey results into Power BI"
 author: "Willem De Keyzer"
 date: "2024-03-15"
-categories: [data engineering, business analytics]
+categories: [data engineering, business analytics, surveys]
 image: "DALL-E 2024-03-15.png"
 toc: true
 draft: false
