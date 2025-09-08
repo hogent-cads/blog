@@ -10,7 +10,7 @@ draft: false
 
 # Respondent Anonymity Assurance (RAA) in QuestionPro
 
-Bij het uitvoeren van online bevragingen moeten onderzoekers **steeds een evenwicht vinden tussen praktisch gemak en het respecteren van de anonimiteit van respondenten**. Vaak willen we gebruikmaken van verzendlijsten om uitnodigingen en herinneringen te versturen. Tegelijk moeten we vermijden dat antwoorden ooit gekoppeld kunnen worden aan de identiteit van deelnemers.
+Bij het uitvoeren van online bevragingen moeten onderzoekers steeds een evenwicht vinden tussen praktisch gemak en het respecteren van de anonimiteit van respondenten. Vaak willen we gebruikmaken van verzendlijsten om uitnodigingen en herinneringen te versturen. Tegelijk moeten we vermijden dat antwoorden ooit gekoppeld kunnen worden aan de identiteit van deelnemers.
 
 QuestionPro biedt met **Respondent Anonymity Assurance (RAA)** een oplossing die precies dit mogelijk maakt.
 
