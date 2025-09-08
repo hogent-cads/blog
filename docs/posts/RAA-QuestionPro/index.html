@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Willem De Keyzer">
+<meta name="dcterms.date" content="2025-09-08">
 
-<title>Home - CADS Data Blog</title>
+<title>Home - Anonimiteit verzekerd met Respondent Anonymity Assurance (RAA) in QuestionPro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,67 +68,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -138,10 +80,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./logo_cads_white.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo_cads_white.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Home</span>
     </a>
   </div>
@@ -152,7 +94,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -180,230 +122,125 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">CADS Data Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Anonimiteit verzekerd met Respondent Anonymity Assurance (RAA) in QuestionPro</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">onderzoek</div>
+                <div class="quarto-category">privacy</div>
+                <div class="quarto-category">surveys</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Willem De Keyzer </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 8, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="AI">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ASR">ASR <span class="quarto-category-count">(1)</span></div><div class="category" data-category="business analytics">business analytics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data cleaning">data cleaning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data engineering">data engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="duplicate detection">duplicate detection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="fuzzy matching">fuzzy matching <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="onderzoek">onderzoek <span class="quarto-category-count">(1)</span></div><div class="category" data-category="privacy">privacy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="spraakherkenning">spraakherkenning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="surveys">surveys <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#respondent-anonymity-assurance-raa-in-questionpro" id="toc-respondent-anonymity-assurance-raa-in-questionpro" class="nav-link active" data-scroll-target="#respondent-anonymity-assurance-raa-in-questionpro">Respondent Anonymity Assurance (RAA) in QuestionPro</a>
+  <ul class="collapse">
+  <li><a href="#wat-is-raa" id="toc-wat-is-raa" class="nav-link" data-scroll-target="#wat-is-raa">Wat is RAA?</a></li>
+  <li><a href="#waarom-is-dit-belangrijk-voor-onderzoekers" id="toc-waarom-is-dit-belangrijk-voor-onderzoekers" class="nav-link" data-scroll-target="#waarom-is-dit-belangrijk-voor-onderzoekers">Waarom is dit belangrijk voor onderzoekers?</a></li>
+  <li><a href="#voorbeeldformulering-voor-onderzoeksdocumentatie" id="toc-voorbeeldformulering-voor-onderzoeksdocumentatie" class="nav-link" data-scroll-target="#voorbeeldformulering-voor-onderzoeksdocumentatie">Voorbeeldformulering voor onderzoeksdocumentatie</a></li>
+  <li><a href="#conclusie" id="toc-conclusie" class="nav-link" data-scroll-target="#conclusie">Conclusie</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="respondent-anonymity-assurance-raa-in-questionpro" class="level1">
+<h1>Respondent Anonymity Assurance (RAA) in QuestionPro</h1>
+<p>Bij het uitvoeren van online bevragingen moeten onderzoekers <strong>steeds een evenwicht vinden tussen praktisch gemak en het respecteren van de anonimiteit van respondenten</strong>. Vaak willen we gebruikmaken van verzendlijsten om uitnodigingen en herinneringen te versturen. Tegelijk moeten we vermijden dat antwoorden ooit gekoppeld kunnen worden aan de identiteit van deelnemers.</p>
+<p>QuestionPro biedt met <strong>Respondent Anonymity Assurance (RAA)</strong> een oplossing die precies dit mogelijk maakt.</p>
+<p>Meer informatie en de officiële handleiding vind je hier:<br>
+👉 <a href="https://www.questionpro.com/help/respondent-anonymity-assurance-raa.html" class="uri">https://www.questionpro.com/help/respondent-anonymity-assurance-raa.html</a></p>
+<hr>
+<section id="wat-is-raa" class="level2">
+<h2 class="anchored" data-anchor-id="wat-is-raa">Wat is RAA?</h2>
+<p>RAA is een functionaliteit die ervoor zorgt dat <strong>contactgegevens en survey-antwoorden volledig gescheiden verwerkt worden</strong>. Het systeem laat toe dat onderzoekers:</p>
+<ul>
+<li>Uitnodigingen en herinneringen via e-mail sturen.<br>
+</li>
+<li>Verzendlijsten efficiënt beheren, zonder dat antwoorden zichtbaar zijn op individueel niveau.<br>
+</li>
+<li>Data analyseren in een <strong>volledig anonieme dataset</strong>.</li>
+</ul>
+<p>Dit betekent dat onderzoekers het beste van twee werelden krijgen: <strong>gebruiksgemak in de communicatie met deelnemers én naleving van ethische en juridische vereisten</strong>.</p>
+<hr>
+</section>
+<section id="waarom-is-dit-belangrijk-voor-onderzoekers" class="level2">
+<h2 class="anchored" data-anchor-id="waarom-is-dit-belangrijk-voor-onderzoekers">Waarom is dit belangrijk voor onderzoekers?</h2>
+<p>Voor HOGENT-onderzoekers brengt dit verschillende voordelen:</p>
+<ul>
+<li><strong>Anonimiteit gegarandeerd</strong>: deelnemers kunnen erop vertrouwen dat hun antwoorden niet herleidbaar zijn tot hun identiteit.<br>
+</li>
+<li><strong>Efficiënte opvolging</strong>: uitnodigingen en herinneringen verlopen automatisch, zonder extra administratie.<br>
+</li>
+<li><strong>Compliance ingebouwd</strong>: de aanpak ondersteunt principes zoals <em>privacy by design</em>, <em>dataminimalisatie</em> en transparantie.<br>
+</li>
+<li><strong>Eenvoudige verantwoording</strong>: dankzij een heldere standaardformulering kunnen onderzoekers eenvoudig uitleggen hoe de anonimiteit verzekerd wordt.</li>
+</ul>
+<hr>
+</section>
+<section id="voorbeeldformulering-voor-onderzoeksdocumentatie" class="level2">
+<h2 class="anchored" data-anchor-id="voorbeeldformulering-voor-onderzoeksdocumentatie">Voorbeeldformulering voor onderzoeksdocumentatie</h2>
+<p>Onderstaande tekst kan rechtstreeks gebruikt worden in onderzoeksdocumentatie, zoals een aanvraag bij een ethisch comité, een datamanagementplan of een GDPR-plan:</p>
+<blockquote class="blockquote">
+<p><strong>Gebruik van Respondent Anonymity Assurance (RAA) via QuestionPro</strong><br>
+Voor deze bevraging wordt gebruikgemaakt van de <strong>Respondent Anonymity Assurance (RAA)</strong>-functionaliteit van QuestionPro (zie <a href="https://www.questionpro.com/help/respondent-anonymity-assurance-raa.html">handleiding</a>).<br>
+Respondenten ontvangen uitnodigingen en eventuele herinneringen per e-mail. Contactgegevens en antwoorden worden in het systeem strikt gescheiden verwerkt. Hierdoor is er <strong>geen mogelijkheid om antwoorden te koppelen aan de identiteit van respondenten</strong>.<br>
+Deze aanpak garandeert anonimiteit en voldoet aan de vereisten inzake vertrouwelijkheid en bescherming van persoonsgegevens.</p>
+</blockquote>
+<hr>
+</section>
+<section id="conclusie" class="level2">
+<h2 class="anchored" data-anchor-id="conclusie">Conclusie</h2>
+<p>De <strong>RAA-functionaliteit in QuestionPro</strong> maakt het eenvoudig om vragenlijsten op te zetten die zowel praktisch bruikbaar zijn voor onderzoekers als veilig en vertrouwelijk voor respondenten.</p>
+<p>CADS raadt onderzoekers aan om bij elke survey waar anonimiteit essentieel is, gebruik te maken van RAA. Het zorgt ervoor dat je:</p>
+<ol type="1">
+<li><strong>Eenvoudig deelnemers bereikt</strong> via verzendlijsten en reminders.<br>
+</li>
+<li><strong>Anonimiteit waarborgt</strong> door een strikte scheiding tussen contactgegevens en antwoorden.<br>
+</li>
+<li><strong>Een duidelijke verantwoording</strong> hebt voor ethische commissies, datamanagementplannen en GDPR-documentatie.</li>
+</ol>
+<p>Door RAA consequent te gebruiken, versterken we samen het vertrouwen van deelnemers en de kwaliteit van onderzoek aan HOGENT.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="onderzoek,privacy,surveys" data-listing-date-sort="1757282400000" data-listing-file-modified-sort="1757324713900" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="405">
-<div class="thumbnail">
-<p><a href="./posts/RAA-QuestionPro/index.html" class="no-external"></a></p><a href="./posts/RAA-QuestionPro/index.html" class="no-external">
-<p><img src="./posts/RAA-QuestionPro/RAA_QuestionPro.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/RAA-QuestionPro/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/RAA-QuestionPro/index.html" class="no-external">Anonimiteit verzekerd met Respondent Anonymity Assurance (RAA) in QuestionPro</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/RAA-QuestionPro/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('onderzoek'); return false;">
-onderzoek
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('privacy'); return false;">
-privacy
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('surveys'); return false;">
-surveys
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/RAA-QuestionPro/index.html" class="no-external">Bij het uitvoeren van online bevragingen moeten onderzoekers <strong>steeds een evenwicht vinden tussen praktisch gemak en het respecteren van de anonimiteit van respondenten</strong>. Vaak…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/RAA-QuestionPro/index.html" class="no-external">
-<div class="listing-date">
-Sep 8, 2025
-</div>
-<div class="listing-author">
-Willem De Keyzer
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="spraakherkenning,AI,ASR" data-listing-date-sort="1730847600000" data-listing-file-modified-sort="1730892168141" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="917">
-<div class="thumbnail">
-<p><a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external"></a></p><a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external">
-<p><img src="./posts/vlaamse-spraakherkenning/ASR.jpeg" class="thumbnail-image"></p>
-</a><p><a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external">Spraakherkenning van Vlaamse dialecten tot algemeen Nederlands</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external">Der is nog vree veel werk aan de winkel!</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('spraakherkenning'); return false;">
-spraakherkenning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('AI'); return false;">
-AI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ASR'); return false;">
-ASR
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external">Spraakherkenning is cruciaal voor toepassingen zoals automatische ondertiteling en spraakgestuurde systemen (bijvoorbeeld de voice assistent in je auto of op je smartphone).…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/vlaamse-spraakherkenning/index.html" class="no-external">
-<div class="listing-date">
-Nov 6, 2024
-</div>
-<div class="listing-author">
-Jens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="data cleaning,duplicate detection,fuzzy matching" data-listing-date-sort="1718920800000" data-listing-file-modified-sort="1718982097636" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2983">
-<div class="thumbnail">
-<p><a href="./posts/duplicate-detection/index.html" class="no-external"></a></p><a href="./posts/duplicate-detection/index.html" class="no-external">
-<p><img src="./posts/duplicate-detection/duplicate-detection-image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/duplicate-detection/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/duplicate-detection/index.html" class="no-external">Duplicate Detection</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/duplicate-detection/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data cleaning'); return false;">
-data cleaning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('duplicate detection'); return false;">
-duplicate detection
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('fuzzy matching'); return false;">
-fuzzy matching
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/duplicate-detection/index.html" class="no-external">A common problem with master data is that different records refer to the same real world entity. This can occur, for example, when a customer was registered twice (once when…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/duplicate-detection/index.html" class="no-external">
-<div class="listing-date">
-Jun 21, 2024
-</div>
-<div class="listing-author">
-Stijn Lievens
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="data engineering,business analytics" data-listing-date-sort="1710457200000" data-listing-file-modified-sort="1718982721684" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1729">
-<div class="thumbnail">
-<p><a href="./posts/qualtrics-powerbi/index.html" class="no-external"></a></p><a href="./posts/qualtrics-powerbi/index.html" class="no-external">
-<p><img src="./posts/qualtrics-powerbi/DALL-E 2024-03-15.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/qualtrics-powerbi/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/qualtrics-powerbi/index.html" class="no-external">Integrating Qualtrics survey results into Power BI</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/qualtrics-powerbi/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data engineering'); return false;">
-data engineering
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('business analytics'); return false;">
-business analytics
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/qualtrics-powerbi/index.html" class="no-external">Imagine you’re tasked with integrating Qualtrics survey results into Power BI for interactive dashboards and reports, data visualization, or combining multiple data sources.…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/qualtrics-powerbi/index.html" class="no-external">
-<div class="listing-date">
-Mar 15, 2024
-</div>
-<div class="listing-author">
-Willem De Keyzer
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="news" data-listing-date-sort="1710370800000" data-listing-file-modified-sort="1710525229070" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="228">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/welcome/thumbnail_square.jpeg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome to our Data Blog!</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">Welcome to the inaugural post of the Centre for Applied Data Science at HOGENT. We are a dedicated team of data experts committed to advancing the field of data science…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Mar 14, 2024
-</div>
-<div class="listing-author">
-CADS
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

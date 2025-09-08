@@ -1,0 +1,66 @@
+---
+title: "Anonimiteit verzekerd met Respondent Anonymity Assurance (RAA) in QuestionPro"
+author: "Willem De Keyzer"
+date: 2025-09-08
+categories: [onderzoek, privacy, surveys]
+image: "RAA_QuestionPro.png"
+toc: true
+draft: false
+---
+
+# Respondent Anonymity Assurance (RAA) in QuestionPro
+
+Bij het uitvoeren van online bevragingen moeten onderzoekers **steeds een evenwicht vinden tussen praktisch gemak en het respecteren van de anonimiteit van respondenten**. Vaak willen we gebruikmaken van verzendlijsten om uitnodigingen en herinneringen te versturen. Tegelijk moeten we vermijden dat antwoorden ooit gekoppeld kunnen worden aan de identiteit van deelnemers.
+
+QuestionPro biedt met **Respondent Anonymity Assurance (RAA)** een oplossing die precies dit mogelijk maakt.
+
+Meer informatie en de officiële handleiding vind je hier:\
+👉 <https://www.questionpro.com/help/respondent-anonymity-assurance-raa.html>
+
+------------------------------------------------------------------------
+
+## Wat is RAA?
+
+RAA is een functionaliteit die ervoor zorgt dat **contactgegevens en survey-antwoorden volledig gescheiden verwerkt worden**. Het systeem laat toe dat onderzoekers:
+
+-   Uitnodigingen en herinneringen via e-mail sturen.\
+-   Verzendlijsten efficiënt beheren, zonder dat antwoorden zichtbaar zijn op individueel niveau.\
+-   Data analyseren in een **volledig anonieme dataset**.
+
+Dit betekent dat onderzoekers het beste van twee werelden krijgen: **gebruiksgemak in de communicatie met deelnemers én naleving van ethische en juridische vereisten**.
+
+------------------------------------------------------------------------
+
+## Waarom is dit belangrijk voor onderzoekers?
+
+Voor HOGENT-onderzoekers brengt dit verschillende voordelen:
+
+-   **Anonimiteit gegarandeerd**: deelnemers kunnen erop vertrouwen dat hun antwoorden niet herleidbaar zijn tot hun identiteit.\
+-   **Efficiënte opvolging**: uitnodigingen en herinneringen verlopen automatisch, zonder extra administratie.\
+-   **Compliance ingebouwd**: de aanpak ondersteunt principes zoals *privacy by design*, *dataminimalisatie* en transparantie.\
+-   **Eenvoudige verantwoording**: dankzij een heldere standaardformulering kunnen onderzoekers eenvoudig uitleggen hoe de anonimiteit verzekerd wordt.
+
+------------------------------------------------------------------------
+
+## Voorbeeldformulering voor onderzoeksdocumentatie
+
+Onderstaande tekst kan rechtstreeks gebruikt worden in onderzoeksdocumentatie, zoals een aanvraag bij een ethisch comité, een datamanagementplan of een GDPR-plan:
+
+> **Gebruik van Respondent Anonymity Assurance (RAA) via QuestionPro**\
+> Voor deze bevraging wordt gebruikgemaakt van de **Respondent Anonymity Assurance (RAA)**-functionaliteit van QuestionPro (zie [handleiding](https://www.questionpro.com/help/respondent-anonymity-assurance-raa.html)).\
+> Respondenten ontvangen uitnodigingen en eventuele herinneringen per e-mail. Contactgegevens en antwoorden worden in het systeem strikt gescheiden verwerkt. Hierdoor is er **geen mogelijkheid om antwoorden te koppelen aan de identiteit van respondenten**.\
+> Deze aanpak garandeert anonimiteit en voldoet aan de vereisten inzake vertrouwelijkheid en bescherming van persoonsgegevens.
+
+------------------------------------------------------------------------
+
+## Conclusie
+
+De **RAA-functionaliteit in QuestionPro** maakt het eenvoudig om vragenlijsten op te zetten die zowel praktisch bruikbaar zijn voor onderzoekers als veilig en vertrouwelijk voor respondenten.
+
+CADS raadt onderzoekers aan om bij elke survey waar anonimiteit essentieel is, gebruik te maken van RAA. Het zorgt ervoor dat je:
+
+1.  **Eenvoudig deelnemers bereikt** via verzendlijsten en reminders.\
+2.  **Anonimiteit waarborgt** door een strikte scheiding tussen contactgegevens en antwoorden.\
+3.  **Een duidelijke verantwoording** hebt voor ethische commissies, datamanagementplannen en GDPR-documentatie.
+
+Door RAA consequent te gebruiken, versterken we samen het vertrouwen van deelnemers en de kwaliteit van onderzoek aan HOGENT.
