@@ -63,4 +63,3 @@ CADS raadt onderzoekers aan om bij elke survey waar anonimiteit essentieel is, g
 2.  **Anonimiteit waarborgt** door een strikte scheiding tussen contactgegevens en antwoorden.\
 3.  **Een duidelijke verantwoording** hebt voor ethische commissies, datamanagementplannen en GDPR-documentatie.
 
-Door RAA consequent te gebruiken, versterken we samen het vertrouwen van deelnemers en de kwaliteit van onderzoek aan HOGENT.
