@@ -109,6 +109,90 @@
     "href": "index.html",
     "title": "CADS Data Blog",
     "section": "",
-    "text": "Anonimiteit verzekerd met Respondent Anonymity Assurance (RAA) in QuestionPro\n\n\n\n\n\n\nonderzoek\n\n\nprivacy\n\n\nsurveys\n\n\n\n\n\n\n\n\n\nSep 8, 2025\n\n\nWillem De Keyzer\n\n\n\n\n\n\n\n\n\n\n\n\nSpraakherkenning van Vlaamse dialecten tot algemeen Nederlands\n\n\nDer is nog vree veel werk aan de winkel!\n\n\n\nspraakherkenning\n\n\nAI\n\n\nASR\n\n\n\n\n\n\n\n\n\nNov 6, 2024\n\n\nJens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes\n\n\n\n\n\n\n\n\n\n\n\n\nDuplicate Detection\n\n\n\n\n\n\ndata cleaning\n\n\nduplicate detection\n\n\nfuzzy matching\n\n\n\n\n\n\n\n\n\nJun 21, 2024\n\n\nStijn Lievens\n\n\n\n\n\n\n\n\n\n\n\n\nIntegrating Qualtrics survey results into Power BI\n\n\n\n\n\n\ndata engineering\n\n\nbusiness analytics\n\n\nsurveys\n\n\n\n\n\n\n\n\n\nMar 15, 2024\n\n\nWillem De Keyzer\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to our Data Blog!\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 14, 2024\n\n\nCADS\n\n\n\n\n\n\nNo matching items"
+    "text": "Praktische datasetdocumentatie voor praktijkgericht onderzoek\n\n\n\n\n\n\ndatasetdocumentatie\n\n\nresearch data management\n\n\n\n\n\n\n\n\n\nNov 8, 2025\n\n\nCADS\n\n\n\n\n\n\n\n\n\n\n\n\nAnonimiteit verzekerd met Respondent Anonymity Assurance (RAA) in QuestionPro\n\n\n\n\n\n\nonderzoek\n\n\nprivacy\n\n\nsurveys\n\n\n\n\n\n\n\n\n\nSep 8, 2025\n\n\nWillem De Keyzer\n\n\n\n\n\n\n\n\n\n\n\n\nSpraakherkenning van Vlaamse dialecten tot algemeen Nederlands\n\n\nDer is nog vree veel werk aan de winkel!\n\n\n\nspraakherkenning\n\n\nAI\n\n\nASR\n\n\n\n\n\n\n\n\n\nNov 6, 2024\n\n\nJens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes\n\n\n\n\n\n\n\n\n\n\n\n\nDuplicate Detection\n\n\n\n\n\n\ndata cleaning\n\n\nduplicate detection\n\n\nfuzzy matching\n\n\n\n\n\n\n\n\n\nJun 21, 2024\n\n\nStijn Lievens\n\n\n\n\n\n\n\n\n\n\n\n\nIntegrating Qualtrics survey results into Power BI\n\n\n\n\n\n\ndata engineering\n\n\nbusiness analytics\n\n\nsurveys\n\n\n\n\n\n\n\n\n\nMar 15, 2024\n\n\nWillem De Keyzer\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to our Data Blog!\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 14, 2024\n\n\nCADS\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html",
+    "href": "posts/datasetdocumentatie/index.html",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "",
+    "text": "Datasetdocumentatie is een van de meest onderschatte maar meest impactvolle onderdelen van Research Data Management (RDM). Goed gedocumenteerde data besparen tijd, voorkomen fouten en verhogen de herbruikbaarheid, betrouwbaarheid en impact van praktijkgericht onderzoek. Goede documentatie maakt het verschil tussen een dataset die slechts één project dient en een dataset die bruikbaar blijft voor andere onderzoekers, studenten, partners of beleidsmakers."
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#bouw-een-logische-datasetstructuur",
+    "href": "posts/datasetdocumentatie/index.html#bouw-een-logische-datasetstructuur",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "1 Bouw een logische datasetstructuur",
+    "text": "1 Bouw een logische datasetstructuur\nEen goede datasetdocumentatie start met een duidelijke, consistente structuur van mappen en bestanden. Dit lijkt eenvoudig, maar net hier gaat in veel projecten waardevolle tijd verloren.\nKenmerken van een goede structuur:\n\neenvoudig te begrijpen\ndoor iedereen in het project te volgen\nlogisch opgebouwd\nconsistent toegepast\nmeteen duidelijk voor externen\n\n\n1.1 Aanbevolen mappenstructuur\n/projectnaam/\n├── data_raw/               # Ongewijzigde ruwe data\n├── data_clean/             # Opgeschoonde en gestructureerde data\n├── data_analysis/          # Afgeleide tabellen, statistische output\n├── docs/                   # README, codeboek, protocollen\n├── scripts/                # R-, Python-, SPSS-, Stata- of SQL-code\n├── metadata/               # Formele metadata\n└── results/                # Tabellen, figuren, rapporten\nVoorbeeld uit praktijkgericht onderzoek\nIn een project rond voedingsgewoonten bij leerlingen:\n\ndata_raw/: CSV-export uit QuesitionPro\ndata_clean/: opgeschoonde dataset zonder vrije tekstvelden\ndocs/: codeboek met variabelen (bv. FRUIT_FREQ)\nscripts/: R-script 01_cleaning.R met datacleaning"
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#schrijf-een-duidelijke-en-volledige-readme",
+    "href": "posts/datasetdocumentatie/index.html#schrijf-een-duidelijke-en-volledige-readme",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "2 Schrijf een duidelijke en volledige README",
+    "text": "2 Schrijf een duidelijke en volledige README\nEen README is het eerste document dat een lezer gebruikt om te begrijpen hoe het project en de dataset in elkaar zitten. Zonder README wordt een dataset snel “verweesd”, zeker wanneer projectleden wisselen of wanneer je maanden later opnieuw naar dezelfde bestanden kijkt.\nMinimale inhoud van een README\n\ntitel van het project\ndoelstelling van het onderzoek\ndatum en context van dataverzameling\nbeschrijving van alle belangrijke bestanden\nuitleg van mappenstructuur\ndefinities van afkortingen en termen\nsoftwarevereisten\ncontactgegevens\nlicentie en toegangsvoorwaarden\n\nVoorbeeld\n# README – Re-integratiecoaching 2024\n\nDit project onderzoekt de impact van een vernieuwde re-integratieaanpak\nin stedelijke diensten. Data werden verzameld via semi-gestructureerde\ninterviews (n=34) en een survey (n=112).\n\nMappen: \n- data_raw/interviews_audio/ (mp3 – niet gedeeld)\n- data_clean/interviews_coded.csv (ATLAS.ti export)\n- data_clean/survey_clean.csv (anoniem)\n- docs/codeboek_survey.xlsx \n- scripts/01_transcript_cleaning.R\n- results/rapport_reintegratie_2024.pdf\n\nAfkortingen:\n- RIP = Re-integratieproces\n- SCO = Sociale Competentie Ontwikkeling\n\nContact: onderzoeksteam@hogent.be\nLicentie: CC-BY-NC 4.0"
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#gebruik-een-codeboek-voor-kwantitatieve-data",
+    "href": "posts/datasetdocumentatie/index.html#gebruik-een-codeboek-voor-kwantitatieve-data",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "3 Gebruik een codeboek voor kwantitatieve data",
+    "text": "3 Gebruik een codeboek voor kwantitatieve data\nEen codeboek bevat de volledige beschrijving van elke variabele in de dataset. Dit maakt analyses reproduceerbaar en voorkomt interpretatiefouten.\nWat moet in een codeboek staan?\n\nvariabelenaam beschrijving\nmogelijke waarden\ndatatype\neenheid (indien van toepassing)\nhoe missing values worden aangeduid\neventuele transformaties\n\nVoorbeeld\n\n\n\n\n\n\n\n\n\n\nVariabele\nBeschrijving\nWaarden\nType\nEenheid\n\n\nBF_PERCENT\nLichaamsvetpercentage via BIA\n0–80\nnumeriek\n%\n\n\nACTIVITY_LEVEL\nZelfgerapporteerde fysieke activiteit\n1=laag, 2=middelmatig, 3=hoog\ninteger\nn.v.t"
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#gebruik-een-datadictionary-voor-complexere-datasets",
+    "href": "posts/datasetdocumentatie/index.html#gebruik-een-datadictionary-voor-complexere-datasets",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "4 Gebruik een datadictionary voor complexere datasets",
+    "text": "4 Gebruik een datadictionary voor complexere datasets\nEen datadictionary is uitgebreider dan een codeboek en is noodzakelijk wanneer een dataset bestaat uit meerdere tabellen, relationele structuren of data afkomstig uit meetapparatuur.\nVoorbeeld\nVeldproef met waterkwaliteitssensoren:\n\nsensor_id verwijst naar tabel sensors\nmetadata per sensor: locatie, diepte, type, kalibratiedatum\nmeasurement_id verwijst naar tabel measurements\nregistratiefrequentie: om de 5 minuten\nkwaliteitscontrole: waarden &gt;3 SD automatisch gemarkeerd"
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#voeg-eenvoudige-metadata-toe",
+    "href": "posts/datasetdocumentatie/index.html#voeg-eenvoudige-metadata-toe",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "5 Voeg eenvoudige metadata toe",
+    "text": "5 Voeg eenvoudige metadata toe\nMetadata maken een dataset vindbaar, interpreteerbaar en bruikbaar voor externen. Je hoeft geen specialist te zijn om een basisset toe te voegen.\nGeschikte metadata-schema’s\n\nDublin Core (breed toepasbaar)\nschema.org Dataset\ndomeinspecifiek:\n\nBIDS (neurodata)\nDarwinCore (biodiversiteit)\nMIxS (microbiologie)\n\n\nVoorbeeld\n\ntitle: \"Microbiologische diversiteit in rauwmelkse kazen\" \ncreator: \"Onderzoeksteam FOOD, HOGENT\" \nkeywords: [\"microbiologie\", \"voedselveiligheid\", \"kaas\"\ndate_created: 2024-03-14\nmethod: \"DNA-sequencing (MinION)\""
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#documenteer-gdpr--en-ethiekprocedures",
+    "href": "posts/datasetdocumentatie/index.html#documenteer-gdpr--en-ethiekprocedures",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "6 Documenteer GDPR- en ethiekprocedures",
+    "text": "6 Documenteer GDPR- en ethiekprocedures\nIn praktijkgericht onderzoek met mensen is dit een essentieel onderdeel van datasetdocumentatie.\nDocumenteer altijd:\n\nhoe en wanneer data zijn gepseudonimiseerd\nwaar sleutelbestanden zijn opgeslagen\nbewaartermijnen\ndataminimalisatiekeuzes\nhoe toestemming werd bekomen\nwie toegang heeft tot welke datacategorie\n\nVoorbeeld\n\naudio-opnames → data_raw/audio (beperkte toegang)\ntranscripties zonder identificeerbare info → data_clean/transcripts.csv\nsleutelbestand id_key.xlsx → versleutelde map, enkel toegankelijk voor de promotor"
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#leg-je-opslag--en-versiebeheerbeleid-vast",
+    "href": "posts/datasetdocumentatie/index.html#leg-je-opslag--en-versiebeheerbeleid-vast",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "7 Leg je opslag- en versiebeheerbeleid vast",
+    "text": "7 Leg je opslag- en versiebeheerbeleid vast\nVersiebeheer en veilige opslag bepalen de betrouwbaarheid van je onderzoek.\n3–2–1 backupregel\n\n3 kopieën\nop 2 verschillende media\nwaarvan 1 externe locatie\n\nAanbevolen tools\n\nOneDrive (automatische synchronisatie)\nGitHub of GitLab voor code\nversiegeschiedenis in Google Sheets of Excel\nchangelogs in dezelfde map als scripts"
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#documenteer-alle-datacleaning--en-analysekoppelingen",
+    "href": "posts/datasetdocumentatie/index.html#documenteer-alle-datacleaning--en-analysekoppelingen",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "8 Documenteer alle datacleaning- en analysekoppelingen",
+    "text": "8 Documenteer alle datacleaning- en analysekoppelingen\nDocumenteer elke stap zodat analyses reproduceerbaar blijven. Dit kan via:\n\nR- of Python-scripts, SPSS syntaxen\neen tekstueel changelog\neen combinatie daarvan\n\nVoorbeeld\n2025-04-12 – WDK\n- Outliers \\&gt;3 SD verwijderd voor 'response_time'\n- Nieuwe variabele 'normalized_time' toegevoegd\n- Log-transformatie toegepast op 'latency'"
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#documenteer-de-voorwaarden-voor-delen-en-licenties",
+    "href": "posts/datasetdocumentatie/index.html#documenteer-de-voorwaarden-voor-delen-en-licenties",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "9 Documenteer de voorwaarden voor delen en licenties",
+    "text": "9 Documenteer de voorwaarden voor delen en licenties\nNiet alle data kunnen open gedeeld worden, maar documentatie moet duidelijk maken wat wel en niet gedeeld mag worden.\nDocumenteer:\n\nwelke datasets publiek kunnen\nwelke enkel intern beschikbaar zijn\nwelke volledig vertrouwelijk zijn\nwelke licentie wordt gebruikt (bv. CC-BY, CC-BY-SA, CC-BY-NC, MIT)\n\nVoorbeeld (AI-onderzoek)\n\ntrainingsdata → niet publiek (rechtelijke beperkingen)\nsynthetische data → publiek (CC-BY)\nscripts → GitHub (MIT-licentie)"
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#conclusie",
+    "href": "posts/datasetdocumentatie/index.html#conclusie",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "10 Conclusie",
+    "text": "10 Conclusie\nDatasetdocumentatie is geen administratieve verplichting maar een kwaliteitsinstrument. Met:\n\neen duidelijke mappenstructuur\neen README\neen codeboek\neen datadictionary\nmetadata\nGDPR-documentatie\nchangelogs en versiebeheer\n\nzorg je ervoor dat je onderzoeksdata helder, toekomstbestendig en bruikbaar blijven, voor jezelf, voor collega-onderzoekers en voor de bredere onderzoekscommunity."
+  },
+  {
+    "objectID": "posts/datasetdocumentatie/index.html#meer-weten",
+    "href": "posts/datasetdocumentatie/index.html#meer-weten",
+    "title": "Praktische datasetdocumentatie voor praktijkgericht onderzoek",
+    "section": "11 Meer weten?",
+    "text": "11 Meer weten?\n[Onderzoeksdatamanagement]https://www.ugent.be/nl/onderzoek/openscience/datamanagement/overzicht.htm"
   }
 ]

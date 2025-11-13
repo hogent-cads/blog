@@ -1,0 +1,316 @@
+---
+title: "Praktische datasetdocumentatie voor praktijkgericht onderzoek"
+author: "CADS"
+date: 2025-11-08
+categories: [datasetdocumentatie, research data management]
+image: "datadocumentatie.png"
+toc: true
+draft: false
+number-sections: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+Datasetdocumentatie is een van de meest onderschatte maar meest
+impactvolle onderdelen van Research Data Management (RDM). Goed
+gedocumenteerde data besparen tijd, voorkomen fouten en verhogen de
+herbruikbaarheid, betrouwbaarheid en impact van praktijkgericht
+onderzoek. Goede documentatie maakt het verschil tussen een dataset die
+slechts één project dient en een dataset die bruikbaar blijft voor
+andere onderzoekers, studenten, partners of beleidsmakers.
+
+## Bouw een logische datasetstructuur
+
+Een goede datasetdocumentatie start met een duidelijke, consistente
+structuur van mappen en bestanden. Dit lijkt eenvoudig, maar net hier
+gaat in veel projecten waardevolle tijd verloren.
+
+Kenmerken van een goede structuur:
+
+-   eenvoudig te begrijpen
+
+-   door iedereen in het project te volgen
+
+-   logisch opgebouwd
+
+-   consistent toegepast
+
+-   meteen duidelijk voor externen
+
+### Aanbevolen mappenstructuur
+
+``` text
+/projectnaam/
+├── data_raw/               # Ongewijzigde ruwe data
+├── data_clean/             # Opgeschoonde en gestructureerde data
+├── data_analysis/          # Afgeleide tabellen, statistische output
+├── docs/                   # README, codeboek, protocollen
+├── scripts/                # R-, Python-, SPSS-, Stata- of SQL-code
+├── metadata/               # Formele metadata
+└── results/                # Tabellen, figuren, rapporten
+```
+
+**Voorbeeld uit praktijkgericht onderzoek**
+
+In een project rond voedingsgewoonten bij leerlingen:
+
+-   data_raw/: CSV-export uit QuesitionPro
+
+-   data_clean/: opgeschoonde dataset zonder vrije tekstvelden
+
+-   docs/: codeboek met variabelen (bv. FRUIT_FREQ)
+
+-   scripts/: R-script 01_cleaning.R met datacleaning
+
+## Schrijf een duidelijke en volledige README
+
+Een README is het eerste document dat een lezer gebruikt om te begrijpen
+hoe het project en de dataset in elkaar zitten. Zonder README wordt een
+dataset snel “verweesd”, zeker wanneer projectleden wisselen of wanneer
+je maanden later opnieuw naar dezelfde bestanden kijkt.
+
+**Minimale inhoud van een README**
+
+-   titel van het project
+
+-   doelstelling van het onderzoek
+
+-   datum en context van dataverzameling
+
+-   beschrijving van alle belangrijke bestanden
+
+-   uitleg van mappenstructuur
+
+-   definities van afkortingen en termen
+
+-   softwarevereisten
+
+-   contactgegevens
+
+-   licentie en toegangsvoorwaarden
+
+**Voorbeeld**
+
+``` text
+# README – Re-integratiecoaching 2024
+
+Dit project onderzoekt de impact van een vernieuwde re-integratieaanpak
+in stedelijke diensten. Data werden verzameld via semi-gestructureerde
+interviews (n=34) en een survey (n=112).
+
+Mappen: 
+- data_raw/interviews_audio/ (mp3 – niet gedeeld)
+- data_clean/interviews_coded.csv (ATLAS.ti export)
+- data_clean/survey_clean.csv (anoniem)
+- docs/codeboek_survey.xlsx 
+- scripts/01_transcript_cleaning.R
+- results/rapport_reintegratie_2024.pdf
+
+Afkortingen:
+- RIP = Re-integratieproces
+- SCO = Sociale Competentie Ontwikkeling
+
+Contact: onderzoeksteam@hogent.be
+Licentie: CC-BY-NC 4.0
+```
+
+## Gebruik een codeboek voor kwantitatieve data
+
+Een codeboek bevat de volledige beschrijving van elke variabele in de
+dataset. Dit maakt analyses reproduceerbaar en voorkomt
+interpretatiefouten.
+
+Wat moet in een codeboek staan?
+
+-   variabelenaam beschrijving
+
+-   mogelijke waarden
+
+-   datatype
+
+-   eenheid (indien van toepassing)
+
+-   hoe missing values worden aangeduid
+
+-   eventuele transformaties
+
+**Voorbeeld**
+
+|  |  |  |  |  |
+|---------------|---------------|---------------|---------------|---------------|
+| **Variabele** | **Beschrijving** | **Waarden** | **Type** | **Eenheid** |
+| BF_PERCENT | Lichaamsvetpercentage via BIA | 0–80 | numeriek | \% |
+| ACTIVITY_LEVEL | Zelfgerapporteerde fysieke activiteit | 1=laag, 2=middelmatig, 3=hoog | integer | n.v.t |
+
+## Gebruik een datadictionary voor complexere datasets
+
+Een datadictionary is uitgebreider dan een codeboek en is noodzakelijk
+wanneer een dataset bestaat uit meerdere tabellen, relationele
+structuren of data afkomstig uit meetapparatuur.
+
+**Voorbeeld**
+
+Veldproef met waterkwaliteitssensoren:
+
+-   `sensor_id` verwijst naar tabel `sensors`
+
+-   metadata per sensor: locatie, diepte, type, kalibratiedatum
+
+-   `measurement_id` verwijst naar tabel `measurements`
+
+-   registratiefrequentie: om de 5 minuten
+
+-   kwaliteitscontrole: waarden \>3 SD automatisch gemarkeerd
+
+## Voeg eenvoudige metadata toe
+
+Metadata maken een dataset vindbaar, interpreteerbaar en bruikbaar voor
+externen. Je hoeft geen specialist te zijn om een basisset toe te
+voegen.
+
+**Geschikte metadata-schema’s**
+
+-   Dublin Core (breed toepasbaar)
+
+-   schema.org Dataset
+
+-   domeinspecifiek:
+
+    -   BIDS (neurodata)
+
+    -   DarwinCore (biodiversiteit)
+
+    -   MIxS (microbiologie)
+
+**Voorbeeld**
+
+``` text
+
+title: "Microbiologische diversiteit in rauwmelkse kazen" 
+creator: "Onderzoeksteam FOOD, HOGENT" 
+keywords: ["microbiologie", "voedselveiligheid", "kaas"
+date_created: 2024-03-14
+method: "DNA-sequencing (MinION)"
+```
+
+## Documenteer GDPR- en ethiekprocedures
+
+In praktijkgericht onderzoek met mensen is dit een essentieel onderdeel
+van datasetdocumentatie.
+
+Documenteer altijd:
+
+-   hoe en wanneer data zijn gepseudonimiseerd
+
+-   waar sleutelbestanden zijn opgeslagen
+
+-   bewaartermijnen
+
+-   dataminimalisatiekeuzes
+
+-   hoe toestemming werd bekomen
+
+-   wie toegang heeft tot welke datacategorie
+
+**Voorbeeld**
+
+-   audio-opnames → `data_raw/audio` (beperkte toegang)
+
+-   transcripties zonder identificeerbare info →
+    `data_clean/transcripts.csv`
+
+-   sleutelbestand `id_key.xlsx` → versleutelde map, enkel toegankelijk
+    voor de promotor
+
+## Leg je opslag- en versiebeheerbeleid vast
+
+Versiebeheer en veilige opslag bepalen de betrouwbaarheid van je
+onderzoek.
+
+**3–2–1 backuprege**l
+
+-   3 kopieën
+
+-   op 2 verschillende media
+
+-   waarvan 1 externe locatie
+
+**Aanbevolen tools**
+
+-   OneDrive (automatische synchronisatie)
+
+-   GitHub of GitLab voor code
+
+-   versiegeschiedenis in Google Sheets of Excel
+
+-   changelogs in dezelfde map als scripts
+
+## Documenteer alle datacleaning- en analysekoppelingen
+
+Documenteer elke stap zodat analyses reproduceerbaar blijven. Dit kan
+via:
+
+-   R- of Python-scripts, SPSS syntaxen
+
+-   een tekstueel changelog
+
+-   een combinatie daarvan
+
+**Voorbeeld**
+
+``` text
+2025-04-12 – WDK
+- Outliers \>3 SD verwijderd voor 'response_time'
+- Nieuwe variabele 'normalized_time' toegevoegd
+- Log-transformatie toegepast op 'latency'
+```
+
+## Documenteer de voorwaarden voor delen en licenties
+
+Niet alle data kunnen open gedeeld worden, maar documentatie moet
+duidelijk maken wat wel en niet gedeeld mag worden.
+
+Documenteer:
+
+-   welke datasets publiek kunnen
+
+-   welke enkel intern beschikbaar zijn
+
+-   welke volledig vertrouwelijk zijn
+
+-   welke licentie wordt gebruikt (bv. CC-BY, CC-BY-SA, CC-BY-NC, MIT)
+
+Voorbeeld (AI-onderzoek)
+
+-   trainingsdata → niet publiek (rechtelijke beperkingen)
+
+-   synthetische data → publiek (CC-BY)
+
+-   scripts → GitHub (MIT-licentie)
+
+## Conclusie
+
+Datasetdocumentatie is geen administratieve verplichting maar een
+kwaliteitsinstrument. Met:
+
+-   een duidelijke mappenstructuur
+
+-   een README
+
+-   een codeboek
+
+-   een datadictionary
+
+-   metadata
+
+-   GDPR-documentatie
+
+-   changelogs en versiebeheer
+
+zorg je ervoor dat je onderzoeksdata helder, toekomstbestendig en
+bruikbaar blijven, voor jezelf, voor collega-onderzoekers en voor de
+bredere onderzoekscommunity.
+
+## Meer weten?
+[Onderzoeksdatamanagement]<https://www.ugent.be/nl/onderzoek/openscience/datamanagement/overzicht.htm>
