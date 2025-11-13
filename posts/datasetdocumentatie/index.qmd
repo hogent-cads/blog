@@ -289,7 +289,7 @@ Voorbeeld (AI-onderzoek)
 
 -   scripts → GitHub (MIT-licentie)
 
-## Conclusie
+## Conclusie {.unnumbered}
 
 Datasetdocumentatie is geen administratieve verplichting maar een
 kwaliteitsinstrument. Met:
@@ -312,5 +312,6 @@ zorg je ervoor dat je onderzoeksdata helder, toekomstbestendig en
 bruikbaar blijven, voor jezelf, voor collega-onderzoekers en voor de
 bredere onderzoekscommunity.
 
-## Meer weten?
+## Meer weten? {.unnumbered}
+
 [Onderzoeksdatamanagement](https://www.ugent.be/nl/onderzoek/openscience/datamanagement/overzicht.htm)
