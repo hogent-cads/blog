@@ -313,4 +313,4 @@ bruikbaar blijven, voor jezelf, voor collega-onderzoekers en voor de
 bredere onderzoekscommunity.
 
 ## Meer weten?
-[Onderzoeksdatamanagement]<https://www.ugent.be/nl/onderzoek/openscience/datamanagement/overzicht.htm>
+[Onderzoeksdatamanagement](https://www.ugent.be/nl/onderzoek/openscience/datamanagement/overzicht.htm)
