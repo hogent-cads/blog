@@ -1,12 +1,12 @@
 ---
 title: "Praktische datasetdocumentatie voor praktijkgericht onderzoek"
-author: "CADS"
+author: "Willem De Keyzer"
 date: 2025-11-08
 categories: [datasetdocumentatie, research data management]
 image: "datadocumentatie.png"
 toc: true
 draft: false
-number-sections: true
+number-sections: false
 editor: 
   markdown: 
     wrap: 72
@@ -20,7 +20,7 @@ onderzoek. Goede documentatie maakt het verschil tussen een dataset die
 slechts één project dient en een dataset die bruikbaar blijft voor
 andere onderzoekers, studenten, partners of beleidsmakers.
 
-## Bouw een logische datasetstructuur
+### Bouw een logische datasetstructuur
 
 Een goede datasetdocumentatie start met een duidelijke, consistente
 structuur van mappen en bestanden. Dit lijkt eenvoudig, maar net hier
@@ -38,7 +38,7 @@ Kenmerken van een goede structuur:
 
 -   meteen duidelijk voor externen
 
-### Aanbevolen mappenstructuur
+#### Aanbevolen mappenstructuur
 
 ``` text
 /projectnaam/
@@ -63,7 +63,7 @@ In een project rond voedingsgewoonten bij leerlingen:
 
 -   scripts/: R-script 01_cleaning.R met datacleaning
 
-## Schrijf een duidelijke en volledige README
+### Schrijf een duidelijke en volledige README
 
 Een README is het eerste document dat een lezer gebruikt om te begrijpen
 hoe het project en de dataset in elkaar zitten. Zonder README wordt een
@@ -115,7 +115,7 @@ Contact: onderzoeksteam@hogent.be
 Licentie: CC-BY-NC 4.0
 ```
 
-## Gebruik een codeboek voor kwantitatieve data
+### Gebruik een codeboek voor kwantitatieve data
 
 Een codeboek bevat de volledige beschrijving van elke variabele in de
 dataset. Dit maakt analyses reproduceerbaar en voorkomt
@@ -143,7 +143,7 @@ Wat moet in een codeboek staan?
 | BF_PERCENT | Lichaamsvetpercentage via BIA | 0–80 | numeriek | \% |
 | ACTIVITY_LEVEL | Zelfgerapporteerde fysieke activiteit | 1=laag, 2=middelmatig, 3=hoog | integer | n.v.t |
 
-## Gebruik een datadictionary voor complexere datasets
+### Gebruik een datadictionary voor complexere datasets
 
 Een datadictionary is uitgebreider dan een codeboek en is noodzakelijk
 wanneer een dataset bestaat uit meerdere tabellen, relationele
@@ -163,72 +163,202 @@ Veldproef met waterkwaliteitssensoren:
 
 -   kwaliteitscontrole: waarden \>3 SD automatisch gemarkeerd
 
-## Voeg eenvoudige metadata toe
+### Voeg eenvoudige metadata toe
 
-Metadata maken een dataset vindbaar, interpreteerbaar en bruikbaar voor
-externen. Je hoeft geen specialist te zijn om een basisset toe te
-voegen.
+Metadata zijn letterlijk “data over data”: gestructureerde informatie
+die je dataset beschrijft, toelicht en annoteert. Waar een README vooral
+voor mensen bedoeld is, zijn metadata machine-leesbare vormen van
+documentatie. Ze spelen een cruciale rol in het toepassen van de
+FAIR-principes: Findable, Accessible, Interoperable en Reusable. Met
+goede metadata kan een dataset online gevonden worden, correct
+geïnterpreteerd worden en kan eenduidig worden aangegeven onder welke
+voorwaarden ze toegankelijk is of hergebruikt mag worden (bijv.
+toegangsrechten, licentie).
 
-**Geschikte metadata-schema’s**
+Metadata kunnen op verschillende manieren worden opgeslagen:
 
--   Dublin Core (breed toepasbaar)
+-   ingebed in de data zelf (bijv. in een netCDF-bestand of een
+    JPEG-header)
 
--   schema.org Dataset
+-   als een apart metadata-bestand (bijv. `metadata.json`,
+    `dataset.xml`)
 
--   domeinspecifiek:
+-   via formulieren of templates in een datamanagementsysteem
 
-    -   BIDS (neurodata)
+-   automatisch gegenereerd bij deponering in een repository.
 
-    -   DarwinCore (biodiversiteit)
+**Metadata-schema’s**
 
-    -   MIxS (microbiologie)
+Wanneer je data deponeert in een repository, moet je metadata aanleveren
+volgens het metadata-schema dat die repository gebruikt. Dit gebeurt
+doorgaans via een webformulier of een vooropgesteld template. Het is
+belangrijk om tijdig de submission guidelines van de repository te
+bekijken, zodat je weet welke informatie je tijdens het onderzoek moet
+verzamelen.
 
-**Voorbeeld**
+Een metadata-schema definieert een vaste set velden die moeten worden
+ingevuld. Sommige schema’s zijn breed toepasbaar, andere zijn specifiek
+ontwikkeld voor bepaalde onderzoeksdomeinen. Voorbeelden:
 
-``` text
+-   **Algemene standaarden**
 
-title: "Microbiologische diversiteit in rauwmelkse kazen" 
-creator: "Onderzoeksteam FOOD, HOGENT" 
-keywords: ["microbiologie", "voedselveiligheid", "kaas"
-date_created: 2024-03-14
-method: "DNA-sequencing (MinION)"
-```
+    -   Dublin Core: breed toepasbare set metadata-elementen
 
-## Documenteer GDPR- en ethiekprocedures
+    -   DataCite: veel gebruikt voor datasets met een DOI (Digital
+        Object Identifier)
 
-In praktijkgericht onderzoek met mensen is dit een essentieel onderdeel
-van datasetdocumentatie.
+-   **Domeinspecifieke standaarden**
 
-Documenteer altijd:
+    -   DDI (Data Documentation Initiative): sociaal-, gedrags-,
+        economisch en gezondheidswetenschappelijk onderzoek
 
--   hoe en wanneer data zijn gepseudonimiseerd
+    -   EML (Ecological Metadata Language): ecologie en
+        biodiversiteitsdata
 
--   waar sleutelbestanden zijn opgeslagen
+**Waar vind je geschikte metadata-standaarden?**
 
--   bewaartermijnen
+Onderzoekers kunnen geschikte schema’s en richtlijnen vinden via:
 
--   dataminimalisatiekeuzes
+-   metadata-richtlijnen van de repository waar je dataset terechtkomt
+    (bv. Zenodo)
 
--   hoe toestemming werd bekomen
+-   [DataCite Metadata
+    Schema](http://schema.datacite.org/meta/kernel-4.5/)
 
--   wie toegang heeft tot welke datacategorie
+-   [Dublin Core Metadata
+    Schema](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/)
 
-**Voorbeeld**
+-   [Metadata Standards Catalog](https://rdamsc.bath.ac.uk/)
 
--   audio-opnames → `data_raw/audio` (beperkte toegang)
+-   DCC: [Overview of Disciplinary
+    Metadata](http://www.dcc.ac.uk/resources/metadata-standards)
 
--   transcripties zonder identificeerbare info →
-    `data_clean/transcripts.csv`
+-   [FAIRsharing.org](FAIRsharing.org)
 
--   sleutelbestand `id_key.xlsx` → versleutelde map, enkel toegankelijk
-    voor de promotor
+Deze bronnen geven een overzicht van beschikbare standaarden per
+discipline en helpen je kiezen welke metadata-velden voor jouw dataset
+relevant zijn. Wil je de dataset echt FAIR maken, begin dan al tijdens
+de onderzoeksopzet met het verzamelen van de metadata die later in het
+schema nodig zijn.
 
-## Leg je opslag- en versiebeheerbeleid vast
+### Documenteer GDPR- en ethiekprocedures
+
+In praktijkgericht onderzoek met mensen is het documenteren van GDPR- en
+ethische aspecten een essentieel onderdeel van datasetdocumentatie. Het
+gaat niet alleen om “juridische verplichtingen”, maar ook om het
+waarborgen van betrouwbare en integere onderzoeksresultaten. Voor vragen
+of concrete toepassing in je project vind je meer informatie op de
+pagina **Ethiek en wetenschappelijke integriteit** op het
+HOGENT-intranet.
+
+#### GDPR en register van verwerkingsactiviteiten
+
+De Algemene Verordening Gegevensbescherming (AVG, of GDPR) heeft als
+doel de bescherming van betrokkenen bij de verwerking van hun
+persoonsgegevens, zodat hun fundamentele rechten op privacy en
+gegevensbescherming worden gegarandeerd. Alle verwerkingen van
+persoonsgegevens moeten gedocumenteerd worden in een register van
+verwerkingsactiviteiten, als onderdeel van de verantwoordingsplicht. Dit
+sluit aan bij de HOGENT-gedragscode voor het verwerken van
+persoonsgegevens en vertrouwelijke informatie.
+
+HOGENT draagt als instelling de verantwoordelijkheid voor de rechtmatige
+en veilige verwerking van persoonsgegevens en voor de naleving van de
+GDPR. Deze verantwoordelijkheid wordt gedeeld met de voor het onderzoek
+verantwoordelijke onderzoeker(s).
+
+Concreet betekent dit:
+
+-   Alle onderzoeksprojecten die persoonsgegevens verwerken, moeten
+    worden geregistreerd in **DMPonline.be**.
+
+-   De registratie gebeurt aan het begin van elk nieuw
+    onderzoeksproject, dus vóór de start van de eigenlijke
+    dataverzameling.
+
+-   De geregistreerde verwerkingsactiviteiten moeten gedurende de
+    looptijd van het project up-to-date gehouden worden.
+
+-   Ook reeds lopende projecten moeten alsnog geregistreerd worden.
+
+De template in DMPonline.be geeft onderzoekers een overzicht van de
+informatie die nodig is om te voldoen aan de GDPR en wijst op mogelijke
+risico’s vóór, tijdens en na het onderzoeksproject. Zorgvuldige en
+rechtmatige verwerking van persoonsgegevens is een voorwaarde voor
+betrouwbare wetenschappelijke resultaten.
+
+Meer informatie vind je via het HOGENT-intranet en
+[DMPonline.be](https://dmponline.be).
+
+#### Informed consent
+
+Wanneer je met personen werkt, moeten respondenten duidelijk
+geïnformeerd worden over:
+
+-   de doelstelling van het onderzoek
+
+-   welke gegevens verzameld worden
+
+-   wat je met die gegevens zal doen
+
+-   waar en hoe lang de gegevens bewaard worden
+
+-   of en hoe de data gedeeld of hergebruikt zullen worden
+
+Dit gebeurt via een informed consent. Als je onderzoeksdata wil delen
+met derden of later opnieuw wil gebruiken (bijvoorbeeld in
+vervolgonderzoek), moet je daar expliciet toestemming voor vragen. Dit
+leg je vast in een informed consent-formulier dat door elke deelnemer
+wordt ondertekend.
+
+Ook de keuzes rond anonimisering/pseudonimisering en de rechten van
+deelnemers (inzage, recht op intrekking, enz.) worden hier duidelijk in
+beschreven.
+
+#### Ethische goedkeuring
+
+Veel onderzoeksprojecten die met mensen werken, vereisen ethische
+goedkeuring vóór de start van het onderzoek. HOGENT voorziet hiervoor
+een beslissingsboom die helpt bepalen:
+
+-   of ethische goedkeuring nodig is
+
+-   welke ethische commissie het meest geschikt is (bijvoorbeeld
+    specifiek voor gezondheidszorg, sociaal werk, onderwijs,
+    dierproeven, …)
+
+Belangrijke aandachtspunten:
+
+-   Ethische goedkeuring moet altijd vóór de start van de
+    dataverzameling aangevraagd worden.
+
+-   Ook onderzoek dat niet rechtstreeks met mensen werkt kan ethische
+    implicaties hebben (bijvoorbeeld dierproeven of gevoelige contexten)
+    en dus goedkeuring vereisen.
+
+-   De keuze van de commissie gebeurt op basis van de aard van het
+    onderzoek en de doelgroep.
+
+In je datasetdocumentatie (README, metadata, DMP) leg je vast:
+
+-   of en hoe GDPR van toepassing is
+
+-   in welke mate persoonsgegevens verwerkt worden
+
+-   hoe informed consent is geregeld
+
+-   welke ethische commissie een goedkeuring heeft verleend (met
+    referentie/nummer)
+
+Dat maakt je onderzoek niet alleen juridisch correct, maar ook
+transparant en integere wetenschap.
+
+### Leg je opslag- en versiebeheerbeleid vast
 
 Versiebeheer en veilige opslag bepalen de betrouwbaarheid van je
 onderzoek.
 
-**3–2–1 backuprege**l
+**3–2–1 backupregel**
 
 -   3 kopieën
 
@@ -246,7 +376,7 @@ onderzoek.
 
 -   changelogs in dezelfde map als scripts
 
-## Documenteer alle datacleaning- en analysekoppelingen
+### Documenteer alle datacleaning- en analysekoppelingen
 
 Documenteer elke stap zodat analyses reproduceerbaar blijven. Dit kan
 via:
@@ -266,7 +396,7 @@ via:
 - Log-transformatie toegepast op 'latency'
 ```
 
-## Documenteer de voorwaarden voor delen en licenties
+### Documenteer de voorwaarden voor delen en licenties
 
 Niet alle data kunnen open gedeeld worden, maar documentatie moet
 duidelijk maken wat wel en niet gedeeld mag worden.
@@ -289,7 +419,7 @@ Voorbeeld (AI-onderzoek)
 
 -   scripts → GitHub (MIT-licentie)
 
-## Conclusie {.unnumbered}
+### Conclusie {.unnumbered}
 
 Datasetdocumentatie is geen administratieve verplichting maar een
 kwaliteitsinstrument. Met:
@@ -312,6 +442,6 @@ zorg je ervoor dat je onderzoeksdata helder, toekomstbestendig en
 bruikbaar blijven, voor jezelf, voor collega-onderzoekers en voor de
 bredere onderzoekscommunity.
 
-## Meer weten? {.unnumbered}
+### Meer weten? {.unnumbered}
 
 [Onderzoeksdatamanagement](https://www.ugent.be/nl/onderzoek/openscience/datamanagement/overzicht.htm)
