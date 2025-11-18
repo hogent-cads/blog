@@ -1,0 +1,132 @@
+---
+title: "Aandachtspunten bij het gebruik van transcriptietools voor kwalitatief onderzoek"
+author: "Nico De Witte, Willem De Keyzer"
+date: 2025-11-18
+categories: [kwalitatieve data-analyse, spraakherkenning, AI, onderzoek, privacy]
+image: "transcriptietools.png"
+toc: true
+draft: false
+number-sections: false
+editor: 
+  markdown: 
+    wrap: 72
+
+---
+
+Transcriptietools, vaak aangedreven door AI, zijn inmiddels niet meer
+weg te denken uit het kwalitatieve onderzoek. Ze bieden snelheid en
+efficiëntie, maar ze roepen ook vragen op over nuance, interpretatie en
+ethiek. Zeker in onderzoek waar mensen, ervaringen en gevoeligheden
+centraal staan, is het belangrijk om verstandig om te gaan met
+technologie. In deze blog verkennen we de cruciale aandachtspunten bij
+het gebruik van transcriptietools en tonen we hoe AI een waardevolle
+plaats kan krijgen zonder de essentie van kwalitatief onderzoek te
+ondermijnen.
+
+### Transcriptie als startpunt van interpretatie
+
+Wie kwalitatief onderzoek doet, weet dat transcriptie veel meer is dan
+het letterlijk uitschrijven van woorden. Tijdens het transcriberen begin
+je als onderzoeker al met analyseren. Je merkt pauzes op, intonatie,
+twijfel, omwegen, omfloerste formuleringen en alles wat een gesprek
+menselijk maakt. Het is in die fase dat je vertrouwd raakt met je data,
+dat patronen zich spontaan aandienen en dat context zich begint te
+vormen.
+
+Transcriptietools nemen dat proces niet over. Ze zetten spraak om in
+tekst, maar missen de interpretatieve dimensie die voor een kwalitatief
+onderzoeker zo cruciaal is. Ze horen woorden, maar begrijpen geen
+betekenis. Ze herkennen zinnen, maar voelen geen nuance. Daarom blijft
+het noodzakelijk om AI-transcripties altijd zorgvuldig na te lezen en
+aan te vullen met menselijke observatie. AI kan je tijd besparen, maar
+het mag je niet vervreemden van je data.
+
+### Waarom de kwaliteit van AI-transcripties sterk varieert
+
+Wie experimenteerde met transcriptietools, merkte al dat de kwaliteit
+niet altijd betrouwbaar is. Verschillen in dialect, achtergrondgeluid,
+overlapping tussen sprekers of vakjargon kunnen de nauwkeurigheid
+aanzienlijk verminderen. In onze eigen experimenten binnen CADS bleek
+zelfs dat een mooie, schijnbaar gestructureerde transcriptie vaak veel
+fouten verbergt: verkeerd toegewezen sprekers, woorden die logisch
+lijken maar niet gezegd werden, of verloren nuances die de interpretatie
+kunnen vertekenen.
+
+Een transcriptietool functioneert alleen optimaal bij heldere opnames
+van één spreker, die duidelijk articuleert in standaardtaal. Interviews,
+focusgroepen en echte onderzoekscontexten voldoen zelden aan dat ideaal.
+Daarom blijft een kwaliteitscheck essentieel — en vaak tijdrovend. De
+tijdswinst die AI biedt, wordt dus pas realiteit wanneer je voldoende
+aandacht hebt voor nauwkeurigheid en correctie.
+
+### Ethiek en GDPR: meer dan een formaliteit
+
+Kwalitatieve data zijn vaak persoonlijk en gevoelig. Wanneer je
+transcriptietools gebruikt, zeker tools die in de cloud werken, verwerk
+je persoonsgegevens via een externe partij. Dit brengt belangrijke
+verplichtingen met zich mee. Onderzoekers moeten expliciet toestemming
+vragen aan deelnemers wanneer hun audio door een AI-tool wordt verwerkt,
+en ze moeten uitleggen wat er met die data gebeurt.
+
+Daarnaast is databeheer cruciaal: waar worden bestanden opgeslagen, hoe
+lang blijven ze bestaan en wie kan er toegang toe krijgen? Niet alle
+tools voldoen automatisch aan GDPR-vereisten, en sommige systemen
+gebruiken geüploade data zelfs om hun modellen te trainen. Dat is een
+no-go voor onderzoek waar privacy centraal staat. De veiligste aanpak is werken met tools die lokaal beheerd worden of met diensten die expliciet garanderen dat data niet worden opgeslagen.
+
+Een veilige oplossing is dus om te werken met transcriptie “on-premise”. Dat
+betekent dat de verwerking volledig plaatsvindt op de eigen
+infrastructuur van de organisatie, zonder dat audio- of tekstbestanden
+naar externe servers worden verzonden. Zo blijft alle data binnen de
+beveiligde omgeving van HOGENT.
+
+**Veilige AI-transcriptie binnen HOGENT**
+
+HOGENT biedt daarvoor een eigen transcriptieserver aan:\
+🎙 [https://whisper.vichogent.be](https://whisper.vichogent.be)
+
+Deze dienst gebruikt de Whisper-technologie van OpenAI, maar draait
+volledig on-premise. Hierdoor:
+
+-   blijven alle data binnen de organisatie
+
+-   worden geen bestanden doorgestuurd naar commerciële clouddiensten
+
+-   is de verwerking beheersbaar om te voldoen aan GDPR-vereisten
+
+-   blijft de onderzoeker eigenaar van de data
+
+Whisper is bovendien robuust bij variaties in uitspraak en
+achtergrondgeluid, wat het bijzonder geschikt maakt voor kwalitatieve
+interviews.
+
+## AI als assistent, niet als analist
+
+AI heeft niet alleen een rol bij transcriptie, maar kan ook functioneren
+als “secundaire codeerder”. Dit betekent dat AI niet de analyse leidt,
+maar de onderzoeker ondersteunt door alternatieve interpretaties,
+aanvullende categorieën of controlevragen te genereren.
+
+Deze benadering wordt beschreven in het werk van @dekok2025, die laat zien dat AI-modellen een waardevolle, complementaire rol kunnen spelen in kwalitatieve analyse, op voorwaarde dat de onderzoeker de primaire interpretatieve verantwoordelijkheid behoudt. AI kan patronen herkennen die je zelf mogelijk mist, maar is nooit vrij van bias of misconcepties.
+
+Dit artikel illustreert mooi dat AI pas relevant wordt wanneer het
+ingebed is in een methodologisch verantwoord proces. De onderzoeker
+blijft de beslisser; AI levert input, geen oordeel.
+
+### Gevoelige of irrelevante informatie vermijden
+
+Bij het doorsturen van data naar een AI-tool is het verstandig om vooraf te anonymiseren. Niet alleen omwille van privacy, maar ook omdat AI-helderder werkt wanneer de input is opgeschoond. Onnodige begroetingen, identificerende details of irrelevante passages voegen weinig toe aan het doel van de analyse en verhogen alleen maar het risico op privacyproblemen.
+
+Bij het gebruik van AI is het verstandig om enkel de informatie te delen die strikt noodzakelijk is voor de taak. Gevoelige gegevens, identificeerbare details of irrelevante stukken zoals begroetingen of smalltalk hoef je niet te verwerken. Door je data vooraf op te schonen, bescherm je niet alleen je deelnemers, maar verhoog je ook de kwaliteit van de output: AI werkt simpelweg beter wanneer de input helder en doelgericht is.
+
+### Wanneer AI wél een meerwaarde biedt
+
+Ondanks de uitdagingen is AI niet te vrezen. Het kan een krachtige bondgenoot zijn voor kwalitatieve onderzoekers, op voorwaarde dat het verstandig wordt ingezet. Transcripties laten genereren, interviewvragen laten optimaliseren, eerste verkennende analyses laten uitvoeren of ruwe teksten laten herschrijven—AI kan veel werk verlichten. De kunst is om precies te weten waar AI het onderzoek versterkt, en waar het de essentie ervan bedreigt.
+
+Het ideale scenario is dus een hybride aanpak: AI verzorgt repetitieve, tijdrovende taken, terwijl de onderzoeker verantwoordelijk blijft voor interpretatie, theorie-opbouw en het begrijpen van menselijke ervaringen.
+
+### Tot slot
+
+Transcriptietools zijn geen wondermiddel, maar ook geen risico wanneer ze zorgvuldig en bewust worden ingezet. Ze maken kwalitatief onderzoek efficiënter, maar nooit gemakkelijker in de zin van ‘minder denken’. Integendeel: hoe meer AI we gebruiken, hoe belangrijker het wordt om onze eigen rol als kritische, reflexieve onderzoeker te bewaken.
+
+Wie AI benadert als een hulpmiddel, en niet als vervanging, kan tijd winnen zonder diepgang te verliezen. Zo verbinden we het beste van twee werelden: de kracht van technologie en de fijngevoeligheid van menselijk inzicht.

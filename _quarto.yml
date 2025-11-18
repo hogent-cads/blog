@@ -18,7 +18,10 @@ format:
   html:
     theme: minty
     css: styles.css
+    csl: styles/apa.csl   # optioneel voor APA-stijl
 
+bibliography: references/references.bib
+reference-section-title: "Referenties"
 
 
 

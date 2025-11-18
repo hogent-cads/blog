@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes">
-<meta name="dcterms.date" content="2024-11-06">
+<meta name="author" content="Nico De Witte, Willem De Keyzer">
+<meta name="dcterms.date" content="2025-11-18">
 
-<title>Home - Spraakherkenning van Vlaamse dialecten tot algemeen Nederlands</title>
+<title>Home - Aandachtspunten bij het gebruik van transcriptietools voor kwalitatief onderzoek</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -123,11 +143,13 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Spraakherkenning van Vlaamse dialecten tot algemeen Nederlands</h1>
-            <p class="subtitle lead">Der is nog vree veel werk aan de winkel!</p>
+      <h1 class="title">Aandachtspunten bij het gebruik van transcriptietools voor kwalitatief onderzoek</h1>
                                 <div class="quarto-categories">
+                <div class="quarto-category">kwalitatieve data-analyse</div>
                 <div class="quarto-category">spraakherkenning</div>
                 <div class="quarto-category">AI</div>
+                <div class="quarto-category">onderzoek</div>
+                <div class="quarto-category">privacy</div>
               </div>
                   </div>
   </div>
@@ -138,14 +160,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Jens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes </p>
+               <p>Nico De Witte, Willem De Keyzer </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 6, 2024</p>
+        <p class="date">November 18, 2025</p>
       </div>
     </div>
     
@@ -156,7 +178,24 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#transcriptie-als-startpunt-van-interpretatie" id="toc-transcriptie-als-startpunt-van-interpretatie" class="nav-link active" data-scroll-target="#transcriptie-als-startpunt-van-interpretatie">Transcriptie als startpunt van interpretatie</a></li>
+  <li><a href="#waarom-de-kwaliteit-van-ai-transcripties-sterk-varieert" id="toc-waarom-de-kwaliteit-van-ai-transcripties-sterk-varieert" class="nav-link" data-scroll-target="#waarom-de-kwaliteit-van-ai-transcripties-sterk-varieert">Waarom de kwaliteit van AI-transcripties sterk varieert</a></li>
+  <li><a href="#ethiek-en-gdpr-meer-dan-een-formaliteit" id="toc-ethiek-en-gdpr-meer-dan-een-formaliteit" class="nav-link" data-scroll-target="#ethiek-en-gdpr-meer-dan-een-formaliteit">Ethiek en GDPR: meer dan een formaliteit</a></li>
+  <li><a href="#ai-als-assistent-niet-als-analist" id="toc-ai-als-assistent-niet-als-analist" class="nav-link" data-scroll-target="#ai-als-assistent-niet-als-analist">AI als assistent, niet als analist</a>
+  <ul class="collapse">
+  <li><a href="#gevoelige-of-irrelevante-informatie-vermijden" id="toc-gevoelige-of-irrelevante-informatie-vermijden" class="nav-link" data-scroll-target="#gevoelige-of-irrelevante-informatie-vermijden">Gevoelige of irrelevante informatie vermijden</a></li>
+  <li><a href="#wanneer-ai-wél-een-meerwaarde-biedt" id="toc-wanneer-ai-wél-een-meerwaarde-biedt" class="nav-link" data-scroll-target="#wanneer-ai-wél-een-meerwaarde-biedt">Wanneer AI wél een meerwaarde biedt</a></li>
+  <li><a href="#tot-slot" id="toc-tot-slot" class="nav-link" data-scroll-target="#tot-slot">Tot slot</a></li>
+  </ul></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Referenties</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -164,28 +203,67 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="inleiding" class="level1">
-<h1>Inleiding</h1>
-<p>Spraakherkenning is cruciaal voor toepassingen zoals automatische ondertiteling en spraakgestuurde systemen (bijvoorbeeld de voice assistent in je auto of op je smartphone). Ondanks de snelle ontwikkeling van deze technologie blijft spraakherkenning een uitdaging voor minder voorkomende talen zoals het Nederlands. Regionale variaties van de taal zorgen bovendien voor een bijkomende complexiteit. In de praktijk vertaalt zich dat in frustraties bij gebruikers wanneer ze in het Vlaams hun systemen proberen te bedienen.</p>
-<p>In zijn bachelorproef onderzocht Jens Coetsiers de prestaties van huidige spraakherkenningssystemen op de Vlaamse spreektaal om hun bruikbaarheid te beoordelen. Slagen huidige speech-to-text-modellen erin een dialoog tussen twee sprekers in het Vlaams voldoende accuraat om te zetten in geschreven taal? Hoe presteren de modellen voor het Vlaams vergeleken met het Nederlands? Zijn er significante verschillen in de transcriptie van Vlaamse standaardtaal en Vlaamse regiolecten? Welke tool komt als Vlaamse spraakherkenningskampioen uit de bus voor de gegeven casus?</p>
+<p>Transcriptietools, vaak aangedreven door AI, zijn inmiddels niet meer weg te denken uit het kwalitatieve onderzoek. Ze bieden snelheid en efficiëntie, maar ze roepen ook vragen op over nuance, interpretatie en ethiek. Zeker in onderzoek waar mensen, ervaringen en gevoeligheden centraal staan, is het belangrijk om verstandig om te gaan met technologie. In deze blog verkennen we de cruciale aandachtspunten bij het gebruik van transcriptietools en tonen we hoe AI een waardevolle plaats kan krijgen zonder de essentie van kwalitatief onderzoek te ondermijnen.</p>
+<section id="transcriptie-als-startpunt-van-interpretatie" class="level3">
+<h3 class="anchored" data-anchor-id="transcriptie-als-startpunt-van-interpretatie">Transcriptie als startpunt van interpretatie</h3>
+<p>Wie kwalitatief onderzoek doet, weet dat transcriptie veel meer is dan het letterlijk uitschrijven van woorden. Tijdens het transcriberen begin je als onderzoeker al met analyseren. Je merkt pauzes op, intonatie, twijfel, omwegen, omfloerste formuleringen en alles wat een gesprek menselijk maakt. Het is in die fase dat je vertrouwd raakt met je data, dat patronen zich spontaan aandienen en dat context zich begint te vormen.</p>
+<p>Transcriptietools nemen dat proces niet over. Ze zetten spraak om in tekst, maar missen de interpretatieve dimensie die voor een kwalitatief onderzoeker zo cruciaal is. Ze horen woorden, maar begrijpen geen betekenis. Ze herkennen zinnen, maar voelen geen nuance. Daarom blijft het noodzakelijk om AI-transcripties altijd zorgvuldig na te lezen en aan te vullen met menselijke observatie. AI kan je tijd besparen, maar het mag je niet vervreemden van je data.</p>
 </section>
-<section id="onderzoek" class="level1">
-<h1>Onderzoek</h1>
-<p>Op basis van een literatuurstudie werd een keuze gemaakt uit de beschikbare data die kon gebruikt worden om de onderzoeksvragen te beantwoorden. De specifieke casus die aanleiding gaf tot het onderzoek – nl. de vraag naar een spraakherkenningsmodel dat bruikbare transcripties oplevert voor Vlaamse één-op-ééngesprekken – was doorslaggevend voor de gemaakte keuzes.</p>
-<p>Er werden twee datasets geselecteerd. Enerzijds gebruikte Jens de telefoondialogen en face-to-face-gesprekken uit de Corpus Gesproken Nederlands. Deze bevatten ongeveer 27 uur aan Nederlandse en Vlaamse audiodata van zowel voorbereide als spontane conversaties, ook in bepaalde regionale variaties (de zogenaamde Vlaamse tussentaal). Dit komt overeen met ongeveer 406.000 woorden. Deze gesprekken worden gekenmerkt door hun spontaniteit en indirect karakter. Anderzijds werden ook voor 4 uur aan geluidsfragmenten uit de corpus Variatie in Nederlandse Taal en Sprekers gebruikt (ongeveer 38.000 woorden), meer bepaald de set met betekenisvolle en met betekenisloze zinnen. De variatie in voorspelbaarheid van deze zinnen verhoogt hun meerwaarde voor het onderzoek. Belangrijk om op te merken is dat in beide datasets enkel één-op-ééngesprekken voorkomen en dat de geluidsfragmenten gekozen of aangepast werden zodat bepaalde verstoringen zoals ruis of slikken minder voorkwamen.</p>
-<p>Om te bepalen hoe goed de modellen de audio kunnen omzetten naar tekst, werd de herkende tekst vergeleken met gecontroleerde transcripties die als gold standard gelden. Per fragment werd de zogenoemde Word Error Rate (WER) berekend. Dit is een relatieve weergave van het aantal foutief herkende woorden, waarbij bijgehouden wordt hoeveel woorden worden toegevoegd, weggelaten of aangepast in een automatische transcriptie ten opzichte van de controletranscriptie. De geteste geluidsfragmenten lieten zich opsplitsen in verschillende categorieën: Algemeen Nederlands, Vlaamse standaardtaal en Vlaamse tussentaal. Die laatste categorie werd verder opgesplitst volgens regio: West-Vlaanderen, Oost-Vlaanderen, Antwerpen en Vlaams-Brabant, en Limburg. Per categorie werd vervolgens de gemiddelde WER berekend. Algemeen wordt aangenomen dat een WER van 5% tot 10% goed en van 10% tot 20% acceptabel is. Een nadeel van de gevolgde werkwijze is dat deze maat nogal streng wordt toegepast. Zo wordt bijvoorbeeld “er op” niet als correcte weergave van het tussentalige “d’rop” beschouwd. Ook worden modellen die getallen in cijfers weergeven benadeeld, aangezien de correcte tekst de getallen als voluit geschreven woorden bevat.</p>
-<p>Naast de keuze voor de testdata, werd ook een selectie gemaakt van de meest veelbelovende spraakmodellen voor de gegeven casus. Mee bepalend voor de keuze waren criteria zoals de mogelijkheid om Nederlandstalige audio te transcriberen – niet alle publiek beschikbare modellen kunnen dit – en het bijhorende prijskaartje. In de studie werden uiteindelijk SeamlessM4T-v2 (van Meta), Whisper Large-v3 (OpenAI), Nova-2 (Deepgram), Google STT (Google) en Chirp (Google) met elkaar vergeleken. Dit zijn allemaal zogenaamde multilinguale (meertalige) modellen. Daarom is het belangrijk om te weten op basis van welke (Nederlandstalige) data deze modellen getraind werden. Volgens de beschikbare documentatie werd Seamless getraind op 6363 uren en Whisper 2077 uren aan Nederlandse tekst (geen Vlaams). Voor de andere modellen is geen precieze informatie over specifieke Nederlandstalige training van de modellen bekend.</p>
+<section id="waarom-de-kwaliteit-van-ai-transcripties-sterk-varieert" class="level3">
+<h3 class="anchored" data-anchor-id="waarom-de-kwaliteit-van-ai-transcripties-sterk-varieert">Waarom de kwaliteit van AI-transcripties sterk varieert</h3>
+<p>Wie experimenteerde met transcriptietools, merkte al dat de kwaliteit niet altijd betrouwbaar is. Verschillen in dialect, achtergrondgeluid, overlapping tussen sprekers of vakjargon kunnen de nauwkeurigheid aanzienlijk verminderen. In onze eigen experimenten binnen CADS bleek zelfs dat een mooie, schijnbaar gestructureerde transcriptie vaak veel fouten verbergt: verkeerd toegewezen sprekers, woorden die logisch lijken maar niet gezegd werden, of verloren nuances die de interpretatie kunnen vertekenen.</p>
+<p>Een transcriptietool functioneert alleen optimaal bij heldere opnames van één spreker, die duidelijk articuleert in standaardtaal. Interviews, focusgroepen en echte onderzoekscontexten voldoen zelden aan dat ideaal. Daarom blijft een kwaliteitscheck essentieel — en vaak tijdrovend. De tijdswinst die AI biedt, wordt dus pas realiteit wanneer je voldoende aandacht hebt voor nauwkeurigheid en correctie.</p>
 </section>
-<section id="resultaten" class="level1">
-<h1>Resultaten</h1>
-<p><img src="./resultaten.png" class="img-fluid"></p>
-<p>Bovenstaande grafieken tonen dat de onderzochte spraakmodellen <strong>niet goed presteren op Nederlandstalige audiofragmenten</strong>, met een gemiddelde WER tot 77%! Voorts valt op dat de WER voor Vlaamse fragmenten consistent hoger ligt dan voor Nederlandse (uit Nederland), met verschillen tussen de 5 en 12 procentpunten. Dat betekent dus dat de modellen slechter presteren op Vlaamse audio. Als we verder inzoomen op regionale verschillen in Vlaanderen, stellen we vast dat de geteste spraakherkenningsmodellen <strong>het meeste moeite hebben met West-Vlaamse fragmenten</strong>. Het model dat het beste presteert voor Vlaamse spraakherkenning is Chirp van Google.</p>
-<p>Wat betekenen deze resultaten nu concreet voor de bruikbaarheid van huidige state-of-the-art spraakherkenningsmodellen voor het Vlaams? In ieder geval maakt dit onderzoek duidelijk dat de technologie nog geen echt bruikbare herkenning van Vlaamse (tussen)taal oplevert. Betekent dit dat we gewoon moeten wachten tot er betere modellen op de markt komen? Niet noodzakelijk. Zo is het – zonder te technisch te willen worden – mogelijk om bestaande taalmodellen te verbeteren voor specifieke doeleinden zonder ze volledig opnieuw te moeten trainen. Dit proces heet finetunen en is bijvoorbeeld mogelijk wanneer de broncode van de modellen die we willen verbeteren beschikbaar is. Van de geteste modellen in het onderzoek zijn Seamless van Meta en Whisper van OpenAI open source en dus modellen die in aanmerking komen om te finetunen. Een eerste poging om Whisper te finetunen specifiek voor de Vlaamse taal leverde alvast een substantiële verbetering op: de WER verminderde van 76% tot 52%. Dit is niet helemaal verrassend aangezien er voor Whisper in de trainingsfase geen gebruik gemaakt werd van Vlaamse trainingsdata. Toch valt op dat zelfs deze verbetering niet genoeg is om <strong>Chirp van Google als Nederlandse spraakherkenningskampioen</strong> van de troon te stoten.</p>
+<section id="ethiek-en-gdpr-meer-dan-een-formaliteit" class="level3">
+<h3 class="anchored" data-anchor-id="ethiek-en-gdpr-meer-dan-een-formaliteit">Ethiek en GDPR: meer dan een formaliteit</h3>
+<p>Kwalitatieve data zijn vaak persoonlijk en gevoelig. Wanneer je transcriptietools gebruikt, zeker tools die in de cloud werken, verwerk je persoonsgegevens via een externe partij. Dit brengt belangrijke verplichtingen met zich mee. Onderzoekers moeten expliciet toestemming vragen aan deelnemers wanneer hun audio door een AI-tool wordt verwerkt, en ze moeten uitleggen wat er met die data gebeurt.</p>
+<p>Daarnaast is databeheer cruciaal: waar worden bestanden opgeslagen, hoe lang blijven ze bestaan en wie kan er toegang toe krijgen? Niet alle tools voldoen automatisch aan GDPR-vereisten, en sommige systemen gebruiken geüploade data zelfs om hun modellen te trainen. Dat is een no-go voor onderzoek waar privacy centraal staat. De veiligste aanpak is werken met tools die lokaal beheerd worden of met diensten die expliciet garanderen dat data niet worden opgeslagen.</p>
+<p>Een veilige oplossing is dus om te werken met transcriptie “on-premise”. Dat betekent dat de verwerking volledig plaatsvindt op de eigen infrastructuur van de organisatie, zonder dat audio- of tekstbestanden naar externe servers worden verzonden. Zo blijft alle data binnen de beveiligde omgeving van HOGENT.</p>
+<p><strong>Veilige AI-transcriptie binnen HOGENT</strong></p>
+<p>HOGENT biedt daarvoor een eigen transcriptieserver aan:<br>
+🎙 <a href="https://whisper.vichogent.be">https://whisper.vichogent.be</a></p>
+<p>Deze dienst gebruikt de Whisper-technologie van OpenAI, maar draait volledig on-premise. Hierdoor:</p>
+<ul>
+<li><p>blijven alle data binnen de organisatie</p></li>
+<li><p>worden geen bestanden doorgestuurd naar commerciële clouddiensten</p></li>
+<li><p>is de verwerking beheersbaar om te voldoen aan GDPR-vereisten</p></li>
+<li><p>blijft de onderzoeker eigenaar van de data</p></li>
+</ul>
+<p>Whisper is bovendien robuust bij variaties in uitspraak en achtergrondgeluid, wat het bijzonder geschikt maakt voor kwalitatieve interviews.</p>
+</section>
+<section id="ai-als-assistent-niet-als-analist" class="level2">
+<h2 class="anchored" data-anchor-id="ai-als-assistent-niet-als-analist">AI als assistent, niet als analist</h2>
+<p>AI heeft niet alleen een rol bij transcriptie, maar kan ook functioneren als “secundaire codeerder”. Dit betekent dat AI niet de analyse leidt, maar de onderzoeker ondersteunt door alternatieve interpretaties, aanvullende categorieën of controlevragen te genereren.</p>
+<p>Deze benadering wordt beschreven in het werk van <span class="citation" data-cites="dekok2025">De Kok (<a href="#ref-dekok2025" role="doc-biblioref">2025</a>)</span>, die laat zien dat AI-modellen een waardevolle, complementaire rol kunnen spelen in kwalitatieve analyse, op voorwaarde dat de onderzoeker de primaire interpretatieve verantwoordelijkheid behoudt. AI kan patronen herkennen die je zelf mogelijk mist, maar is nooit vrij van bias of misconcepties.</p>
+<p>Dit artikel illustreert mooi dat AI pas relevant wordt wanneer het ingebed is in een methodologisch verantwoord proces. De onderzoeker blijft de beslisser; AI levert input, geen oordeel.</p>
+<section id="gevoelige-of-irrelevante-informatie-vermijden" class="level3">
+<h3 class="anchored" data-anchor-id="gevoelige-of-irrelevante-informatie-vermijden">Gevoelige of irrelevante informatie vermijden</h3>
+<p>Bij het doorsturen van data naar een AI-tool is het verstandig om vooraf te anonymiseren. Niet alleen omwille van privacy, maar ook omdat AI-helderder werkt wanneer de input is opgeschoond. Onnodige begroetingen, identificerende details of irrelevante passages voegen weinig toe aan het doel van de analyse en verhogen alleen maar het risico op privacyproblemen.</p>
+<p>Bij het gebruik van AI is het verstandig om enkel de informatie te delen die strikt noodzakelijk is voor de taak. Gevoelige gegevens, identificeerbare details of irrelevante stukken zoals begroetingen of smalltalk hoef je niet te verwerken. Door je data vooraf op te schonen, bescherm je niet alleen je deelnemers, maar verhoog je ook de kwaliteit van de output: AI werkt simpelweg beter wanneer de input helder en doelgericht is.</p>
+</section>
+<section id="wanneer-ai-wél-een-meerwaarde-biedt" class="level3">
+<h3 class="anchored" data-anchor-id="wanneer-ai-wél-een-meerwaarde-biedt">Wanneer AI wél een meerwaarde biedt</h3>
+<p>Ondanks de uitdagingen is AI niet te vrezen. Het kan een krachtige bondgenoot zijn voor kwalitatieve onderzoekers, op voorwaarde dat het verstandig wordt ingezet. Transcripties laten genereren, interviewvragen laten optimaliseren, eerste verkennende analyses laten uitvoeren of ruwe teksten laten herschrijven—AI kan veel werk verlichten. De kunst is om precies te weten waar AI het onderzoek versterkt, en waar het de essentie ervan bedreigt.</p>
+<p>Het ideale scenario is dus een hybride aanpak: AI verzorgt repetitieve, tijdrovende taken, terwijl de onderzoeker verantwoordelijk blijft voor interpretatie, theorie-opbouw en het begrijpen van menselijke ervaringen.</p>
+</section>
+<section id="tot-slot" class="level3">
+<h3 class="anchored" data-anchor-id="tot-slot">Tot slot</h3>
+<p>Transcriptietools zijn geen wondermiddel, maar ook geen risico wanneer ze zorgvuldig en bewust worden ingezet. Ze maken kwalitatief onderzoek efficiënter, maar nooit gemakkelijker in de zin van ‘minder denken’. Integendeel: hoe meer AI we gebruiken, hoe belangrijker het wordt om onze eigen rol als kritische, reflexieve onderzoeker te bewaken.</p>
+<p>Wie AI benadert als een hulpmiddel, en niet als vervanging, kan tijd winnen zonder diepgang te verliezen. Zo verbinden we het beste van twee werelden: de kracht van technologie en de fijngevoeligheid van menselijk inzicht.</p>
+
+
+</section>
+</section>
+<section id="bibliography" class="level1 unnumbered">
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referenties</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-dekok2025" class="csl-entry" role="listitem">
+De Kok, T. (2025). Second opinions from AI: Large language models as qualitative co-analysts. <em>Management Science</em>, <em>71</em>(1), 123–141. <a href="https://doi.org/10.1287/mnsc.2023.03253">https://doi.org/10.1287/mnsc.2023.03253</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
