@@ -5,7 +5,7 @@ date: 2025-11-18
 categories: [kwalitatieve data-analyse, spraakherkenning, AI, onderzoek, privacy]
 image: "transcriptietools.png"
 toc: true
-draft: false
+draft: true
 number-sections: false
 editor: 
   markdown: 
