@@ -5,7 +5,7 @@ date: 2025-11-08
 categories: [datasetdocumentatie, research data management]
 image: "datadocumentatie.png"
 toc: true
-draft: false
+draft: true
 number-sections: false
 editor: 
   markdown: 
@@ -418,6 +418,29 @@ Voorbeeld (AI-onderzoek)
 -   synthetische data → publiek (CC-BY)
 
 -   scripts → GitHub (MIT-licentie)
+
+Wanneer je code, documentatie of datasets op GitHub beheert, kun je
+gebruikmaken van de \*\*REUSE-specificatie\*\* (Free Software Foundation
+Europe) om licenties correct, volledig en machine-leesbaar te
+dokumenteren.
+
+De REUSE-tool controleert automatisch:
+
+-    of elk bestand een licentieheader heeft  
+
+-   of alle licentie-informatie volledig en consistent is  
+
+-    of je project voldoet aan de REUSE-standard voor open en
+    herbruikbare software/data
+
+Dit maakt je repository transparanter, juridisch correct en eenvoudiger
+te archiveren in open data repositories.
+
+Meer info:
+
+\- REUSE-documentatie: <https://reuse.software> 
+
+\- REUSE-tool (GitHub): <https://github.com/fsfe/reuse-tool> 
 
 ### Conclusie {.unnumbered}
 
