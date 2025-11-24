@@ -138,7 +138,7 @@ Wat moet in een codeboek staan?
 **Voorbeeld**
 
 |  |  |  |  |  |
-|---------------|---------------|---------------|---------------|---------------|
+|----|----|----|----|----|
 | **Variabele** | **Beschrijving** | **Waarden** | **Type** | **Eenheid** |
 | BF_PERCENT | Lichaamsvetpercentage via BIA | 0–80 | numeriek | \% |
 | ACTIVITY_LEVEL | Zelfgerapporteerde fysieke activiteit | 1=laag, 2=middelmatig, 3=hoog | integer | n.v.t |
