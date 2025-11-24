@@ -5,7 +5,7 @@ date: 2025-11-08
 categories: [datasetdocumentatie, research data management]
 image: "datadocumentatie.png"
 toc: true
-draft: true
+draft: false
 number-sections: false
 editor: 
   markdown: 
@@ -426,11 +426,11 @@ dokumenteren.
 
 De REUSE-tool controleert automatisch:
 
--    of elk bestand een licentieheader heeft  
+-   of elk bestand een licentieheader heeft  
 
 -   of alle licentie-informatie volledig en consistent is  
 
--    of je project voldoet aan de REUSE-standard voor open en
+-   of je project voldoet aan de REUSE-standard voor open en
     herbruikbare software/data
 
 Dit maakt je repository transparanter, juridisch correct en eenvoudiger
