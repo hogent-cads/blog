@@ -3,6 +3,9 @@ project:
 
 website:
   title: "Home"
+  site-url: "hogent-cads.github.io/blog/"
+  favicon: favicon.ico
+  description: "CADS Data Blog"
   navbar:
     logo: logo_cads_white.png
     right:
