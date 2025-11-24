@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Home</title>
-<link>https://hogent-cads.github.io/blog/</link>
-<atom:link href="https://hogent-cads.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
-<description></description>
+<link>hogent-cads.github.io/blog/</link>
+<atom:link href="hogent-cads.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>CADS Data Blog</description>
 <generator>quarto-1.8.26</generator>
 <lastBuildDate>Sat, 08 Nov 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Praktische datasetdocumentatie voor praktijkgericht onderzoek</title>
   <dc:creator>Willem De Keyzer</dc:creator>
-  <link>https://hogent-cads.github.io/blog/posts/datasetdocumentatie/</link>
+  <link>hogent-cads.github.io/blog/posts/datasetdocumentatie/</link>
   <description><![CDATA[ 
 
 
@@ -322,14 +322,14 @@ Licentie: CC-BY-NC 4.0</code></pre>
  ]]></description>
   <category>datasetdocumentatie</category>
   <category>research data management</category>
-  <guid>https://hogent-cads.github.io/blog/posts/datasetdocumentatie/</guid>
+  <guid>hogent-cads.github.io/blog/posts/datasetdocumentatie/</guid>
   <pubDate>Sat, 08 Nov 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://hogent-cads.github.io/blog/posts/datasetdocumentatie/datadocumentatie.png" medium="image" type="image/png" height="137" width="144"/>
+  <media:content url="hogent-cads.github.io/blog/posts/datasetdocumentatie/datadocumentatie.png" medium="image" type="image/png" height="137" width="144"/>
 </item>
 <item>
   <title>Anonimiteit verzekerd met Respondent Anonymity Assurance (RAA) in QuestionPro</title>
   <dc:creator>Willem De Keyzer</dc:creator>
-  <link>https://hogent-cads.github.io/blog/posts/RAA-QuestionPro/</link>
+  <link>hogent-cads.github.io/blog/posts/RAA-QuestionPro/</link>
   <description><![CDATA[ 
 
 
@@ -401,14 +401,14 @@ Deze aanpak garandeert anonimiteit en voldoet aan de vereisten inzake vertrouwel
   <category>onderzoek</category>
   <category>privacy</category>
   <category>surveys</category>
-  <guid>https://hogent-cads.github.io/blog/posts/RAA-QuestionPro/</guid>
+  <guid>hogent-cads.github.io/blog/posts/RAA-QuestionPro/</guid>
   <pubDate>Mon, 08 Sep 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://hogent-cads.github.io/blog/posts/RAA-QuestionPro/RAA_QuestionPro.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="hogent-cads.github.io/blog/posts/RAA-QuestionPro/RAA_QuestionPro.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Spraakherkenning van Vlaamse dialecten tot algemeen Nederlands</title>
   <dc:creator>Jens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes</dc:creator>
-  <link>https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/</link>
+  <link>hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/</link>
   <description><![CDATA[ 
 
 
@@ -429,7 +429,7 @@ Deze aanpak garandeert anonimiteit en voldoet aan de vereisten inzake vertrouwel
 </section>
 <section id="resultaten" class="level1">
 <h1>Resultaten</h1>
-<p><img src="https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/resultaten.png" class="img-fluid"></p>
+<p><img src="hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/resultaten.png" class="img-fluid"></p>
 <p>Bovenstaande grafieken tonen dat de onderzochte spraakmodellen <strong>niet goed presteren op Nederlandstalige audiofragmenten</strong>, met een gemiddelde WER tot 77%! Voorts valt op dat de WER voor Vlaamse fragmenten consistent hoger ligt dan voor Nederlandse (uit Nederland), met verschillen tussen de 5 en 12 procentpunten. Dat betekent dus dat de modellen slechter presteren op Vlaamse audio. Als we verder inzoomen op regionale verschillen in Vlaanderen, stellen we vast dat de geteste spraakherkenningsmodellen <strong>het meeste moeite hebben met West-Vlaamse fragmenten</strong>. Het model dat het beste presteert voor Vlaamse spraakherkenning is Chirp van Google.</p>
 <p>Wat betekenen deze resultaten nu concreet voor de bruikbaarheid van huidige state-of-the-art spraakherkenningsmodellen voor het Vlaams? In ieder geval maakt dit onderzoek duidelijk dat de technologie nog geen echt bruikbare herkenning van Vlaamse (tussen)taal oplevert. Betekent dit dat we gewoon moeten wachten tot er betere modellen op de markt komen? Niet noodzakelijk. Zo is het – zonder te technisch te willen worden – mogelijk om bestaande taalmodellen te verbeteren voor specifieke doeleinden zonder ze volledig opnieuw te moeten trainen. Dit proces heet finetunen en is bijvoorbeeld mogelijk wanneer de broncode van de modellen die we willen verbeteren beschikbaar is. Van de geteste modellen in het onderzoek zijn Seamless van Meta en Whisper van OpenAI open source en dus modellen die in aanmerking komen om te finetunen. Een eerste poging om Whisper te finetunen specifiek voor de Vlaamse taal leverde alvast een substantiële verbetering op: de WER verminderde van 76% tot 52%. Dit is niet helemaal verrassend aangezien er voor Whisper in de trainingsfase geen gebruik gemaakt werd van Vlaamse trainingsdata. Toch valt op dat zelfs deze verbetering niet genoeg is om <strong>Chirp van Google als Nederlandse spraakherkenningskampioen</strong> van de troon te stoten.</p>
 
@@ -439,14 +439,14 @@ Deze aanpak garandeert anonimiteit en voldoet aan de vereisten inzake vertrouwel
  ]]></description>
   <category>spraakherkenning</category>
   <category>AI</category>
-  <guid>https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/</guid>
+  <guid>hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/</guid>
   <pubDate>Wed, 06 Nov 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/ASR.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/ASR.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Duplicate Detection</title>
   <dc:creator>Stijn Lievens</dc:creator>
-  <link>https://hogent-cads.github.io/blog/posts/duplicate-detection/</link>
+  <link>hogent-cads.github.io/blog/posts/duplicate-detection/</link>
   <description><![CDATA[ 
 
 
@@ -647,14 +647,14 @@ Blvrd (0.5 subsequent deletion) =&gt; Blvd </code></pre>
   <category>data cleaning</category>
   <category>duplicate detection</category>
   <category>fuzzy matching</category>
-  <guid>https://hogent-cads.github.io/blog/posts/duplicate-detection/</guid>
+  <guid>hogent-cads.github.io/blog/posts/duplicate-detection/</guid>
   <pubDate>Fri, 21 Jun 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://hogent-cads.github.io/blog/posts/duplicate-detection/duplicate-detection-image.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="hogent-cads.github.io/blog/posts/duplicate-detection/duplicate-detection-image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Integrating Qualtrics survey results into Power BI</title>
   <dc:creator>Willem De Keyzer</dc:creator>
-  <link>https://hogent-cads.github.io/blog/posts/qualtrics-powerbi/</link>
+  <link>hogent-cads.github.io/blog/posts/qualtrics-powerbi/</link>
   <description><![CDATA[ 
 
 
@@ -807,14 +807,14 @@ font-style: inherit;">"your_survey_ID"</span>)</span>
   <category>data engineering</category>
   <category>business analytics</category>
   <category>surveys</category>
-  <guid>https://hogent-cads.github.io/blog/posts/qualtrics-powerbi/</guid>
+  <guid>hogent-cads.github.io/blog/posts/qualtrics-powerbi/</guid>
   <pubDate>Fri, 15 Mar 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://hogent-cads.github.io/blog/posts/qualtrics-powerbi/DALL-E 2024-03-15.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="hogent-cads.github.io/blog/posts/qualtrics-powerbi/DALL-E 2024-03-15.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Welcome to our Data Blog!</title>
   <dc:creator>CADS </dc:creator>
-  <link>https://hogent-cads.github.io/blog/posts/welcome/</link>
+  <link>hogent-cads.github.io/blog/posts/welcome/</link>
   <description><![CDATA[ 
 
 
@@ -823,7 +823,7 @@ font-style: inherit;">"your_survey_ID"</span>)</span>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://hogent-cads.github.io/blog/posts/welcome/thumbnail_square.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="hogent-cads.github.io/blog/posts/welcome/thumbnail_square.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>Welcome to the inaugural post of the Centre for Applied Data Science at HOGENT. We are a dedicated team of data experts committed to advancing the field of data science through innovative research, education, and application. Our journey into the digital expanse is fuelled by a passion for uncovering insights and fostering knowledge that drives progress and transformation across various domains.</p>
@@ -836,7 +836,7 @@ font-style: inherit;">"your_survey_ID"</span>)</span>
 
  ]]></description>
   <category>news</category>
-  <guid>https://hogent-cads.github.io/blog/posts/welcome/</guid>
+  <guid>hogent-cads.github.io/blog/posts/welcome/</guid>
   <pubDate>Thu, 14 Mar 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>

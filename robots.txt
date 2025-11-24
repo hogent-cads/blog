@@ -1,1 +1,1 @@
-Sitemap: https://hogent-cads.github.io/blog/sitemap.xml
+Sitemap: hogent-cads.github.io/blog/sitemap.xml
