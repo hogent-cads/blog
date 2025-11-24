@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Home</title>
+<link>https://hogent-cads.github.io/blog/</link>
+<atom:link href="https://hogent-cads.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.8.26</generator>
+<lastBuildDate>Sat, 08 Nov 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Praktische datasetdocumentatie voor praktijkgericht onderzoek</title>
+  <dc:creator>Willem De Keyzer</dc:creator>
+  <link>https://hogent-cads.github.io/blog/posts/datasetdocumentatie/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Datasetdocumentatie is een van de meest onderschatte maar meest impactvolle onderdelen van Research Data Management (RDM). Goed gedocumenteerde data besparen tijd, voorkomen fouten en verhogen de herbruikbaarheid, betrouwbaarheid en impact van praktijkgericht onderzoek. Goede documentatie maakt het verschil tussen een dataset die slechts één project dient en een dataset die bruikbaar blijft voor andere onderzoekers, studenten, partners of beleidsmakers.</p>
+<section id="bouw-een-logische-datasetstructuur" class="level3">
+<h3 class="anchored" data-anchor-id="bouw-een-logische-datasetstructuur">Bouw een logische datasetstructuur</h3>
+<p>Een goede datasetdocumentatie start met een duidelijke, consistente structuur van mappen en bestanden. Dit lijkt eenvoudig, maar net hier gaat in veel projecten waardevolle tijd verloren.</p>
+<p>Kenmerken van een goede structuur:</p>
+<ul>
+<li><p>eenvoudig te begrijpen</p></li>
+<li><p>door iedereen in het project te volgen</p></li>
+<li><p>logisch opgebouwd</p></li>
+<li><p>consistent toegepast</p></li>
+<li><p>meteen duidelijk voor externen</p></li>
+</ul>
+<section id="aanbevolen-mappenstructuur" class="level4">
+<h4 class="anchored" data-anchor-id="aanbevolen-mappenstructuur">Aanbevolen mappenstructuur</h4>
+<pre class="text"><code>/projectnaam/
+├── data_raw/               # Ongewijzigde ruwe data
+├── data_clean/             # Opgeschoonde en gestructureerde data
+├── data_analysis/          # Afgeleide tabellen, statistische output
+├── docs/                   # README, codeboek, protocollen
+├── scripts/                # R-, Python-, SPSS-, Stata- of SQL-code
+├── metadata/               # Formele metadata
+└── results/                # Tabellen, figuren, rapporten</code></pre>
+<p><strong>Voorbeeld uit praktijkgericht onderzoek</strong></p>
+<p>In een project rond voedingsgewoonten bij leerlingen:</p>
+<ul>
+<li><p>data_raw/: CSV-export uit QuesitionPro</p></li>
+<li><p>data_clean/: opgeschoonde dataset zonder vrije tekstvelden</p></li>
+<li><p>docs/: codeboek met variabelen (bv. FRUIT_FREQ)</p></li>
+<li><p>scripts/: R-script 01_cleaning.R met datacleaning</p></li>
+</ul>
+</section>
+</section>
+<section id="schrijf-een-duidelijke-en-volledige-readme" class="level3">
+<h3 class="anchored" data-anchor-id="schrijf-een-duidelijke-en-volledige-readme">Schrijf een duidelijke en volledige README</h3>
+<p>Een README is het eerste document dat een lezer gebruikt om te begrijpen hoe het project en de dataset in elkaar zitten. Zonder README wordt een dataset snel “verweesd”, zeker wanneer projectleden wisselen of wanneer je maanden later opnieuw naar dezelfde bestanden kijkt.</p>
+<p><strong>Minimale inhoud van een README</strong></p>
+<ul>
+<li><p>titel van het project</p></li>
+<li><p>doelstelling van het onderzoek</p></li>
+<li><p>datum en context van dataverzameling</p></li>
+<li><p>beschrijving van alle belangrijke bestanden</p></li>
+<li><p>uitleg van mappenstructuur</p></li>
+<li><p>definities van afkortingen en termen</p></li>
+<li><p>softwarevereisten</p></li>
+<li><p>contactgegevens</p></li>
+<li><p>licentie en toegangsvoorwaarden</p></li>
+</ul>
+<p><strong>Voorbeeld</strong></p>
+<pre class="text"><code># README – Re-integratiecoaching 2024
+
+Dit project onderzoekt de impact van een vernieuwde re-integratieaanpak
+in stedelijke diensten. Data werden verzameld via semi-gestructureerde
+interviews (n=34) en een survey (n=112).
+
+Mappen: 
+- data_raw/interviews_audio/ (mp3 – niet gedeeld)
+- data_clean/interviews_coded.csv (ATLAS.ti export)
+- data_clean/survey_clean.csv (anoniem)
+- docs/codeboek_survey.xlsx 
+- scripts/01_transcript_cleaning.R
+- results/rapport_reintegratie_2024.pdf
+
+Afkortingen:
+- RIP = Re-integratieproces
+- SCO = Sociale Competentie Ontwikkeling
+
+Contact: onderzoeksteam@hogent.be
+Licentie: CC-BY-NC 4.0</code></pre>
+</section>
+<section id="gebruik-een-codeboek-voor-kwantitatieve-data" class="level3">
+<h3 class="anchored" data-anchor-id="gebruik-een-codeboek-voor-kwantitatieve-data">Gebruik een codeboek voor kwantitatieve data</h3>
+<p>Een codeboek bevat de volledige beschrijving van elke variabele in de dataset. Dit maakt analyses reproduceerbaar en voorkomt interpretatiefouten.</p>
+<p>Wat moet in een codeboek staan?</p>
+<ul>
+<li><p>variabelenaam beschrijving</p></li>
+<li><p>mogelijke waarden</p></li>
+<li><p>datatype</p></li>
+<li><p>eenheid (indien van toepassing)</p></li>
+<li><p>hoe missing values worden aangeduid</p></li>
+<li><p>eventuele transformaties</p></li>
+</ul>
+<p><strong>Voorbeeld</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Variabele</strong></td>
+<td><strong>Beschrijving</strong></td>
+<td><strong>Waarden</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Eenheid</strong></td>
+</tr>
+<tr class="even">
+<td>BF_PERCENT</td>
+<td>Lichaamsvetpercentage via BIA</td>
+<td>0–80</td>
+<td>numeriek</td>
+<td>%</td>
+</tr>
+<tr class="odd">
+<td>ACTIVITY_LEVEL</td>
+<td>Zelfgerapporteerde fysieke activiteit</td>
+<td>1=laag, 2=middelmatig, 3=hoog</td>
+<td>integer</td>
+<td>n.v.t</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="gebruik-een-datadictionary-voor-complexere-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="gebruik-een-datadictionary-voor-complexere-datasets">Gebruik een datadictionary voor complexere datasets</h3>
+<p>Een datadictionary is uitgebreider dan een codeboek en is noodzakelijk wanneer een dataset bestaat uit meerdere tabellen, relationele structuren of data afkomstig uit meetapparatuur.</p>
+<p><strong>Voorbeeld</strong></p>
+<p>Veldproef met waterkwaliteitssensoren:</p>
+<ul>
+<li><p><code>sensor_id</code> verwijst naar tabel <code>sensors</code></p></li>
+<li><p>metadata per sensor: locatie, diepte, type, kalibratiedatum</p></li>
+<li><p><code>measurement_id</code> verwijst naar tabel <code>measurements</code></p></li>
+<li><p>registratiefrequentie: om de 5 minuten</p></li>
+<li><p>kwaliteitscontrole: waarden &gt;3 SD automatisch gemarkeerd</p></li>
+</ul>
+</section>
+<section id="voeg-eenvoudige-metadata-toe" class="level3">
+<h3 class="anchored" data-anchor-id="voeg-eenvoudige-metadata-toe">Voeg eenvoudige metadata toe</h3>
+<p>Metadata zijn letterlijk “data over data”: gestructureerde informatie die je dataset beschrijft, toelicht en annoteert. Waar een README vooral voor mensen bedoeld is, zijn metadata machine-leesbare vormen van documentatie. Ze spelen een cruciale rol in het toepassen van de FAIR-principes: Findable, Accessible, Interoperable en Reusable. Met goede metadata kan een dataset online gevonden worden, correct geïnterpreteerd worden en kan eenduidig worden aangegeven onder welke voorwaarden ze toegankelijk is of hergebruikt mag worden (bijv. toegangsrechten, licentie).</p>
+<p>Metadata kunnen op verschillende manieren worden opgeslagen:</p>
+<ul>
+<li><p>ingebed in de data zelf (bijv. in een netCDF-bestand of een JPEG-header)</p></li>
+<li><p>als een apart metadata-bestand (bijv. <code>metadata.json</code>, <code>dataset.xml</code>)</p></li>
+<li><p>via formulieren of templates in een datamanagementsysteem</p></li>
+<li><p>automatisch gegenereerd bij deponering in een repository.</p></li>
+</ul>
+<p><strong>Metadata-schema’s</strong></p>
+<p>Wanneer je data deponeert in een repository, moet je metadata aanleveren volgens het metadata-schema dat die repository gebruikt. Dit gebeurt doorgaans via een webformulier of een vooropgesteld template. Het is belangrijk om tijdig de submission guidelines van de repository te bekijken, zodat je weet welke informatie je tijdens het onderzoek moet verzamelen.</p>
+<p>Een metadata-schema definieert een vaste set velden die moeten worden ingevuld. Sommige schema’s zijn breed toepasbaar, andere zijn specifiek ontwikkeld voor bepaalde onderzoeksdomeinen. Voorbeelden:</p>
+<ul>
+<li><p><strong>Algemene standaarden</strong></p>
+<ul>
+<li><p>Dublin Core: breed toepasbare set metadata-elementen</p></li>
+<li><p>DataCite: veel gebruikt voor datasets met een DOI (Digital Object Identifier)</p></li>
+</ul></li>
+<li><p><strong>Domeinspecifieke standaarden</strong></p>
+<ul>
+<li><p>DDI (Data Documentation Initiative): sociaal-, gedrags-, economisch en gezondheidswetenschappelijk onderzoek</p></li>
+<li><p>EML (Ecological Metadata Language): ecologie en biodiversiteitsdata</p></li>
+</ul></li>
+</ul>
+<p><strong>Waar vind je geschikte metadata-standaarden?</strong></p>
+<p>Onderzoekers kunnen geschikte schema’s en richtlijnen vinden via:</p>
+<ul>
+<li><p>metadata-richtlijnen van de repository waar je dataset terechtkomt (bv. Zenodo)</p></li>
+<li><p><a href="http://schema.datacite.org/meta/kernel-4.5/">DataCite Metadata Schema</a></p></li>
+<li><p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core Metadata Schema</a></p></li>
+<li><p><a href="https://rdamsc.bath.ac.uk/">Metadata Standards Catalog</a></p></li>
+<li><p>DCC: <a href="http://www.dcc.ac.uk/resources/metadata-standards">Overview of Disciplinary Metadata</a></p></li>
+<li><p><a href="FAIRsharing.org">FAIRsharing.org</a></p></li>
+</ul>
+<p>Deze bronnen geven een overzicht van beschikbare standaarden per discipline en helpen je kiezen welke metadata-velden voor jouw dataset relevant zijn. Wil je de dataset echt FAIR maken, begin dan al tijdens de onderzoeksopzet met het verzamelen van de metadata die later in het schema nodig zijn.</p>
+</section>
+<section id="documenteer-gdpr--en-ethiekprocedures" class="level3">
+<h3 class="anchored" data-anchor-id="documenteer-gdpr--en-ethiekprocedures">Documenteer GDPR- en ethiekprocedures</h3>
+<p>In praktijkgericht onderzoek met mensen is het documenteren van GDPR- en ethische aspecten een essentieel onderdeel van datasetdocumentatie. Het gaat niet alleen om “juridische verplichtingen”, maar ook om het waarborgen van betrouwbare en integere onderzoeksresultaten. Voor vragen of concrete toepassing in je project vind je meer informatie op de pagina <strong>Ethiek en wetenschappelijke integriteit</strong> op het HOGENT-intranet.</p>
+<section id="gdpr-en-register-van-verwerkingsactiviteiten" class="level4">
+<h4 class="anchored" data-anchor-id="gdpr-en-register-van-verwerkingsactiviteiten">GDPR en register van verwerkingsactiviteiten</h4>
+<p>De Algemene Verordening Gegevensbescherming (AVG, of GDPR) heeft als doel de bescherming van betrokkenen bij de verwerking van hun persoonsgegevens, zodat hun fundamentele rechten op privacy en gegevensbescherming worden gegarandeerd. Alle verwerkingen van persoonsgegevens moeten gedocumenteerd worden in een register van verwerkingsactiviteiten, als onderdeel van de verantwoordingsplicht. Dit sluit aan bij de HOGENT-gedragscode voor het verwerken van persoonsgegevens en vertrouwelijke informatie.</p>
+<p>HOGENT draagt als instelling de verantwoordelijkheid voor de rechtmatige en veilige verwerking van persoonsgegevens en voor de naleving van de GDPR. Deze verantwoordelijkheid wordt gedeeld met de voor het onderzoek verantwoordelijke onderzoeker(s).</p>
+<p>Concreet betekent dit:</p>
+<ul>
+<li><p>Alle onderzoeksprojecten die persoonsgegevens verwerken, moeten worden geregistreerd in <strong>DMPonline.be</strong>.</p></li>
+<li><p>De registratie gebeurt aan het begin van elk nieuw onderzoeksproject, dus vóór de start van de eigenlijke dataverzameling.</p></li>
+<li><p>De geregistreerde verwerkingsactiviteiten moeten gedurende de looptijd van het project up-to-date gehouden worden.</p></li>
+<li><p>Ook reeds lopende projecten moeten alsnog geregistreerd worden.</p></li>
+</ul>
+<p>De template in DMPonline.be geeft onderzoekers een overzicht van de informatie die nodig is om te voldoen aan de GDPR en wijst op mogelijke risico’s vóór, tijdens en na het onderzoeksproject. Zorgvuldige en rechtmatige verwerking van persoonsgegevens is een voorwaarde voor betrouwbare wetenschappelijke resultaten.</p>
+<p>Meer informatie vind je via het HOGENT-intranet en <a href="https://dmponline.be">DMPonline.be</a>.</p>
+</section>
+<section id="informed-consent" class="level4">
+<h4 class="anchored" data-anchor-id="informed-consent">Informed consent</h4>
+<p>Wanneer je met personen werkt, moeten respondenten duidelijk geïnformeerd worden over:</p>
+<ul>
+<li><p>de doelstelling van het onderzoek</p></li>
+<li><p>welke gegevens verzameld worden</p></li>
+<li><p>wat je met die gegevens zal doen</p></li>
+<li><p>waar en hoe lang de gegevens bewaard worden</p></li>
+<li><p>of en hoe de data gedeeld of hergebruikt zullen worden</p></li>
+</ul>
+<p>Dit gebeurt via een informed consent. Als je onderzoeksdata wil delen met derden of later opnieuw wil gebruiken (bijvoorbeeld in vervolgonderzoek), moet je daar expliciet toestemming voor vragen. Dit leg je vast in een informed consent-formulier dat door elke deelnemer wordt ondertekend.</p>
+<p>Ook de keuzes rond anonimisering/pseudonimisering en de rechten van deelnemers (inzage, recht op intrekking, enz.) worden hier duidelijk in beschreven.</p>
+</section>
+<section id="ethische-goedkeuring" class="level4">
+<h4 class="anchored" data-anchor-id="ethische-goedkeuring">Ethische goedkeuring</h4>
+<p>Veel onderzoeksprojecten die met mensen werken, vereisen ethische goedkeuring vóór de start van het onderzoek. HOGENT voorziet hiervoor een beslissingsboom die helpt bepalen:</p>
+<ul>
+<li><p>of ethische goedkeuring nodig is</p></li>
+<li><p>welke ethische commissie het meest geschikt is (bijvoorbeeld specifiek voor gezondheidszorg, sociaal werk, onderwijs, dierproeven, …)</p></li>
+</ul>
+<p>Belangrijke aandachtspunten:</p>
+<ul>
+<li><p>Ethische goedkeuring moet altijd vóór de start van de dataverzameling aangevraagd worden.</p></li>
+<li><p>Ook onderzoek dat niet rechtstreeks met mensen werkt kan ethische implicaties hebben (bijvoorbeeld dierproeven of gevoelige contexten) en dus goedkeuring vereisen.</p></li>
+<li><p>De keuze van de commissie gebeurt op basis van de aard van het onderzoek en de doelgroep.</p></li>
+</ul>
+<p>In je datasetdocumentatie (README, metadata, DMP) leg je vast:</p>
+<ul>
+<li><p>of en hoe GDPR van toepassing is</p></li>
+<li><p>in welke mate persoonsgegevens verwerkt worden</p></li>
+<li><p>hoe informed consent is geregeld</p></li>
+<li><p>welke ethische commissie een goedkeuring heeft verleend (met referentie/nummer)</p></li>
+</ul>
+<p>Dat maakt je onderzoek niet alleen juridisch correct, maar ook transparant en integere wetenschap.</p>
+</section>
+</section>
+<section id="leg-je-opslag--en-versiebeheerbeleid-vast" class="level3">
+<h3 class="anchored" data-anchor-id="leg-je-opslag--en-versiebeheerbeleid-vast">Leg je opslag- en versiebeheerbeleid vast</h3>
+<p>Versiebeheer en veilige opslag bepalen de betrouwbaarheid van je onderzoek.</p>
+<p><strong>3–2–1 backupregel</strong></p>
+<ul>
+<li><p>3 kopieën</p></li>
+<li><p>op 2 verschillende media</p></li>
+<li><p>waarvan 1 externe locatie</p></li>
+</ul>
+<p><strong>Aanbevolen tools</strong></p>
+<ul>
+<li><p>OneDrive (automatische synchronisatie)</p></li>
+<li><p>GitHub of GitLab voor code</p></li>
+<li><p>versiegeschiedenis in Google Sheets of Excel</p></li>
+<li><p>changelogs in dezelfde map als scripts</p></li>
+</ul>
+</section>
+<section id="documenteer-alle-datacleaning--en-analysekoppelingen" class="level3">
+<h3 class="anchored" data-anchor-id="documenteer-alle-datacleaning--en-analysekoppelingen">Documenteer alle datacleaning- en analysekoppelingen</h3>
+<p>Documenteer elke stap zodat analyses reproduceerbaar blijven. Dit kan via:</p>
+<ul>
+<li><p>R- of Python-scripts, SPSS syntaxen</p></li>
+<li><p>een tekstueel changelog</p></li>
+<li><p>een combinatie daarvan</p></li>
+</ul>
+<p><strong>Voorbeeld</strong></p>
+<pre class="text"><code>2025-04-12 – WDK
+- Outliers \&gt;3 SD verwijderd voor 'response_time'
+- Nieuwe variabele 'normalized_time' toegevoegd
+- Log-transformatie toegepast op 'latency'</code></pre>
+</section>
+<section id="documenteer-de-voorwaarden-voor-delen-en-licenties" class="level3">
+<h3 class="anchored" data-anchor-id="documenteer-de-voorwaarden-voor-delen-en-licenties">Documenteer de voorwaarden voor delen en licenties</h3>
+<p>Niet alle data kunnen open gedeeld worden, maar documentatie moet duidelijk maken wat wel en niet gedeeld mag worden.</p>
+<p>Documenteer:</p>
+<ul>
+<li><p>welke datasets publiek kunnen</p></li>
+<li><p>welke enkel intern beschikbaar zijn</p></li>
+<li><p>welke volledig vertrouwelijk zijn</p></li>
+<li><p>welke licentie wordt gebruikt (bv. CC-BY, CC-BY-SA, CC-BY-NC, MIT)</p></li>
+</ul>
+<p>Voorbeeld (AI-onderzoek)</p>
+<ul>
+<li><p>trainingsdata → niet publiek (rechtelijke beperkingen)</p></li>
+<li><p>synthetische data → publiek (CC-BY)</p></li>
+<li><p>scripts → GitHub (MIT-licentie)</p></li>
+</ul>
+<p>Wanneer je code, documentatie of datasets op GitHub beheert, kun je gebruikmaken van de **REUSE-specificatie** (Free Software Foundation Europe) om licenties correct, volledig en machine-leesbaar te dokumenteren.</p>
+<p>De REUSE-tool controleert automatisch:</p>
+<ul>
+<li><p>of elk bestand een licentieheader heeft &nbsp;</p></li>
+<li><p>of alle licentie-informatie volledig en consistent is &nbsp;</p></li>
+<li><p>of je project voldoet aan de REUSE-standard voor open en herbruikbare software/data</p></li>
+</ul>
+<p>Dit maakt je repository transparanter, juridisch correct en eenvoudiger te archiveren in open data repositories.</p>
+<p>Meer info:</p>
+<p>- REUSE-documentatie: <a href="https://reuse.software" class="uri">https://reuse.software</a>&nbsp;</p>
+<p>- REUSE-tool (GitHub): <a href="https://github.com/fsfe/reuse-tool" class="uri">https://github.com/fsfe/reuse-tool</a>&nbsp;</p>
+</section>
+<section id="conclusie" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="conclusie">Conclusie</h3>
+<p>Datasetdocumentatie is geen administratieve verplichting maar een kwaliteitsinstrument. Met:</p>
+<ul>
+<li><p>een duidelijke mappenstructuur</p></li>
+<li><p>een README</p></li>
+<li><p>een codeboek</p></li>
+<li><p>een datadictionary</p></li>
+<li><p>metadata</p></li>
+<li><p>GDPR-documentatie</p></li>
+<li><p>changelogs en versiebeheer</p></li>
+</ul>
+<p>zorg je ervoor dat je onderzoeksdata helder, toekomstbestendig en bruikbaar blijven, voor jezelf, voor collega-onderzoekers en voor de bredere onderzoekscommunity.</p>
+</section>
+<section id="meer-weten" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="meer-weten">Meer weten?</h3>
+<p><a href="https://www.ugent.be/nl/onderzoek/openscience/datamanagement/overzicht.htm">Onderzoeksdatamanagement</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>datasetdocumentatie</category>
+  <category>research data management</category>
+  <guid>https://hogent-cads.github.io/blog/posts/datasetdocumentatie/</guid>
+  <pubDate>Sat, 08 Nov 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://hogent-cads.github.io/blog/posts/datasetdocumentatie/datadocumentatie.png" medium="image" type="image/png" height="137" width="144"/>
+</item>
+<item>
+  <title>Anonimiteit verzekerd met Respondent Anonymity Assurance (RAA) in QuestionPro</title>
+  <dc:creator>Willem De Keyzer</dc:creator>
+  <link>https://hogent-cads.github.io/blog/posts/RAA-QuestionPro/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="respondent-anonymity-assurance-raa-in-questionpro" class="level1">
+<h1>Respondent Anonymity Assurance (RAA) in QuestionPro</h1>
+<p>Bij het uitvoeren van online bevragingen moeten onderzoekers steeds een evenwicht vinden tussen praktisch gemak en het respecteren van de anonimiteit van respondenten. Vaak willen we gebruikmaken van verzendlijsten om uitnodigingen en herinneringen te versturen. Tegelijk moeten we vermijden dat antwoorden ooit gekoppeld kunnen worden aan de identiteit van deelnemers.</p>
+<p>QuestionPro biedt met <strong>Respondent Anonymity Assurance (RAA)</strong> een oplossing die precies dit mogelijk maakt.</p>
+<p>Meer informatie en de officiële handleiding vind je hier:<br>
+👉 <a href="https://www.questionpro.com/help/respondent-anonymity-assurance-raa.html" class="uri">https://www.questionpro.com/help/respondent-anonymity-assurance-raa.html</a></p>
+<hr>
+<section id="wat-is-raa" class="level2">
+<h2 class="anchored" data-anchor-id="wat-is-raa">Wat is RAA?</h2>
+<p>RAA is een functionaliteit die ervoor zorgt dat <strong>contactgegevens en survey-antwoorden volledig gescheiden verwerkt worden</strong>. Het systeem laat toe dat onderzoekers:</p>
+<ul>
+<li>Uitnodigingen en herinneringen via e-mail sturen.<br>
+</li>
+<li>Verzendlijsten efficiënt beheren, zonder dat antwoorden zichtbaar zijn op individueel niveau.<br>
+</li>
+<li>Data analyseren in een <strong>volledig anonieme dataset</strong>.</li>
+</ul>
+<p>Dit betekent dat onderzoekers het beste van twee werelden krijgen: <strong>gebruiksgemak in de communicatie met deelnemers én naleving van ethische en juridische vereisten</strong>.</p>
+<hr>
+</section>
+<section id="waarom-is-dit-belangrijk-voor-onderzoekers" class="level2">
+<h2 class="anchored" data-anchor-id="waarom-is-dit-belangrijk-voor-onderzoekers">Waarom is dit belangrijk voor onderzoekers?</h2>
+<p>Voor HOGENT-onderzoekers brengt dit verschillende voordelen:</p>
+<ul>
+<li><strong>Anonimiteit gegarandeerd</strong>: deelnemers kunnen erop vertrouwen dat hun antwoorden niet herleidbaar zijn tot hun identiteit.<br>
+</li>
+<li><strong>Efficiënte opvolging</strong>: uitnodigingen en herinneringen verlopen automatisch, zonder extra administratie.<br>
+</li>
+<li><strong>Compliance ingebouwd</strong>: de aanpak ondersteunt principes zoals <em>privacy by design</em>, <em>dataminimalisatie</em> en transparantie.<br>
+</li>
+<li><strong>Eenvoudige verantwoording</strong>: dankzij een heldere standaardformulering kunnen onderzoekers eenvoudig uitleggen hoe de anonimiteit verzekerd wordt.</li>
+</ul>
+<hr>
+</section>
+<section id="voorbeeldformulering-voor-onderzoeksdocumentatie" class="level2">
+<h2 class="anchored" data-anchor-id="voorbeeldformulering-voor-onderzoeksdocumentatie">Voorbeeldformulering voor onderzoeksdocumentatie</h2>
+<p>Onderstaande tekst kan rechtstreeks gebruikt worden in onderzoeksdocumentatie, zoals een aanvraag bij een ethisch comité, een datamanagementplan of een GDPR-plan:</p>
+<blockquote class="blockquote">
+<p><strong>Gebruik van Respondent Anonymity Assurance (RAA) via QuestionPro</strong><br>
+Voor deze bevraging wordt gebruikgemaakt van de <strong>Respondent Anonymity Assurance (RAA)</strong>-functionaliteit van QuestionPro (zie <a href="https://www.questionpro.com/help/respondent-anonymity-assurance-raa.html">handleiding</a>).<br>
+Respondenten ontvangen uitnodigingen en eventuele herinneringen per e-mail. Contactgegevens en antwoorden worden in het systeem strikt gescheiden verwerkt. Hierdoor is er <strong>geen mogelijkheid om antwoorden te koppelen aan de identiteit van respondenten</strong>.<br>
+Deze aanpak garandeert anonimiteit en voldoet aan de vereisten inzake vertrouwelijkheid en bescherming van persoonsgegevens.</p>
+</blockquote>
+<hr>
+</section>
+<section id="conclusie" class="level2">
+<h2 class="anchored" data-anchor-id="conclusie">Conclusie</h2>
+<p>De <strong>RAA-functionaliteit in QuestionPro</strong> maakt het eenvoudig om vragenlijsten op te zetten die zowel praktisch bruikbaar zijn voor onderzoekers als veilig en vertrouwelijk voor respondenten.</p>
+<p>CADS raadt onderzoekers aan om bij elke survey waar anonimiteit essentieel is, gebruik te maken van RAA. Het zorgt ervoor dat je:</p>
+<ol type="1">
+<li><strong>Eenvoudig deelnemers bereikt</strong> via verzendlijsten en reminders.<br>
+</li>
+<li><strong>Anonimiteit waarborgt</strong> door een strikte scheiding tussen contactgegevens en antwoorden.<br>
+</li>
+<li><strong>Een duidelijke verantwoording</strong> hebt voor ethische commissies, datamanagementplannen en GDPR-documentatie.</li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>onderzoek</category>
+  <category>privacy</category>
+  <category>surveys</category>
+  <guid>https://hogent-cads.github.io/blog/posts/RAA-QuestionPro/</guid>
+  <pubDate>Mon, 08 Sep 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://hogent-cads.github.io/blog/posts/RAA-QuestionPro/RAA_QuestionPro.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Spraakherkenning van Vlaamse dialecten tot algemeen Nederlands</title>
+  <dc:creator>Jens Coetsiers, Lena De Mol, Stijn Lievens en Jan Claes</dc:creator>
+  <link>https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="inleiding" class="level1">
+<h1>Inleiding</h1>
+<p>Spraakherkenning is cruciaal voor toepassingen zoals automatische ondertiteling en spraakgestuurde systemen (bijvoorbeeld de voice assistent in je auto of op je smartphone). Ondanks de snelle ontwikkeling van deze technologie blijft spraakherkenning een uitdaging voor minder voorkomende talen zoals het Nederlands. Regionale variaties van de taal zorgen bovendien voor een bijkomende complexiteit. In de praktijk vertaalt zich dat in frustraties bij gebruikers wanneer ze in het Vlaams hun systemen proberen te bedienen.</p>
+<p>In zijn bachelorproef onderzocht Jens Coetsiers de prestaties van huidige spraakherkenningssystemen op de Vlaamse spreektaal om hun bruikbaarheid te beoordelen. Slagen huidige speech-to-text-modellen erin een dialoog tussen twee sprekers in het Vlaams voldoende accuraat om te zetten in geschreven taal? Hoe presteren de modellen voor het Vlaams vergeleken met het Nederlands? Zijn er significante verschillen in de transcriptie van Vlaamse standaardtaal en Vlaamse regiolecten? Welke tool komt als Vlaamse spraakherkenningskampioen uit de bus voor de gegeven casus?</p>
+</section>
+<section id="onderzoek" class="level1">
+<h1>Onderzoek</h1>
+<p>Op basis van een literatuurstudie werd een keuze gemaakt uit de beschikbare data die kon gebruikt worden om de onderzoeksvragen te beantwoorden. De specifieke casus die aanleiding gaf tot het onderzoek – nl. de vraag naar een spraakherkenningsmodel dat bruikbare transcripties oplevert voor Vlaamse één-op-ééngesprekken – was doorslaggevend voor de gemaakte keuzes.</p>
+<p>Er werden twee datasets geselecteerd. Enerzijds gebruikte Jens de telefoondialogen en face-to-face-gesprekken uit de Corpus Gesproken Nederlands. Deze bevatten ongeveer 27 uur aan Nederlandse en Vlaamse audiodata van zowel voorbereide als spontane conversaties, ook in bepaalde regionale variaties (de zogenaamde Vlaamse tussentaal). Dit komt overeen met ongeveer 406.000 woorden. Deze gesprekken worden gekenmerkt door hun spontaniteit en indirect karakter. Anderzijds werden ook voor 4 uur aan geluidsfragmenten uit de corpus Variatie in Nederlandse Taal en Sprekers gebruikt (ongeveer 38.000 woorden), meer bepaald de set met betekenisvolle en met betekenisloze zinnen. De variatie in voorspelbaarheid van deze zinnen verhoogt hun meerwaarde voor het onderzoek. Belangrijk om op te merken is dat in beide datasets enkel één-op-ééngesprekken voorkomen en dat de geluidsfragmenten gekozen of aangepast werden zodat bepaalde verstoringen zoals ruis of slikken minder voorkwamen.</p>
+<p>Om te bepalen hoe goed de modellen de audio kunnen omzetten naar tekst, werd de herkende tekst vergeleken met gecontroleerde transcripties die als gold standard gelden. Per fragment werd de zogenoemde Word Error Rate (WER) berekend. Dit is een relatieve weergave van het aantal foutief herkende woorden, waarbij bijgehouden wordt hoeveel woorden worden toegevoegd, weggelaten of aangepast in een automatische transcriptie ten opzichte van de controletranscriptie. De geteste geluidsfragmenten lieten zich opsplitsen in verschillende categorieën: Algemeen Nederlands, Vlaamse standaardtaal en Vlaamse tussentaal. Die laatste categorie werd verder opgesplitst volgens regio: West-Vlaanderen, Oost-Vlaanderen, Antwerpen en Vlaams-Brabant, en Limburg. Per categorie werd vervolgens de gemiddelde WER berekend. Algemeen wordt aangenomen dat een WER van 5% tot 10% goed en van 10% tot 20% acceptabel is. Een nadeel van de gevolgde werkwijze is dat deze maat nogal streng wordt toegepast. Zo wordt bijvoorbeeld “er op” niet als correcte weergave van het tussentalige “d’rop” beschouwd. Ook worden modellen die getallen in cijfers weergeven benadeeld, aangezien de correcte tekst de getallen als voluit geschreven woorden bevat.</p>
+<p>Naast de keuze voor de testdata, werd ook een selectie gemaakt van de meest veelbelovende spraakmodellen voor de gegeven casus. Mee bepalend voor de keuze waren criteria zoals de mogelijkheid om Nederlandstalige audio te transcriberen – niet alle publiek beschikbare modellen kunnen dit – en het bijhorende prijskaartje. In de studie werden uiteindelijk SeamlessM4T-v2 (van Meta), Whisper Large-v3 (OpenAI), Nova-2 (Deepgram), Google STT (Google) en Chirp (Google) met elkaar vergeleken. Dit zijn allemaal zogenaamde multilinguale (meertalige) modellen. Daarom is het belangrijk om te weten op basis van welke (Nederlandstalige) data deze modellen getraind werden. Volgens de beschikbare documentatie werd Seamless getraind op 6363 uren en Whisper 2077 uren aan Nederlandse tekst (geen Vlaams). Voor de andere modellen is geen precieze informatie over specifieke Nederlandstalige training van de modellen bekend.</p>
+</section>
+<section id="resultaten" class="level1">
+<h1>Resultaten</h1>
+<p><img src="https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/resultaten.png" class="img-fluid"></p>
+<p>Bovenstaande grafieken tonen dat de onderzochte spraakmodellen <strong>niet goed presteren op Nederlandstalige audiofragmenten</strong>, met een gemiddelde WER tot 77%! Voorts valt op dat de WER voor Vlaamse fragmenten consistent hoger ligt dan voor Nederlandse (uit Nederland), met verschillen tussen de 5 en 12 procentpunten. Dat betekent dus dat de modellen slechter presteren op Vlaamse audio. Als we verder inzoomen op regionale verschillen in Vlaanderen, stellen we vast dat de geteste spraakherkenningsmodellen <strong>het meeste moeite hebben met West-Vlaamse fragmenten</strong>. Het model dat het beste presteert voor Vlaamse spraakherkenning is Chirp van Google.</p>
+<p>Wat betekenen deze resultaten nu concreet voor de bruikbaarheid van huidige state-of-the-art spraakherkenningsmodellen voor het Vlaams? In ieder geval maakt dit onderzoek duidelijk dat de technologie nog geen echt bruikbare herkenning van Vlaamse (tussen)taal oplevert. Betekent dit dat we gewoon moeten wachten tot er betere modellen op de markt komen? Niet noodzakelijk. Zo is het – zonder te technisch te willen worden – mogelijk om bestaande taalmodellen te verbeteren voor specifieke doeleinden zonder ze volledig opnieuw te moeten trainen. Dit proces heet finetunen en is bijvoorbeeld mogelijk wanneer de broncode van de modellen die we willen verbeteren beschikbaar is. Van de geteste modellen in het onderzoek zijn Seamless van Meta en Whisper van OpenAI open source en dus modellen die in aanmerking komen om te finetunen. Een eerste poging om Whisper te finetunen specifiek voor de Vlaamse taal leverde alvast een substantiële verbetering op: de WER verminderde van 76% tot 52%. Dit is niet helemaal verrassend aangezien er voor Whisper in de trainingsfase geen gebruik gemaakt werd van Vlaamse trainingsdata. Toch valt op dat zelfs deze verbetering niet genoeg is om <strong>Chirp van Google als Nederlandse spraakherkenningskampioen</strong> van de troon te stoten.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>spraakherkenning</category>
+  <category>AI</category>
+  <guid>https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/</guid>
+  <pubDate>Wed, 06 Nov 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/ASR.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Duplicate Detection</title>
+  <dc:creator>Stijn Lievens</dc:creator>
+  <link>https://hogent-cads.github.io/blog/posts/duplicate-detection/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level1" data-number="0.1">
+<h1 data-number="0.1"><span class="header-section-number">0.1</span> Introduction</h1>
+<p>A common problem with master data is that different records refer to the same real world entity. This can occur, for example, when a customer was registered twice (once when first contacting the company and a second time when an order was actually placed), or when a product was created twice.</p>
+<p>At first sight, discovering duplicates seems easy to solve: go through all record pairs and verify whether they are the same or not. In practice, however, this is much more difficult because duplicate records are often <strong>similar</strong> but <strong>not identical</strong>. The question is then to identify these similar record pairs.</p>
+</section>
+<section id="comparing-a-single-column" class="level1" data-number="0.2">
+<h1 data-number="0.2"><span class="header-section-number">0.2</span> Comparing a Single Column</h1>
+<p>Before starting to compare entire records, it seems obvious to look into how to compare values in a single column. Here we assume that the values in a column are of “string” type. What one typically wants then is a <strong>similarity measure</strong> that indicates how similar two strings are. Such a similarity measure takes as input two strings and has as output a number indicating how similar the two strings are, where the value 1 usually stands for “perfectly similar” and the value 0 for “not at all similar”. Sometimes <strong>distance measures</strong> are used: with a distance measure, the meaning is exactly reversed: a distance equal to zero means that the strings are similar, and the larger the (value of the) distance the more different the strings are.</p>
+<p>The various ways in which the similarity of (or distance between) two strings can be determined can be divided into a number of categories:</p>
+<ul>
+<li>Character-based methods</li>
+<li>Token-based methods</li>
+<li>Methods based on the pronunciation of the words/strings</li>
+<li>Methods based on word semantics</li>
+</ul>
+<section id="character-based-methods" class="level2" data-number="0.2.1">
+<h2 data-number="0.2.1" class="anchored" data-anchor-id="character-based-methods"><span class="header-section-number">0.2.1</span> Character-based methods</h2>
+<p>As the name suggests, character-based methods work at the level of individual characters. These methods give good results when the cause of the errors is expected to be small typing errors, e.g.&nbsp;swapping two letters or accidentally adding a small number of characters. Within this category, we recognise the following distance measures:</p>
+<ul>
+<li><strong>Edit distance</strong>: this distance function is good at recognising small typographical errors.</li>
+<li><strong>Affine gap distance</strong>: this distance function takes into account that once one has inserted an extra character one is likely to insert additional extra characters.</li>
+<li><strong>Distance based on n-grams</strong>: this considers how many <img src="https://latex.codecogs.com/png.latex?n">-grams two strings have in common, the intuition being that similar strings have many <img src="https://latex.codecogs.com/png.latex?n">-grams in common but strings that differ a lot do not.</li>
+</ul>
+<p>Below we give a brief explanation of each of these 3 distance measures, along with additional references where you can find more detail.</p>
+<section id="edit-distance" class="level3" data-number="0.2.1.1">
+<h3 data-number="0.2.1.1" class="anchored" data-anchor-id="edit-distance"><span class="header-section-number">0.2.1.1</span> Edit distance</h3>
+<p>The <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">edit or Levenshtein distance</a> is the minimum number of substitutions, insertions and deletions required to convert two strings into each other. For example, the Levenshtein distance between “CADS” and “LAST” is equal to three.</p>
+<pre><code>CADS (substitute C by L) -&gt; LADS (delete D) -&gt; LAS (insert T) -&gt; LAST</code></pre>
+</section>
+<section id="affine-gap-distance" class="level3" data-number="0.2.1.2">
+<h3 data-number="0.2.1.2" class="anchored" data-anchor-id="affine-gap-distance"><span class="header-section-number">0.2.1.2</span> Affine gap distance</h3>
+<p>When strings were abbreviated or shortened, the edit distance sometimes shows a large value even though they are about the same entity. An example would be the strings “John R. Smith” and “Jonathan Richard Smith”. With the affine gap distance, one adjusts the Levenshtein distance by introducing two additional operations, namely “opening” a hole and “expanding” a hole, where typically opening a hole has a greater cost (i.e.&nbsp;will give rise to a greater distance) than expanding a hole. The reasoning is that once one has introduced an additional first character one might add several more.</p>
+<p>By way of example we show the affine gap distance between the words “Boulevard” and “Blvd”.</p>
+<pre><code>Boulevard (1 deletion) =&gt; Bulevard
+Bulevard (0.5 subsequent deletetion) =&gt; "Blevard"
+Blevard (1 deletion) =&gt; Blvard
+Blvard (1 deletion) =&gt; Blvrd
+Blvrd (0.5 subsequent deletion) =&gt; Blvd </code></pre>
+<p>The affine gap distance between “Boulevard” and “Blvd” is 4 whereas the regular edit distance would yield a value of 5.</p>
+</section>
+<section id="distance-based-on-n-grams" class="level3" data-number="0.2.1.3">
+<h3 data-number="0.2.1.3" class="anchored" data-anchor-id="distance-based-on-n-grams"><span class="header-section-number">0.2.1.3</span> Distance based on n-grams</h3>
+<p>An <img src="https://latex.codecogs.com/png.latex?n">-gram of a string is nothing but a sequence of <img src="https://latex.codecogs.com/png.latex?n"> characters of that string. E.g. all 2-grams of “books” are “bo”, “oo”, “ok” and “ks”. The 2-grams of “boots” are “bo”, “oo”, “ot” and “ts”.</p>
+<p>To calculate the distance based on 2-grams between two words, one looks at all 2-grams occurring in at least one of the words and considers the absolute value of the difference between the number of occurrences in the two words. For the example above this becomes:</p>
+<table class="caption-top table">
+<caption>Table 1: 2-grams and their occurrences in the words “books” and “boots”</caption>
+<thead>
+<tr class="header">
+<th>2-gram</th>
+<th style="text-align: center;">books</th>
+<th style="text-align: center;">boots</th>
+<th style="text-align: center;">difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bo</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td>oo</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td>ok</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td>ks</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td>ot</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td>ts</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p>Hence, the distance based on 2-grams between “books” and “boots” is 4.</p>
+</section>
+</section>
+<section id="token-based-methods" class="level2" data-number="0.2.2">
+<h2 data-number="0.2.2" class="anchored" data-anchor-id="token-based-methods"><span class="header-section-number">0.2.2</span> Token-based methods</h2>
+<p>When words are swapped places in two strings, character-based methods will typically attribute a large distance (or low similarity) to these two strings. Methods based on “tokens” attempt to address this.</p>
+<p>We list some token-based methods below:</p>
+<ul>
+<li>Method based on “atomic strings”. This method will typically work well when certain words are sometimes abbreviated.</li>
+<li>A method combining n-grams with “tf.idf”</li>
+</ul>
+<section id="method-based-on-atomic-strings" class="level3" data-number="0.2.2.1">
+<h3 data-number="0.2.2.1" class="anchored" data-anchor-id="method-based-on-atomic-strings"><span class="header-section-number">0.2.2.1</span> Method based on “atomic strings”</h3>
+<p>In this context, an “atomic string” refers to a sequence of alphanumeric characters bounded by other characters. We say that two “atomic strings” produce a match when they are equal or when one of them is a prefix of the other. E.g. “Univ” and “University” match because the former is a prefix of the latter.</p>
+<p>In this method, the similarity between two strings A and B is defined as the number of atomic strings of A that yield a match to an atomic string of B divided by the average number of atomic strings in strings A and B.</p>
+<p>By way of example, suppose that:</p>
+<ul>
+<li>string A equals “Comput. Sci. &amp; Eng. Dept., University of California, San Diego”</li>
+<li>and that string B equals “Department of Computer Science, Univ. Calif., San Diego”</li>
+</ul>
+<p>The atomic strings of A and B are: - for string A: “Comput”, “Sci”, “Eng”, “Dept”, “University”, “of”, “California”, “San”, “Diego” - for string B: “Department”, “of”, “Computer”, “Science”, “Univ”, “Calif”, “San”, “Diego”</p>
+<p>The following atomic strings of A match with an atomic string of B:</p>
+<ul>
+<li>“Comput” matches with “Computer”</li>
+<li>“Sci” matches with “Science”</li>
+<li>“University” matches with “Univ”</li>
+<li>“of” matches with “of”</li>
+<li>“California” matches with “Calif”</li>
+<li>“San” matches with “San”</li>
+<li>“Diego” matches with “Diego”</li>
+</ul>
+<p>Consequently, the number of atomic strings of A that match an atomic string of B equals 7. On average, strings A and B have <img src="https://latex.codecogs.com/png.latex?(9%20+%208)/2%20=%208.5"> atomic strings. Consequently, the similarity, based on this method of atomic strings, between A and B is: <img src="https://latex.codecogs.com/png.latex?7/8.5%20=%200.82">.</p>
+<p>If one were to remove the stop word “of” the similarity would become <img src="https://latex.codecogs.com/png.latex?6/7.5%20=%200.8">.</p>
+</section>
+<section id="method-combining-n-grams-with-tf.idf" class="level3" data-number="0.2.2.2">
+<h3 data-number="0.2.2.2" class="anchored" data-anchor-id="method-combining-n-grams-with-tf.idf"><span class="header-section-number">0.2.2.2</span> Method combining n-grams with “tf.idf”</h3>
+<p>tf.idf, which stands for “term frequency, inverse document frequency” is a number indicating how important a word is to the content of a document compared to a collection of documents. Terms that occur frequently in a document have a high “term frequency”. However, if a term occurs in many documents then it also has a high “document frequency”. To determine the tf.idf of a word in a document, the “term frequency” is divided by the “document frequency”. So one only gets a high “tf.idf” for word in a document if this word occurs frequently in this document and does not occur in many other documents.</p>
+<p>As a next step, one can put all terms (words) appearing in all documents in a certain order (e.g.&nbsp;alphabetically). A single document can then be summarised by a (very long) list of numbers, each number being the tf.idf of a given term.</p>
+<p>Comparing long lists of numbers (i.e.&nbsp;of vectors) is a problem that has been studied extensively. One of the typical ways of comparing such lists of numbers is the so-called cosine similarity. When two lists of numbers are exactly equal then it gives a value equal to +1, when they are exactly opposite the value is equal to -1. Thus, if one wants to identify similar documents, one looks for documents for which the cosine similarity of their tf.idf lists is “large”.</p>
+<p>Within the context of database tables, there are few fields that contain enough different words to calculate the tf.idf in a meaningful way. The trick now is to apply the above procedure to the <img src="https://latex.codecogs.com/png.latex?n">-grams of the fields. Hence, to apply this technique to compare two strings (in a column) we also need the contents of all (other) strings in the same column.</p>
+</section>
+</section>
+<section id="phonetic-methods" class="level2" data-number="0.2.3">
+<h2 data-number="0.2.3" class="anchored" data-anchor-id="phonetic-methods"><span class="header-section-number">0.2.3</span> Phonetic Methods</h2>
+<p>These methods are typically highly language-dependent. Here, words are compared based on their pronunciation. Words with similar pronunciation are assigned higher similarity.</p>
+</section>
+<section id="methods-based-on-word-semantics" class="level2" data-number="0.2.4">
+<h2 data-number="0.2.4" class="anchored" data-anchor-id="methods-based-on-word-semantics"><span class="header-section-number">0.2.4</span> Methods Based on Word Semantics</h2>
+<p>But what if we compare words that are not syntactically similar at all, but which mean the same thing? For example, the words “Car” and “Automobile” are synonyms of each other, but would have little or no similarity with the methods discussed above. We can determine the similarity of words by comparing their word vectors, or <strong>word embeddings</strong>. Word embeddings can be generated with an algorithm like word2vec: As the name suggests, word2vec represents each individual word with a list of numbers, called a vector. The vectors are carefully constructed so that a simple mathematical function (the cosine equality between the vectors) indicates the degree of semantic similarity between the words represented by those vectors. In essence, a word is transformed into a sequence of some 300 numbers and these sequences of numbers will be very similar when comparing words that have the same meaning.</p>
+<p>These methods will work well when the words in a column are common words; when it comes to a specific jargon then the words may not be recognised or the vectors with which they are represented will not necessarily show the right behaviour in terms of similarity.</p>
+</section>
+</section>
+<section id="comparing-records" class="level1" data-number="0.3">
+<h1 data-number="0.3"><span class="header-section-number">0.3</span> Comparing Records</h1>
+<p>Applying the previous single-column methods to pairs of records, we get a (large number of) records whose fields are numbers. In this post, we call such a record a <strong>comparison record</strong>. Each field in such a comparison record indicates how similar or different the original values in the corresponding columns are.</p>
+<p>For each such comparison record, we now want to indicate whether it is a possible duplicate or not, i.e.&nbsp;whether the original records are duplicates or not. This problem can be tackled in several ways.</p>
+<p>On the one hand, there are <strong>supervised methods</strong> where we train a binary classification algorithm to detect the duplicates. The problem with this is that such an algorithm typically requires <em>a large amount of labelled data</em>. This is not very interesting because creating such a labelled dataset requires a large effort.</p>
+<p>It is more interesting to recognise duplicates based on an <strong>unsupervised method</strong>, i.e.&nbsp;a method that can work <em>without labelled data</em>. The underlying idea is that the comparison records will look “different” for duplicates compared to “non-duplicates”. Intuitively, we can expect duplicates to have many high similarities, while non-duplicates probably do not.</p>
+<p>A first unsupervised method one can try is a (hard) <strong>clustering method</strong> such as the <strong>k-means algorithm</strong>. In this case, we would typically work with 2 classes. After the algorithm has been run, the comparison records will be divided into two classes. We can assume that the smallest class is the class containing the duplicates (since we assume that there are far fewer duplicates than non-duplicates). These can then be presented to the user for verification.</p>
+<p>The main disadvantage of hard clustering methods is that they give a yes/no answer and cannot indicate how “certain” they are about their answer. For that, other methods are needed that can indicate the (un)certainty in their answer.</p>
+<p>A <strong>Gaussian mixture model</strong> can be seen as a “soft” version of the (hard) k-means clustering algorithm. After running this algorithm, each record has a certain “probability” of belonging to a particular cluster. The mathematical details are relatively complicated but again, we can assume that the “smallest” cluster is the one that represents the duplicates. In this case, we can only show the most “obvious” (candidate) duplicates to the user for verification.</p>
+<p>Supervised learning has the problem of requiring a large amount of labelled data; in unsupervised learning this is not the case but here it is also not always clear whether a record (pair) is a duplicate or not. In <strong>active learning</strong>, the algorithm itself searches for record pairs that are most informative (to the algorithm); these will typically be record pairs that are rather “ambiguous”. These records are then shown to the user with a request to label them.</p>
+<section id="limiting-the-number-of-record-comparisons" class="level2" data-number="0.3.1">
+<h2 data-number="0.3.1" class="anchored" data-anchor-id="limiting-the-number-of-record-comparisons"><span class="header-section-number">0.3.1</span> Limiting the Number of Record Comparisons</h2>
+<p>When running algorithms, it is important that they finish executing within a reasonable time. This is where there can be a catch with duplicate detection. If one has e.g.&nbsp;<img src="https://latex.codecogs.com/png.latex?1000"> records then the number of pairs is about 500,000! (The exact number is <img src="https://latex.codecogs.com/png.latex?1000%20%5Ctimes%20999%20/%202%20=%20499,500"> but <img src="https://latex.codecogs.com/png.latex?500,000"> is obviously easier to work with). For a dataset with <img src="https://latex.codecogs.com/png.latex?10,000"> records, the number of pairs is already about <img src="https://latex.codecogs.com/png.latex?50,000,000">! Even for fast and powerful computers, this can quickly become a problem. If one wants to express this technically, one says that the number of pairs is of order <img src="https://latex.codecogs.com/png.latex?n%5E2">, where <img src="https://latex.codecogs.com/png.latex?n"> represents the number of records.</p>
+<p>In certain cases, however, one may have domain knowledge that allows one to deduce that records that differ in a particular column (or in the initial letters of a column value) are most likely not duplicates. One can then use this to dramatically reduce the number of records to be compared.</p>
+<p>By way of example, suppose one has a customer list and one has stored the gender of the customer. To keep the example simple, we assume that there are only two possible values, i.e.&nbsp;‘M’ and ‘F’. While it is possible that the gender was noted incorrectly and thus duplicates occur between ‘M’ and ‘F’ this seems unlikely. Now if we assume that there are <img src="https://latex.codecogs.com/png.latex?1000"> customers of which <img src="https://latex.codecogs.com/png.latex?500"> are ‘M’ and <img src="https://latex.codecogs.com/png.latex?500"> are ‘F’, and we compare only <em>within</em> ‘M’ and <em>within</em> ‘F’ then the number of records to be compared is about <img src="https://latex.codecogs.com/png.latex?125,000"> (for ‘M’) and <img src="https://latex.codecogs.com/png.latex?125,000"> (for ‘V’). Together this is <img src="https://latex.codecogs.com/png.latex?250,000">, and thus about half of what the number of records to compare would be without this division.</p>
+<p>If we can partition even more, the gains become even greater. Suppose there is a certain column with <img src="https://latex.codecogs.com/png.latex?10"> different values that occur <img src="https://latex.codecogs.com/png.latex?100"> times each (i.e.&nbsp;there are still 1000 records) and it is very unlikely that any two records are duplicates when they have a different value for this column. If, as already mentioned, we assume that each value occurs <img src="https://latex.codecogs.com/png.latex?100"> times then the number of records to compare is roughly equal to <img src="https://latex.codecogs.com/png.latex?10%20%5Ctimes%205000"> which is equal to <img src="https://latex.codecogs.com/png.latex?50,000">. Compare this with the <img src="https://latex.codecogs.com/png.latex?500,000"> records we have to compare without this division.</p>
+<p>The technical name for this partitioning is <strong>blocking</strong>, and it is a crucial technique for making duplicate detection scalable.</p>
+</section>
+</section>
+<section id="python-libraries-for-duplicate-detection" class="level1" data-number="0.4">
+<h1 data-number="0.4"><span class="header-section-number">0.4</span> Python Libraries for Duplicate Detection</h1>
+<p>By now, it should be clear that implementing an algorithm for duplicate detection from scratch will require a fair amount of work. Fortunately, implementations of these various methods are already available in easy-to-use Python libraries. Some examples are:</p>
+<ul>
+<li><a href="https://docs.dedupe.io/en/latest/">Dedupe.io</a> According to their website, dedupe will help you to:
+<ul>
+<li>remove duplicates from a spreadsheet of names and addresses</li>
+<li>link a list of customer information to order, even if no unique customer ID is present.</li>
+</ul></li>
+<li><a href="https://www.deduplipy.com/">deduplipy</a> A Python library that uses active learning to detect duplicates and can be used “out-of-the-box” but at the same time allows advanced users to tune the algorithm to their own needs, according to the website.</li>
+<li><a href="https://github.com/chu-data-lab/zeroer">zeroER</a> is the implementation that goes with the research paper “ZeroER: Entity Resolution using Zero Labeled Examples” which, as the title indicates, does not require any labelled example to do “entity resolution” (which is another name for duplicate detection). This code is very much of “research quality” and is not supported by a (fancy) website or a finished product.</li>
+<li><a href="https://github.com/J535D165/recordlinkage">The Python Record Linkage Toolkit</a> is a library for linking records within or between data sources. According to information on their website, the toolkit offers most of the tools needed for record linkage and deduplication. The package includes indexing methods, record comparison functions and classifiers. The package is designed for research and linking small or medium-sized files. Again according to the information provided by this library, its main features are:
+<ul>
+<li>Creating pairs of records with smart indexing methods such as blocking and sorted neighbourhood indexing</li>
+<li>The toolkit includes various classification algorithms, both supervised and unsupervised.</li>
+</ul></li>
+</ul>
+</section>
+<section id="conclusion" class="level1" data-number="0.5">
+<h1 data-number="0.5"><span class="header-section-number">0.5</span> Conclusion</h1>
+<p>Duplicate detection is essential for maintaining data accuracy, as they identify records referring to the same entity despite variations. This guide outlined various methods for comparing columns, such as character-based, token-based, phonetic, and semantic approaches. It also explored techniques for comparing entire records using supervised and unsupervised methods. Additionally, the use of blocking reduces computational load by limiting comparisons. Python libraries like Dedupe.io, deduplipy and the Python Record Linkage Toolkit provide practical tools to implement these techniques efficiently, ensuring reliable and actionable data.</p>
+<div class="line-block"><em>This blog post is mainly a translation of a blog post written in Dutch. The original blog post can be found <a href="https://ai-assisted-mdm.be/node/32">here</a></em></div>
+
+
+</section>
+
+ ]]></description>
+  <category>data cleaning</category>
+  <category>duplicate detection</category>
+  <category>fuzzy matching</category>
+  <guid>https://hogent-cads.github.io/blog/posts/duplicate-detection/</guid>
+  <pubDate>Fri, 21 Jun 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://hogent-cads.github.io/blog/posts/duplicate-detection/duplicate-detection-image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Integrating Qualtrics survey results into Power BI</title>
+  <dc:creator>Willem De Keyzer</dc:creator>
+  <link>https://hogent-cads.github.io/blog/posts/qualtrics-powerbi/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Imagine you’re tasked with integrating Qualtrics survey results into Power BI for interactive dashboards and reports, data visualization, or combining multiple data sources. At first, this seems like a straightforward task. You dive into Power BI, expecting to find a ready-to-use connector for Qualtrics, only to realise none exists.</p>
+<p>Your journey takes an unexpected turn as you begin to explore alternative solutions. You discover that while some companies offer integration services, they charge exorbitant fees, up to $200 per month. This discovery propels you to look for a more cost-effective and efficient solution.</p>
+<p>Through diligent research and exploration, you come across the R package <code>{qualtRics}</code>, a beacon of hope in your quest. This package, specifically designed for R, offers functions that allow you to fetch survey results directly from Qualtrics through an API. It’s a game-changer, offering a direct line to the data you need without the hefty price tag.</p>
+<p>Your next steps are clear but require careful planning and execution:</p>
+<ol type="1">
+<li><p><strong>Setting up an API token in Qualtrics</strong>: You’ll navigate the Qualtrics interface to generate an API token. This token is essential for authenticating your requests and securing the data transfer.</p></li>
+<li><p><strong>Downloading and installing R and the <code>{qualtRics}</code> package</strong>: R will serve as the backbone for data manipulation and analysis. The <code>{qualtRics}</code> package will be the tool that bridges Qualtrics and R, enabling you to pull the data into an environment where you can manipulate it freely.</p></li>
+<li><p><strong>Setting Power BI to work with R</strong>: Power BI’s versatility allows it to integrate with R scripts, a feature you plan to leverage. You’ll configure Power BI to recognise R, setting the stage for seamless data integration.</p></li>
+<li><p><strong>Writing a query in Power BI to fetch data from surveys</strong>: The final piece of the puzzle involves crafting a query within Power BI that utilises R and the <code>{qualtRics}</code> package to fetch your desired survey data. This query will be your key to unlocking the insights hidden within your survey responses.</p></li>
+</ol>
+</section>
+<section id="setting-up-an-api-token-in-qualtrics" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-an-api-token-in-qualtrics">Setting up an API Token in Qualtrics</h3>
+<p>Your first step in this data integration journey is to obtain an API token from Qualtrics. This token acts as a key, granting you access to your survey data through the API. It ensures secure communication between Qualtrics and any external applications, like R in your case, that you might use for data analysis. Here’s how you can go about setting up an API token in Qualtrics:</p>
+<ol type="1">
+<li><p><strong>Accessing the Qualtrics interface</strong>: Begin by logging into your Qualtrics account. Navigate to the “Account Settings” under “My Account” at the top right corner of the page.</p></li>
+<li><p><strong>Finding the API section</strong>: Within the “User Settings”, look for a section called “API”. Qualtrics continuously updates its interface, so the exact naming might vary, but you’re looking for the area where API-related settings are managed.</p></li>
+<li><p><strong>Generating the API token</strong>: In the API section, there should be an option to “Generate Token”. Clicking on this option will either generate a new token for you or take you to a screen where you can request a token.</p></li>
+<li><p><strong>Securing the token</strong>: Once your token is generated, it’s crucial to keep it secure. Treat it like a password, as it provides access to your Qualtrics data. Store it in a safe place, and avoid sharing it unnecessarily.</p></li>
+<li><p><strong>Get your Data centre ID</strong>: You will also need to know your Data centre ID. You can find this under the “Account Settings” in the Qualtrics interface when you look for the section “User”.</p></li>
+</ol>
+<p>By successfully setting up an API token in Qualtrics, you’ve taken the first significant step towards integrating your survey data with Power BI. This token will be used in subsequent steps to authenticate your data requests and ensure a seamless flow of information between Qualtrics and your analysis tools.</p>
+</section>
+<section id="downloading-and-installing-r-and-the-qualtrics-package" class="level3">
+<h3 class="anchored" data-anchor-id="downloading-and-installing-r-and-the-qualtrics-package">Downloading and installing R and the <code>{qualtRics}</code> package</h3>
+<p>After securing your API token from Qualtrics, the next step is to set up the tools you’ll use for fetching survey results: R and the <code>{qualtRics}</code> package. R is a powerful programming language used extensively in data analysis and statistical computing. The <code>{qualtRics}</code> package, specifically designed for R, facilitates the connection to Qualtrics, allowing you to fetch and work with your survey data seamlessly. Here’s how you can do this:</p>
+<ol type="1">
+<li><p><strong>Downloading R</strong>:</p>
+<ul>
+<li>Visit the Comprehensive R Archive Network (CRAN) at <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>.</li>
+<li>Select the download link that corresponds to your operating system (Windows, Mac, or Linux).</li>
+<li>Follow the instructions to download and install R on your computer. The installation process is straightforward, typically involving a series of clicks through the setup wizard.</li>
+</ul></li>
+<li><p><strong>Running R and installing the <code>{qualtRics}</code> package</strong>: While R can be ran using a graphical interface, we will use command-line tools to install the <code>{qualtRics}</code> package. Here’s how you can do this:</p>
+<ul>
+<li><strong>For Windows users</strong>:
+<ul>
+<li>Open the Command Prompt by typing <code>cmd</code> in the Windows search bar.</li>
+<li>Type <code>R</code> and press Enter to start an R session within the Command Prompt.</li>
+<li>In the R session within the Command Prompt, type the following command and press Enter: <code>install.packages("qualtRics")</code>.</li>
+</ul></li>
+<li><strong>For Mac users</strong>:
+<ul>
+<li>Open the Terminal application (you can find it using Spotlight with <code>Cmd + Space</code> and then typing “Terminal”).</li>
+<li>Type <code>R</code> and press Enter to start an R session within the Terminal.</li>
+<li>In the R session within the Terminal, type the following command and press Enter: <code>install.packages("qualtRics")</code>.</li>
+</ul></li>
+</ul></li>
+</ol>
+<p>For both Windows and Mac, after installing the <code>{qualtRics}</code> package, you can load it in any R session by typing <code>library(qualtRics)</code>. This will enable you to use the package’s functions to connect to and fetch data from Qualtrics.</p>
+<ol start="3" type="1">
+<li><strong>Setting up Qualtrics API credentials in R</strong>:
+<ul>
+<li><p>To ensure R can communicate with Qualtrics using your API token, set your credentials within R. This involves using a command in the Command Prompt (Windows) or Terminal (Mac) such as in the example below (don’t mind the new lines, they are just for readability).</p></li>
+<li><p>Replace <code>"your_api_token_here"</code> with the actual API token you obtained from Qualtrics and <code>"your_data_centre_id_here"</code> with the appropriate name for your Qualtrics data centre ID.</p></li>
+</ul></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">qualtRics<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">qualtrics_api_credentials</span>(</span>
+<span id="cb1-2">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">api_key =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"your_api_token_here"</span>, </span>
+<span id="cb1-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">base_url =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"your_data_centre_id_here.qualtrics.com"</span>,</span>
+<span id="cb1-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">install =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb1-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">overwrite =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb1-6">    )</span></code></pre></div></div>
+</div>
+<p>By completing these steps, you’ve successfully set up R and the <code>{qualtRics}</code> package, and you’ve configured R to communicate with Qualtrics using your API token. <strong>All the above should be done only once</strong>, and you’re now ready to use R to fetch survey data from Qualtrics and integrate it with Power BI.</p>
+</section>
+<section id="setting-power-bi-to-work-with-r" class="level3">
+<h3 class="anchored" data-anchor-id="setting-power-bi-to-work-with-r">Setting Power BI to work with R</h3>
+<p>To unlock the power of R scripting Power BI, you first need to ensure that R is correctly referenced in your Power BI application. Open Power BI Desktop, navigate to <code>File</code> &gt; <code>Options and settings</code> &gt; <code>Options</code> to open the Options menu. Here, find the <code>R scripting</code> tab where you’ll inform Power BI about your R installation. This setup requires specifying the path to the R executable in the R home directory field. Usually, Power BI will automatically detect the R installation, but if it doesn’t, you can manually specify the path to the R executable. Once you’ve set up R in Power BI, you’re ready to start integrating your survey data with Power BI.</p>
+</section>
+<section id="writing-a-query-in-power-bi-to-fetch-data-from-surveys" class="level3">
+<h3 class="anchored" data-anchor-id="writing-a-query-in-power-bi-to-fetch-data-from-surveys">Writing a query in Power BI to fetch data from surveys</h3>
+<p>The final step in integrating Qualtrics survey results into Power BI involves writing a query in Power BI to fetch the data. This step leverages the work you’ve done so far. Here’s how you can write and execute a query to fetch your survey data:</p>
+<ol type="1">
+<li><strong>Open Power BI and Start a New Query</strong>:
+<ul>
+<li>Launch Power BI Desktop and create a new report. Navigate to the <code>Home</code> tab, and select <code>Get Data</code>. Choose <code>More</code> to see all data connection options.</li>
+</ul></li>
+<li><strong>Select R Script as the Data Source</strong>:
+<ul>
+<li>In the <code>Get Data</code> window, scroll down or search for <code>R script</code>, then select it and click <code>Connect</code>. This opens a dialog box where you can input your R script.</li>
+</ul></li>
+<li><strong>Craft Your R Script</strong>:
+<ul>
+<li>In the R script input box, you’ll write an R script that utilizes the <code>{qualtRics}</code> package to fetch survey data from Qualtrics. R will use the API token you set up earlier to authenticate the request and fetch the data. You just need one additional parameter, and that’s the survey ID. This is the unique identifier for the survey you want to fetch data from. You can find the survey ID in the Qualtrics interface, typically in the URL when you’re viewing the survey. The survey ID is a long string of characters and numbers, and it’s unique to each survey. Here’s an example of an R script that fetches survey data using the <code>{qualtRics}</code> package:</li>
+</ul></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(qualtRics)</span>
+<span id="cb2-2">my_table <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.data.frame</span>(</span>
+<span id="cb2-3">    qualtRics<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fetch_survey</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">surveyID =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"your_survey_ID"</span>)</span>
+<span id="cb2-4">)</span></code></pre></div></div>
+</div>
+<p>Replace <code>"your_survey_ID"</code> with the actual survey ID you want to fetch data from. This R script will fetch the survey data and store it in a data frame called <code>my_table</code>. You can then use this data frame to work with the survey data in Power BI.</p>
+<ol start="4" type="1">
+<li><strong>Execute the R Script</strong>:
+<ul>
+<li>After writing your R script, click <code>OK</code> to execute the script. Power BI will run the R script and fetch the survey data from Qualtrics. The data will be loaded into Power BI, and you can start working with it in the Power BI interface!</li>
+</ul></li>
+</ol>
+<p>By writing a query in Power BI to fetch data from your Qualtrics surveys, you’ve effectively bridged the gap between these powerful platforms. This integration not only streamlines your workflow but also opens up new possibilities for analyzing and visualizing survey data to inform data-driven decisions.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>data engineering</category>
+  <category>business analytics</category>
+  <category>surveys</category>
+  <guid>https://hogent-cads.github.io/blog/posts/qualtrics-powerbi/</guid>
+  <pubDate>Fri, 15 Mar 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://hogent-cads.github.io/blog/posts/qualtrics-powerbi/DALL-E 2024-03-15.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Welcome to our Data Blog!</title>
+  <dc:creator>CADS </dc:creator>
+  <link>https://hogent-cads.github.io/blog/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://hogent-cads.github.io/blog/posts/welcome/thumbnail_square.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Welcome to the inaugural post of the Centre for Applied Data Science at HOGENT. We are a dedicated team of data experts committed to advancing the field of data science through innovative research, education, and application. Our journey into the digital expanse is fuelled by a passion for uncovering insights and fostering knowledge that drives progress and transformation across various domains.</p>
+<p>At the heart of our centre lies a profound appreciation for the power of data. In a world increasingly driven by information, we see endless opportunities to leverage data in ways that are both groundbreaking and beneficial to society. Our blog serves as a platform to share our discoveries, challenges, and the lessons we learn along the way.</p>
+<p>As we embark on this exciting journey, we invite you to join us. Whether you’re a data science professional, a student eager to learn, or simply curious about the impact of data in our world, our blog aims to provide valuable content that informs, inspires, and ignites discussion.</p>
+<p>Through our posts, we’ll delve into all things data-related, from the latest trends and technologies to in-depth analyses and case studies. We’re here to share our expertise, explore new frontiers, and build a community of like-minded individuals passionate about harnessing the potential of data.</p>
+<p>So, welcome aboard. We’re thrilled to have you with us and can’t wait to see where this journey takes us together.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://hogent-cads.github.io/blog/posts/welcome/</guid>
+  <pubDate>Thu, 14 Mar 2024 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
