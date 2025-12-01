@@ -10,7 +10,58 @@
 <atom:link href="https://hogent-cads.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>CADS Data Blog</description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Sat, 08 Nov 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 18 Nov 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Aandachtspunten bij het gebruik van transcriptietools voor kwalitatief onderzoek</title>
+  <dc:creator>Nico De Witte</dc:creator>
+  <link>https://hogent-cads.github.io/blog/posts/transcriptietools_kwalitatief/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Transcriptietools, vaak aangedreven door AI, lijken een logische stap binnen kwalitatief onderzoek. Ze bieden op het eerste zicht voordelen zoals snelheid en efficiëntie, maar ze roepen ook vragen op over, interpretatie, nuancering en ethiek. In kwalitatief onderzoek ligt de focus op vaak op de ervaringen van mensen, hun gevoelens en emoties. Daarom is het belangrijk om verstandig om te gaan met AI technologie. In deze blog verkennen we de cruciale aandachtspunten bij het gebruik van transcriptietools en tonen we hoe AI een waardevolle plaats kan krijgen zonder de essentie van kwalitatief onderzoek te ondermijnen.</p>
+<section id="transcriptie-als-startpunt-van-interpretatie" class="level3">
+<h3 class="anchored" data-anchor-id="transcriptie-als-startpunt-van-interpretatie">Transcriptie als startpunt van interpretatie</h3>
+<p>Wie kwalitatief onderzoek doet, beschikt vaak over audiobestanden, afkomstig van een interview of een focusgroep. Transcriberen is echter veel meer dan het letterlijk uitschrijven van woorden. Je merkt pauzes op, intonatie, twijfel, omwegen, omfloerste formuleringen, non verbale uitingen en alles wat een gesprek menselijk maakt. Meer nog, tijdens het transcriberen begin je als onderzoeker al met analyseren. Het is in die fase dat je vertrouwd raakt met je data, dat patronen zichtbaar worden en context zich begint te vormen. Misschien krijg je zelfs inzichten om specifieke topics in een volgend interview aan bod te laten komen.</p>
+<p>Transcriptietools nemen dat proces niet over. Ze zetten spraak om in tekst, maar missen de interpretatieve dimensie die voor een kwalitatief onderzoeker zo cruciaal is. De tools horen woorden en zetten die om in tekst, maar ze begrijpen geen betekenis. Ze herkennen zinnen, maar voelen geen nuance. Daarom blijft het noodzakelijk om AI-transcripties altijd zorgvuldig na te lezen en aan te vullen met menselijke nalezing/controle en correctie. AI kan je tijd doen besparen, maar het mag je niet vervreemden van je data.</p>
+</section>
+<section id="waarom-de-kwaliteit-van-ai-transcripties-sterk-varieert" class="level3">
+<h3 class="anchored" data-anchor-id="waarom-de-kwaliteit-van-ai-transcripties-sterk-varieert">Waarom de kwaliteit van AI-transcripties sterk varieert</h3>
+<p>Wie experimenteerde met transcriptietools, merkte al dat de kwaliteit niet altijd betrouwbaar is. Verschillen in dialect, achtergrondgeluid, overlapping tussen sprekers of vakjargon kunnen de nauwkeurigheid aanzienlijk verminderen. In onze eigen experimenten binnen CADS bleek zelfs dat een mooie, schijnbaar gestructureerde transcriptie vaak nogal wat fouten verbergt: verkeerd toegewezen sprekers, woorden die logisch lijken maar niet gezegd werden, of verloren nuances die de interpretatie kunnen vertekenen.</p>
+<p>Een transcriptietool functioneert immers alleen optimaal bij heldere opnames van één spreker, die duidelijk articuleert in “standaardtaal”. Interviews, focusgroepen en echte onderzoekscontexten voldoen zelden aan dat ideaal. Daarom blijft een kwaliteitscheck essentieel — en dat is vaak tijdrovend. Het is dus nog niet 100% zeker dat het gebruik van een transcriptietook je echt tijdwinst zal binnen de eisen van het kwalitatief onderzoek, aangezien je extra aandacht moet hebben voor nauwkeurigheid en correcties.</p>
+</section>
+<section id="ethiek-en-gdpr-meer-dan-een-formaliteit" class="level3">
+<h3 class="anchored" data-anchor-id="ethiek-en-gdpr-meer-dan-een-formaliteit">Ethiek en GDPR: meer dan een formaliteit</h3>
+<p>Kwalitatieve data zijn vaak persoonlijk en gevoelig. Wanneer je transcriptietools gebruikt, zeker tools die in de cloud werken, verwerk je al wat de persoon gezegd heeft, via een externe partij. Dit brengt belangrijke verplichtingen met zich mee voor de onderzoeker. Onderzoekers zijn verplicht om te melden, aan de geïnterviewden in het informed consent, dat het interview (integraal/gedeeltelijk) door AI zal verwerkt worden, om hiervoor expliciet hun toestemming voor te vragen en om duidelijk uit te leggen wat er met de data zal gebeuren. Alleen dan kan de deelnemer op een geïnformeerde manier dit al dan niet toelaten. Bovendien is voorzichtigheid geboden wanneer op de geluidsopnames identificeerbare gegevens staan. Denk daarbij verder dan enkel namen, maar ook plaatsen, beroepen, enz die mogelijks de identiteit van de persoon kunnen blootleggen. Daarnaast is databeheer cruciaal en behoort ook tot de verantwoordelijkheid van de onderzoeker: waar worden opgeladen bestanden opgeslagen, hoe lang blijven ze bestaan en wie kan er toegang toe krijgen?</p>
+<p>Besef ook dat niet alle tools automatisch voldoen aan GDPR-vereisten, en sommige systemen gebruiken geüploade data zelfs om hun modellen te trainen. Dat is een no-go voor onderzoek waar privacy centraal staat. De veiligste aanpak is werken met tools die lokaal beheerd worden of met diensten die expliciet garanderen dat data niet worden opgeslagen.</p>
+<p>Een veilige oplossing is dus om te werken met transcriptie “on-premise”. Dat betekent dat de verwerking volledig plaatsvindt op de eigen infrastructuur van de organisatie, zonder dat audio- of tekstbestanden naar externe servers worden verzonden. Zo blijft alle data binnen de beveiligde omgeving van HOGENT.</p>
+<p><strong>Veilige AI-transcriptie binnen HOGENT</strong></p>
+<p>HOGENT biedt daarvoor een eigen transcriptieserver aan:<br>
+🎙 <a href="https://whisper.vichogent.be">https://whisper.vichogent.be</a></p>
+<p>Deze dienst gebruikt de Whisper-technologie van OpenAI, maar draait volledig on-premise. Hierdoor:</p>
+<ul>
+<li><p>blijven alle data binnen de organisatie</p></li>
+<li><p>worden geen bestanden doorgestuurd naar commerciële clouddiensten</p></li>
+<li><p>is de verwerking beheersbaar om te voldoen aan GDPR-vereisten</p></li>
+<li><p>blijft de onderzoeker eigenaar van de data</p></li>
+</ul>
+<p>Whisper is bovendien robuust bij variaties in uitspraak en achtergrondgeluid, wat het geschikt maakt voor kwalitatieve interviews. ### Conclusie: AI als hulpmiddel, niet als vervanging Transcriptietools kunnen een waardevolle aanvulling zijn binnen kwalitatief onderzoek, mits ze met de nodige voorzichtigheid worden ingezet. Ze mogen echter nooit de rol van de onderzoeker vervangen in het interpreteren en begrijpen van data. Kwalitatief onderzoek draait immers om menselijke ervaringen, emoties en nuances die AI nog niet volledig kan vatten.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>kwalitatieve data-analyse</category>
+  <category>spraakherkenning</category>
+  <category>AI</category>
+  <category>onderzoek</category>
+  <category>privacy</category>
+  <guid>https://hogent-cads.github.io/blog/posts/transcriptietools_kwalitatief/</guid>
+  <pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://hogent-cads.github.io/blog/posts/transcriptietools_kwalitatief/transcriptietools.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Praktische datasetdocumentatie voor praktijkgericht onderzoek</title>
   <dc:creator>Willem De Keyzer</dc:creator>

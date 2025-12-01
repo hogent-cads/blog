@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hogent-cads.github.io/blog/about.html</loc>
-    <lastmod>2025-11-28T16:00:40.280Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/RAA-QuestionPro/index.html</loc>
-    <lastmod>2025-11-28T16:00:40.286Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/index.html</loc>
-    <lastmod>2025-11-28T16:00:40.295Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/qualtrics-powerbi/index.html</loc>
-    <lastmod>2025-11-28T16:00:40.291Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/index.html</loc>
-    <lastmod>2025-11-28T16:00:40.280Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/duplicate-detection/index.html</loc>
-    <lastmod>2025-11-28T16:00:40.289Z</lastmod>
+    <lastmod>2025-12-01T10:13:42.215Z</lastmod>
   </url>
   <url>
     <loc>https://hogent-cads.github.io/blog/posts/datasetdocumentatie/index.html</loc>
-    <lastmod>2025-11-28T16:00:40.288Z</lastmod>
+    <lastmod>2025-12-01T10:13:42.223Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/duplicate-detection/index.html</loc>
+    <lastmod>2025-12-01T10:13:42.224Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/index.html</loc>
+    <lastmod>2025-12-01T10:13:42.215Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/qualtrics-powerbi/index.html</loc>
+    <lastmod>2025-12-01T10:13:42.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/index.html</loc>
+    <lastmod>2025-12-01T10:13:42.230Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/RAA-QuestionPro/index.html</loc>
+    <lastmod>2025-12-01T10:13:42.221Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/transcriptietools_kwalitatief/index.html</loc>
+    <lastmod>2025-12-01T10:13:42.226Z</lastmod>
   </url>
   <url>
     <loc>https://hogent-cads.github.io/blog/posts/welcome/index.html</loc>
-    <lastmod>2025-11-28T16:00:40.296Z</lastmod>
+    <lastmod>2025-12-01T10:13:42.231Z</lastmod>
   </url>
 </urlset>
