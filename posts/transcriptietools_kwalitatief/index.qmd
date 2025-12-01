@@ -89,5 +89,6 @@ volledig on-premise. Hierdoor:
 Whisper is bovendien robuust bij variaties in uitspraak en
 achtergrondgeluid, wat het  geschikt maakt voor kwalitatieve
 interviews.
+
 ### Conclusie: AI als hulpmiddel, niet als vervanging
 Transcriptietools kunnen een waardevolle aanvulling zijn binnen kwalitatief onderzoek, mits ze met de nodige voorzichtigheid worden ingezet. Ze mogen echter nooit de rol van de onderzoeker vervangen in het interpreteren en begrijpen van data. Kwalitatief onderzoek draait immers om menselijke ervaringen, emoties en nuances die AI nog niet volledig kan vatten. 
