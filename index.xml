@@ -9,8 +9,50 @@
 <link>https://hogent-cads.github.io/blog/</link>
 <atom:link href="https://hogent-cads.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>CADS Data Blog</description>
-<generator>quarto-1.8.26</generator>
-<lastBuildDate>Tue, 18 Nov 2025 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Wed, 06 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>AI op HOGENT</title>
+  <dc:creator>Martijns Saelens</dc:creator>
+  <link>https://hogent-cads.github.io/blog/posts/AI-tools HOGENT/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="ai-op-hogent" class="level1">
+<h1>AI op HOGENT</h1>
+<section id="experimentele-privacyvriendelijke-ai-tools-voor-hogent-personeel." class="level2">
+<h2 class="anchored" data-anchor-id="experimentele-privacyvriendelijke-ai-tools-voor-hogent-personeel.">Experimentele privacyvriendelijke AI-tools voor HOGENT-personeel.</h2>
+<p>Om te kijken hoe privacyvriendelijke alternatieven voor AI-tools beschikbaar gemaakt kunnen worden voor HOGENT-personeel, sloegen <a href="https://www.hogent.be/onderzoekscentra/cads/">CADS</a> (Centre for Applied Data Science) en <a href="https://vichogent.be/nl">VIC</a> (Virtual IT Company; het datacenter door studenten van de opleiding Toegepaste Informatica) de handen in elkaar. Uit deze samenwerking zijn momenteel al twee experimentele tools ontstaan waarmee HOGENT-personeel aan de slag kan.</p>
+<p>Hoewel deze tools zich nog in een experimentele fase bevinden, moedigen we HOGENT-personeel aan om ze uit te proberen en feedback te delen!</p>
+</section>
+<section id="hogpt" class="level2">
+<h2 class="anchored" data-anchor-id="hogpt"><strong>HoGPT</strong></h2>
+<p><img src="https://vichogent.be/assets/hogpt-example-87346624.png" class="img-fluid"></p>
+<p>Een privacyvriendelijke chatbot vergelijkbaar met ChatGPT, gehost op de servers van het VIC. Daardoor blijven ingegeven prompts en gegevens binnen HOGENT en worden ze niet gedeeld met externe partijen.</p>
+<p><a href="https://vichogent.be/nl/ai#hogpt">Ga naar HoGPT en de handleiding</a></p>
+</section>
+<section id="whisper" class="level2">
+<h2 class="anchored" data-anchor-id="whisper"><strong>Whisper</strong></h2>
+<p><img src="https://vichogent.be/assets/whisper-simple-view-f10312f0.png" class="img-fluid"></p>
+<p>Een privacyvriendelijke spraak-naar-tekst tool, vergelijkbaar met Whisper van OpenAI, eveneens gehost op de servers van het VIC. Zo blijven geüploade audio- en videofragmenten en gegevens binnen HOGENT en worden ze niet gedeeld met externe partijen.</p>
+<p><a href="https://vichogent.be/nl/ai#whisper">Ga naar Whisper en de handleiding</a></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>AI</category>
+  <category>onderzoek</category>
+  <category>spraakherkenning</category>
+  <category>privacy</category>
+  <guid>https://hogent-cads.github.io/blog/posts/AI-tools HOGENT/</guid>
+  <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://hogent-cads.github.io/blog/posts/AI-tools HOGENT/ai-tools.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
 <item>
   <title>Aandachtspunten bij het gebruik van transcriptietools voor kwalitatief onderzoek</title>
   <dc:creator>Nico De Witte</dc:creator>
