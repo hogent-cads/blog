@@ -1,0 +1,37 @@
+---
+title: "AI op HOGENT"
+subtitle: "Experimentele privacyvriendelijke AI-tools voor HOGENT-personeel"
+author: "Martijns Saelens"
+date: "2026-05-06"
+categories: [AI, onderzoek, tools]
+image: "ai-tools.png"
+toc: false
+toc-depth: 4
+number-sections: false
+shift-heading-level-by: -2
+draft: false
+---
+
+### AI op HOGENT
+
+#### Experimentele privacyvriendelijke AI-tools voor HOGENT-personeel.
+
+Om te kijken hoe privacyvriendelijke alternatieven voor AI-tools beschikbaar gemaakt kunnen worden voor HOGENT-personeel, sloegen [CADS](https://www.hogent.be/onderzoekscentra/cads/) (Centre for Applied Data Science) en [VIC](https://vichogent.be/nl) (Virtual IT Company; het datacenter door studenten van de opleiding Toegepaste Informatica) de handen in elkaar. Uit deze samenwerking zijn momenteel al twee experimentele tools ontstaan waarmee HOGENT-personeel aan de slag kan.
+
+Hoewel deze tools zich nog in een experimentele fase bevinden, moedigen we HOGENT-personeel aan om ze uit te proberen en feedback te delen!
+
+#### **HoGPT**
+
+![](https://vichogent.be/assets/hogpt-example-87346624.png)
+
+Een privacyvriendelijke chatbot vergelijkbaar met ChatGPT, gehost op de servers van het VIC. Daardoor blijven ingegeven prompts en gegevens binnen HOGENT en worden ze niet gedeeld met externe partijen.
+
+[Ga naar HoGPT en de handleiding](https://vichogent.be/nl/ai#hogpt) 
+
+#### **Whisper**
+
+![](https://vichogent.be/assets/whisper-simple-view-f10312f0.png)
+
+Een privacyvriendelijke spraak-naar-tekst tool, vergelijkbaar met Whisper van OpenAI, eveneens gehost op de servers van het VIC. Zo blijven geüploade audio- en videofragmenten en gegevens binnen HOGENT en worden ze niet gedeeld met externe partijen.
+
+[Ga naar Whisper en de handleiding](https://vichogent.be/nl/ai#whisper)
