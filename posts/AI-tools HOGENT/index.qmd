@@ -4,7 +4,7 @@ subtitle: "Experimentele privacyvriendelijke AI-tools voor HOGENT-personeel"
 author: "Martijns Saelens"
 date: "2026-05-06"
 categories: [AI, onderzoek, spraakherkenning, privacy]
-image: "ai-tools.png"
+image: "ai-tools-square.png"
 toc: false
 toc-depth: 4
 number-sections: false
