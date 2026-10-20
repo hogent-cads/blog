@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hogent-cads.github.io/blog/about.html</loc>
-    <lastmod>2026-10-06T13:31:02.116Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/datasetdocumentatie/index.html</loc>
-    <lastmod>2026-10-06T13:31:02.125Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/index.html</loc>
-    <lastmod>2026-10-06T13:31:02.131Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/AI-tools HOGENT/index.html</loc>
-    <lastmod>2026-10-06T13:31:02.122Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/RAA-QuestionPro/index.html</loc>
-    <lastmod>2026-10-06T13:31:02.124Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/index.html</loc>
-    <lastmod>2026-10-06T13:31:02.116Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/welcome/index.html</loc>
-    <lastmod>2026-10-06T13:31:02.132Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/duplicate-detection/index.html</loc>
-    <lastmod>2026-10-06T13:31:02.126Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hogent-cads.github.io/blog/posts/transcriptietools_kwalitatief/index.html</loc>
-    <lastmod>2026-10-06T13:31:02.129Z</lastmod>
+    <lastmod>2026-10-20T12:35:59.719Z</lastmod>
   </url>
   <url>
     <loc>https://hogent-cads.github.io/blog/posts/qualtrics-powerbi/index.html</loc>
-    <lastmod>2026-10-06T13:31:02.128Z</lastmod>
+    <lastmod>2026-10-20T12:35:59.739Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/transcriptietools_kwalitatief/index.html</loc>
+    <lastmod>2026-10-20T12:35:59.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/duplicate-detection/index.html</loc>
+    <lastmod>2026-10-20T12:35:59.731Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/welcome/index.html</loc>
+    <lastmod>2026-10-20T12:35:59.743Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/index.html</loc>
+    <lastmod>2026-10-20T12:35:59.719Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/RAA-QuestionPro/index.html</loc>
+    <lastmod>2026-10-20T12:35:59.728Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/AI-tools HOGENT/index.html</loc>
+    <lastmod>2026-10-20T12:35:59.726Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/vlaamse-spraakherkenning/index.html</loc>
+    <lastmod>2026-10-20T12:35:59.742Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/datasetdocumentatie/index.html</loc>
+    <lastmod>2026-10-20T12:35:59.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hogent-cads.github.io/blog/posts/onderzoek-je-data-zonder-code/index.html</loc>
+    <lastmod>2026-10-20T12:35:59.734Z</lastmod>
   </url>
 </urlset>

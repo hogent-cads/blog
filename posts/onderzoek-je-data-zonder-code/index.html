@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stijn Lievens">
+<meta name="dcterms.date" content="2026-10-06">
+
+<title>Onderzoek je data zonder code – Home</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-95e700bef72d2880c277d2cb84c9764b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo_cads_white.png" alt="" class="navbar-logo light-content">
+    <img src="../../logo_cads_white.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Home</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.hogent.be/onderzoekscentra/cads"> <i class="bi bi-globe" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/hogent-cads/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/showcase/centre-for-applied-data-science/about/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Onderzoek je data zonder code</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">dataverkenning</div>
+                <div class="quarto-category">visualisatie</div>
+                <div class="quarto-category">tools</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Stijn Lievens </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 6, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#zonder-r-of-python" id="toc-zonder-r-of-python" class="nav-link active" data-scroll-target="#zonder-r-of-python">Zonder R of Python?</a></li>
+  <li><a href="#jasp" id="toc-jasp" class="nav-link" data-scroll-target="#jasp">JASP</a></li>
+  <li><a href="#orange" id="toc-orange" class="nav-link" data-scroll-target="#orange">Orange</a></li>
+  <li><a href="#beperkingen" id="toc-beperkingen" class="nav-link" data-scroll-target="#beperkingen">Beperkingen</a></li>
+  <li><a href="#welke-tool-te-kiezen" id="toc-welke-tool-te-kiezen" class="nav-link" data-scroll-target="#welke-tool-te-kiezen">Welke tool te kiezen?</a></li>
+  <li><a href="#kort-voorbeeld" id="toc-kort-voorbeeld" class="nav-link" data-scroll-target="#kort-voorbeeld">Kort voorbeeld</a>
+  <ul class="collapse">
+  <li><a href="#jasp-verschilt-de-flipperlengte-per-soort" id="toc-jasp-verschilt-de-flipperlengte-per-soort" class="nav-link" data-scroll-target="#jasp-verschilt-de-flipperlengte-per-soort">JASP: verschilt de flipperlengte per soort?</a></li>
+  <li><a href="#orange-kunnen-we-de-soort-voorspellen" id="toc-orange-kunnen-we-de-soort-voorspellen" class="nav-link" data-scroll-target="#orange-kunnen-we-de-soort-voorspellen">Orange: kunnen we de soort voorspellen?</a></li>
+  </ul></li>
+  <li><a href="#conclusie" id="toc-conclusie" class="nav-link" data-scroll-target="#conclusie">Conclusie</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Ook als je geen kennis hebt van R of Python, kan je zinvolle inzichten halen uit je data. In deze blogpost introduceren we enkele gratis tools, die je toelaten om je data te verkennen, statistische toetsen uit te voeren en zelf machine-learningmodellen te bouwen door te klikken en te slepen in een grafische gebruikersomgeving. De twee tools die we voorstellen in deze blogpost zijn JASP en Orange Data Mining. Deze softwarepakketten laten je toe om je data volledig op je eigen machine te analyseren, zonder cloudaccount of upload. Voor de kernfunctionaliteit, zoals de analyses in deze post, verlaat je data je computer niet. Gebruik je in Orange echter widgets of add-ons die online diensten aanspreken, dan kan dat veranderen. Controleer dat vooraf als privacy een zorg is.</p>
+<section id="zonder-r-of-python" class="level2">
+<h2 class="anchored" data-anchor-id="zonder-r-of-python">Zonder R of Python?</h2>
+<p>Het gebruik van R of Python geeft je heel veel flexibiliteit, maar komt ook met een drempel. Je moet een programmeeromgeving installeren, syntax en bibliotheken leren, en de onvermijdelijke fouten debuggen. Als onderzoeker wil je echter vooral snel antwoorden op je vragen over jouw data.</p>
+<p>Tools die gebruikmaken van een grafische gebruikersinterface bieden een aantal voordelen t.o.v. het gebruik van R of Python. Er is meestal een <em>lage instapdrempel</em>; je bent dus snel aan de slag. Bovendien krijg je <em>visuele feedback</em> en je ziet meteen wat er met je data gebeurt.</p>
+<p>Het nadeel van een grafische gebruikersinterface is dat er mogelijks wat minder flexibiliteit is; als een bepaalde optie niet ingebouwd is, dan kan je die ook niet gebruiken.</p>
+</section>
+<section id="jasp" class="level2">
+<h2 class="anchored" data-anchor-id="jasp">JASP</h2>
+<p><a href="https://jasp-stats.org/">JASP</a> (Jeffreys’s Amazing Statistics Program) wordt aan de Universiteit van Amsterdam ontwikkeld als een gratis en open source alternatief voor SPSS. Als je een verkennende ronde wil doen van je data of als je klassieke (of Bayesiaanse) toetsen wil uitvoeren op je data, dan is JASP hier heel geschikt voor.</p>
+<p>JASP heeft een aantal sterke punten:</p>
+<ul>
+<li>de resultaten passen zich “live” aan: als je een optie aan- of uitvinkt, dan verandert de uitvoer onmiddellijk;</li>
+<li>het aanbod van analyses is heel breed: t-toetsen, ANOVA, regressie- en correlatieanalyses en zelfs factoranalyse en meer zijn ingebouwd;</li>
+<li>JASP ondersteunt voor heel veel analyses zowel een “klassieke” als een “Bayesiaanse” variant;</li>
+<li>de uitvoer, zoals tabellen en grafieken, is professioneel opgemaakt zodat je die heel gemakkelijk in een rapport of artikel kan opnemen;</li>
+<li>data, analyses en rapporten worden in één bestand bewaard, zodat alles reproduceerbaar is.</li>
+</ul>
+<p>JASP heeft een eenvoudige data-editor (knop <code>Edit Data</code>): als je data foutieve of ontbrekende waarden bevat, dan is het niet zo handig om deze aan te passen binnen JASP zelf. Hiervoor kan je eventueel teruggrijpen naar andere software, zoals klassieke werkbladsoftware (bv. Excel) of een alternatief voor JASP, nl. <a href="https://www.jamovi.org/index.html">Jamovi</a>. Als je echt “zware” dataopschoning wil of moet doen, dan is er hiervoor een specifiek programma, nl. <a href="https://openrefine.org/">OpenRefine</a>.</p>
+</section>
+<section id="orange" class="level2">
+<h2 class="anchored" data-anchor-id="orange">Orange</h2>
+<p><a href="https://orangedatamining.com/">Orange</a> wordt onderhouden door de Universiteit van Ljubljana en heeft een andere aanpak. Je sleept blokjes (widgets) op een canvas en verbindt ze door middel van lijnen die aangeven hoe de data “vloeit” doorheen de <em>workflow</em> die je op deze manier opbouwt. Elk blokje doet één ding, zoals data inladen, filteren, visualiseren of een model trainen. Door te klikken op een widget kan je de werking ervan via een grafische gebruikersinterface aanpassen.</p>
+<p>De sterke punten van Orange zijn:</p>
+<ul>
+<li>de aanpak is heel visueel: de hele analyse is zichtbaar als een “stroomschema”, wat het gemakkelijk maakt om erover te redeneren;</li>
+<li>het is gemakkelijk om je data te verkennen door het uitgebreide gamma aan plots: scatterplots, boxplots, heatmaps, histogrammen; deze zijn ook allemaal interactief;</li>
+<li>het beschikt over veel ingebouwde machine-learningmodellen voor classificatie, regressie en clustering die via cross-validatie kunnen worden geëvalueerd;</li>
+<li>er is een bibliotheek van “add-ons” die je toelaat de functionaliteiten van Orange uit te breiden naar bv. tekst- of beeldanalyse.</li>
+</ul>
+<p>Orange is dus minder gericht op “klassieke” statistiek en meer op machine learning.</p>
+</section>
+<section id="beperkingen" class="level2">
+<h2 class="anchored" data-anchor-id="beperkingen">Beperkingen</h2>
+<p>Als je werkt met dergelijke tools (en zonder code), dan zijn hier ook nadelen aan verbonden:</p>
+<ul>
+<li>het is minder gemakkelijk om analyses volledig te automatiseren;</li>
+<li>voor (zeer) grote datasets zijn deze tools minder geschikt;</li>
+<li>ze zijn minder flexibel dan werken met code: als je bijzondere (niet-standaard) analyses wil uitvoeren of eigen modellen wil bouwen, dan heb je meestal wel Python of R nodig.</li>
+</ul>
+<p>Een mooie uitvoer is echter geen garantie voor een betrouwbaar resultaat. Het principe <em>garbage in, garbage out</em> geldt ook hier: foutieve of onvolledige data leveren foutieve conclusies op, hoe verzorgd de tabellen en grafieken er ook uitzien. Controleer daarom steeds de <strong>kwaliteit van je data</strong> voor je begint.</p>
+</section>
+<section id="welke-tool-te-kiezen" class="level2">
+<h2 class="anchored" data-anchor-id="welke-tool-te-kiezen">Welke tool te kiezen?</h2>
+<p>Hieronder presenteren we een korte tabel die je kan helpen om een keuze te maken tussen JASP en Orange.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 36%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">JASP</th>
+<th style="text-align: left;">Orange</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Focus</strong></td>
+<td style="text-align: left;">Statistisch toetsen</td>
+<td style="text-align: left;">Machine Learning</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Werkwijze</strong></td>
+<td style="text-align: left;">Menu’s en opties</td>
+<td style="text-align: left;">Visuele workflows met widgets</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Sterk in</strong></td>
+<td style="text-align: left;">Klassieke en Bayesiaanse statistiek</td>
+<td style="text-align: left;">Visualisatie, clustering, voorspellen</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Best voor</strong></td>
+<td style="text-align: left;">Onderzoek, rapportage</td>
+<td style="text-align: left;">Data-exploratie, onderwijs, prototypes</td>
+</tr>
+</tbody>
+</table>
+<p>De twee tools sluiten elkaar niet uit: je kan de data eerst verkennen in Orange en nadien de hypotheses die je hierdoor formuleert formeel toetsen m.b.v. JASP. Deze blogpost toont verder de sterkte van elke tool: formele hypotheses testen in JASP, en verkennen en voorspellen in Orange. Verkennen van de data is echter ook mogelijk in JASP door de uitgebreide grafieken die je kan maken. JASP beschikt bovendien over extra modules die je kan toevoegen worden waarmee ook machine-learningmodellen kunnen worden gebouwd; beide tools bezitten m.a.w. overlappende functionaliteiten.</p>
+</section>
+<section id="kort-voorbeeld" class="level2">
+<h2 class="anchored" data-anchor-id="kort-voorbeeld">Kort voorbeeld</h2>
+<p>We werken met de gekende <a href="https://raw.githubusercontent.com/allisonhorst/palmerpenguins/refs/heads/main/inst/extdata/penguins.csv">Palmer Penguins dataset</a>. Deze bevat gegevens over 344 pinguïns die behoren tot 3 verschillende soorten. We stellen ons de volgende vragen:</p>
+<ol type="1">
+<li>Verschillen de pinguïnsoorten van elkaar?</li>
+<li>Kunnen we de soort voorspellen vanuit de gegevens?</li>
+</ol>
+<p>Deze eerste vraag beantwoorden we m.b.v. JASP, voor de tweede gebruiken we Orange.</p>
+<p>Download de dataset naar je harde schijf zodat je die later kan inladen in JASP en Orange.</p>
+<p>In deze blogpost gebruiken we JASP 0.98.1 Orange 3.40.</p>
+<section id="jasp-verschilt-de-flipperlengte-per-soort" class="level3">
+<h3 class="anchored" data-anchor-id="jasp-verschilt-de-flipperlengte-per-soort">JASP: verschilt de flipperlengte per soort?</h3>
+<p>We laden de pinguïndata in JASP (<code>Open -&gt; Computer -&gt; Browse</code>) en stellen een eenvoudige vraag: <strong>verschilt de flipperlengte tussen de drie soorten</strong>? Een flipper is de “vleugel” van een pinguïn, en de gegevens hiervan worden opgeslagen in de kolom <code>flipper_length_mm</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="hoofdscherm-jasp.png" class="img-fluid figure-img"></p>
+<figcaption>Hoofdscherm JASP na inladen data</figcaption>
+</figure>
+</div>
+<p>Dit is een klassieke vraag voor een <em>ANOVA</em> (variantieanalyse). Die vergelijkt de gemiddelden van meer dan twee groepen in één keer.</p>
+<section id="data-exploratie" class="level4">
+<h4 class="anchored" data-anchor-id="data-exploratie">Data-exploratie</h4>
+<p>Voor we de toets uitvoeren is het een goed idee om eerst eventjes de data te bekijken. Dat doe je in JASP onder <em>Descriptives</em>: splits <code>flipper_length_mm</code> op per <code>species</code> en vraag een boxplot aan.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="boxplot_flipper.png" class="img-fluid figure-img"></p>
+<figcaption>Boxplot van de flipperlengte per soort</figcaption>
+</figure>
+</div>
+<p>Op het eerste zicht ligt de flipperlengte van Gentoo duidelijk hoger dan die van de andere twee soorten. In de tabel <code>Descriptive Statistics</code> lees je de gemiddelden af: ongeveer 190 mm bij Adelie, 196 mm bij Chinstrap en 217 mm bij Gentoo. Door de ANOVA uit te voeren kunnen we nagaan of dit verschil groter is dan wat je door toeval zou verwachten.</p>
+</section>
+<section id="de-anova-uitvoeren" class="level4">
+<h4 class="anchored" data-anchor-id="de-anova-uitvoeren">De ANOVA uitvoeren</h4>
+<p>De ANOVA wordt uitgevoerd door (<code>ANOVA -&gt; Classical -&gt; Anova</code>) te kiezen uit de band bovenaan de gebruikersinteface. Verplaats <code>flipper_length_mm</code> naar <code>Dependent Variable</code> en <code>species</code> naar <code>Fixed Factors</code>. De analyse wordt onmiddellijk uitgevoerd.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="anova.png" class="img-fluid figure-img"></p>
+<figcaption>JASP scherm met ANOVA-opties</figcaption>
+</figure>
+</div>
+<p>Als je in het linkerscherm opties aan- of uitklikt zal het rechterscherm zich onmiddellijk aanpassen.</p>
+<p>Vink bijvoorbeeld de volgende extra opties aan: - <em>Descriptive statistics</em> - <em>Estimates of effect size (ω²)</em> - <em>Post hoc tests</em> (<code>Tukey</code>, verplaats <code>species</code> naar de rechterkolom): welke soorten verschillen van elkaar? - <em>Assumption checks</em> (<code>Homogeneity tests</code> en <code>Q-Q-plot residuals</code>): zijn de aannames van de ANOVA geschonden?</p>
+<p>De volgende <em>extra</em> uitvoer wordt dan getoond:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="extra-uitvoer-anova.png" class="img-fluid figure-img"></p>
+<figcaption>Extra uitvoer ANOVA</figcaption>
+</figure>
+</div>
+</section>
+<section id="aannames-controleren" class="level4">
+<h4 class="anchored" data-anchor-id="aannames-controleren">Aannames controleren</h4>
+<p>Een ANOVA werkt alleen betrouwbaar als aan een aantal aannames is voldaan. JASP maakt het gemakkelijk om die te controleren:</p>
+<ul>
+<li><strong>Gelijke varianties</strong>: de Levene-toets onder <em>Assumption checks</em>. De Levene-toets is hier niet significant, wat erop wijst dat er geen reden is om te twijfelen aan de gelijkheid van de varianties.</li>
+<li><strong>Normaliteit van de residuen</strong>: uit de Q-Q-plot blijkt dat de residuen ongeveer normaal verdeeld lijken.</li>
+<li><strong>Onafhankelijke waarnemingen</strong>: dit kan JASP niet nagaan: het gaat om metingen van verschillende pinguïns, maar die zijn verzameld op drie eilanden en in drie jaren. Dieren uit dezelfde groep lijken mogelijk meer op elkaar, dus de aanname is niet helemaal vervuld. Bij een groot verschil tussen de soorten verandert dat de conclusie hoogstwaarschijnlijk niet.</li>
+</ul>
+<p>Het is belangrijk om steeds de aannames van je statistische test te controleren ook al wordt die door de software met één klik op de knop uitgevoerd. De conclusies van een statistische test zijn immers enkel betrouwbaar als de aannames waarop de test is gebouwd voldaan zijn.</p>
+</section>
+<section id="de-resultaten-van-de-anova-interpreteren" class="level4">
+<h4 class="anchored" data-anchor-id="de-resultaten-van-de-anova-interpreteren">De resultaten van de ANOVA interpreteren</h4>
+<p><strong>De ANOVA-tabel.</strong> De toets geeft een zeer kleine p-waarde (F(2, 339) = 594,8 en p &lt; 0,001). Er is m.a.w. een significant verschil in gemiddelde flipperlengte tussen de soorten. De p-waarde zegt alleen dat er <em>ergens</em> een verschil is, maar niet hoe groot het is en niet tussen welke soorten.</p>
+<p><strong>De effectgrootte.</strong> Daarvoor is er ω². Die geeft aan welk deel van de variatie in flipperlengte samenhangt met de soort. Hier is ω² = 0,7764, dus ongeveer 78% van de variatie in flipperlengte wordt verklaard door de verschillende soorten. Dat is een groot effect.</p>
+<p><strong>De post-hoctoetsen.</strong> Met de Tukey-toets vergelijk je de soorten paarsgewijs: Adelie met Chinstrap, Adelie met Gentoo en Chinstrap met Gentoo. De toets corrigeert voor het feit dat je meerdere vergelijkingen tegelijk doet. Je ziet dat er significante verschillen zijn tussen elk paar soorten.</p>
+</section>
+<section id="ontbrekende-waarden" class="level4">
+<h4 class="anchored" data-anchor-id="ontbrekende-waarden">Ontbrekende waarden</h4>
+<p>Twee pinguïns hebben geen metingen voor de flipperlengte. Dat zag je al in de rij <code>Missing</code> van de tabel <code>Descriptive Statistics</code>. JASP laat zulke rijen automatisch weg uit de analyse, dus we werken met 342 waarnemingen in plaats van 344. Let op dit soort details. Je kan dit niet rechtstreeks zien in de ANOVA-tabel, enkel onrechtstreeks in het aantal vrijheidsgraden.</p>
+</section>
+</section>
+<section id="orange-kunnen-we-de-soort-voorspellen" class="level3">
+<h3 class="anchored" data-anchor-id="orange-kunnen-we-de-soort-voorspellen">Orange: kunnen we de soort voorspellen?</h3>
+<p>In JASP vroegen we of de soorten <strong>verschillen</strong>. In Orange stellen we de omgekeerde vraag: <strong>kunnen we de soort voorspellen</strong> uit de metingen van een pinguïn? We bouwen daarvoor stap voor stap een workflow. Elk blokje (widget) doet één ding, en de lijnen ertussen tonen hoe de data door de analyse “vloeien”.</p>
+<p>De flow die we finaal zullen opbouwen is deze:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="orange_workflow.png" class="img-fluid figure-img"></p>
+<figcaption>De volledige workflow</figcaption>
+</figure>
+</div>
+<section id="stap-1-de-data-inladen" class="level4">
+<h4 class="anchored" data-anchor-id="stap-1-de-data-inladen">Stap 1: de data inladen</h4>
+<p>Sleep een <em>CSV File Import</em>-widget op het canvas en dubbelklik erop. Kies je <code>penguins.csv</code> en controleer in de voorbeeldweergave of de kolommen goed zijn herkend.</p>
+</section>
+<section id="stap-2-de-data-bekijken-met-een-scatter-plot" class="level4">
+<h4 class="anchored" data-anchor-id="stap-2-de-data-bekijken-met-een-scatter-plot">Stap 2: de data bekijken met een Scatter Plot</h4>
+<p>Voor je modellen bouwt, kijk je naar de data. Sleep een <em>Scatter Plot</em> op het canvas en verbind hem met <em>CSV File Import</em>. Klik op de rechterrand van het eerste blokje en sleep naar het tweede. De lijn krijgt automatisch het label “Data”.</p>
+<p>Dubbelklik op de scatter plot en zet <code>bill_length_mm</code> op de x-as en <code>bill_depth_mm</code> op de y-as. Kleur de punten naar <code>species</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="orange_scatter.png" class="img-fluid figure-img"></p>
+<figcaption>Scatter plot van <code>bill_length_mm</code> en <code>bill_depth_mm</code>, gekleurd per soort</figcaption>
+</figure>
+</div>
+<p>Je ziet meteen dat de soorten relatief goed van elkaar te onderscheiden zijn op basis van deze kenmerken. Dat is het voordeel van een visuele aanpak: je hebt een eerste indruk nog voor je een model bouwt. Als je op een groepje punten klikt, kan je ze ook selecteren en doorgeven aan een volgende widget, maar wij zullen verder bouwen op de <em>CSV File Import</em> widget.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Opmerking
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bemerk hier dat Orange in deze eerste stap het type van de kolommen juist heeft herkend: <code>bill_length_mm</code> en <code>bill_depth_mm</code> zijn herkend als numerieke kolommen, terwijl <code>species</code> herkend is als categorische variabele. Dit zie je in de scatter plot aan de rode N en de groene C bij de namen van deze kolommen. Mocht dat niet zo zijn, dan moet je dit aanpassen in de <em>CSV File Import</em> widget.</p>
+</div>
+</div>
+</section>
+<section id="stap-3-kiezen-wat-we-voorspellen-en-waarmee" class="level4">
+<h4 class="anchored" data-anchor-id="stap-3-kiezen-wat-we-voorspellen-en-waarmee">Stap 3: kiezen wat we voorspellen en waarmee</h4>
+<p>Sleep een <em>Select Columns</em>-widget op het canvas en verbind de <em>CSV File Import</em> hiermee. Hier bepaal je de <em>rol</em> van elke kolom:</p>
+<ul>
+<li><strong>Doelvariabele</strong> (wat we willen voorspellen): <code>species</code>.</li>
+<li><strong>Kenmerken</strong> (waarmee we voorspellen): <code>bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g</code>.</li>
+<li>Kolommen die we <strong>niet</strong> gebruiken, zet je in het vak <em>Ignored</em>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="orange_select_columns.png" class="img-fluid figure-img"></p>
+<figcaption>De instellingen van Select Columns</figcaption>
+</figure>
+</div>
+<p>Zonder doelvariabele kan Orange niet beoordelen of een voorspelling juist is. Zet je hier iets verkeerd, dan krijg je later in <em>Test and Score</em> niets te zien.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Keuze van de kenmerken?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We laten <code>island</code> buiten beschouwing omdat Gentoo enkel op Biscoe voorkomt en Chinstrap enkel op Dream. (Dit kan je controleren m.b.v. een scatter plot.) Het eiland verraadt dus voor een deel al de soort.</p>
+<p>Verder denken we dat het jaar van de meting en het geslacht van de pinguïn niet relevant zijn om de soort te voorspellen, daarom nemen we die ook niet mee in het model.</p>
+<p>Door de metingen als enige voorspellers te nemen, testen we of de pinguïns zelf van elkaar te onderscheiden zijn.</p>
+</div>
+</div>
+</section>
+<section id="stap-4-een-model-kiezen" class="level4">
+<h4 class="anchored" data-anchor-id="stap-4-een-model-kiezen">Stap 4: een model kiezen</h4>
+<p>Sleep een <em>Tree</em>-widget op het canvas. Voorlopig krijgt deze widget geen verbindingen. Een <em>beslissingsboom</em> stelt een reeks ja/nee-vragen over de metingen (“is de flipperlengte groter dan x mm?”) tot hij een soort kan voorspellen.</p>
+<p>Dubbelklik op <em>Tree</em> en beperk de complexiteit, zodat de boom leesbaar blijft: stel bijvoorbeeld de maximale diepte in op <code>3</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="orange_tree_settings.png" class="img-fluid figure-img"></p>
+<figcaption>De instellingen van de Tree-widget</figcaption>
+</figure>
+</div>
+</section>
+<section id="stap-5-beoordelen-hoe-goed-het-model-werkt" class="level4">
+<h4 class="anchored" data-anchor-id="stap-5-beoordelen-hoe-goed-het-model-werkt">Stap 5: beoordelen hoe goed het model werkt</h4>
+<p>Sleep een <em>Test and Score</em>-widget op het canvas en maak twee verbindingen:</p>
+<ol type="1">
+<li>van <em>Select Columns</em> naar <em>Test and Score</em>, met het kanaal “Data”;</li>
+<li>van <em>Tree</em> naar <em>Test and Score</em>, met het kanaal “Learner”.</li>
+</ol>
+<p>Dat tweede kanaal is bijzonder: <em>Tree</em> levert enkel een <strong>recept</strong>, namelijk het algoritme met zijn instellingen. <em>Test and Score</em> krijgt de eigenlijke data van de <em>Select Columns</em> widget en doet het echte werk.</p>
+<p>Kies links in <em>Test and Score</em> voor <strong>cross-validation</strong> met 10 folds. Orange doet dan het volgende:</p>
+<ol type="1">
+<li>De data worden in 10 gelijke delen verdeeld.</li>
+<li>Op 9 delen wordt een boom getraind, op het overblijvende deel getest. Hier wordt onder andere gekeken hoeveel van de pinguïns in het overblijvende deel correct worden voorspeld.</li>
+<li>Dit wordt 10 keer herhaald, telkens met een ander testdeel.</li>
+</ol>
+<p>Zo beoordeel je het model op pinguïns die het tijdens het trainen <strong>niet gezien heeft</strong>. Een model dat enkel goed scoort op data waarop het getraind is, zegt niets over hoe het presteert op nieuwe data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="orange_test_and_score.png" class="img-fluid figure-img"></p>
+<figcaption>Resultaten van Test and Score</figcaption>
+</figure>
+</div>
+<p>De nauwkeurigheid (<em>CA</em>, classification accuracy) bedraagt 93,6%. Van de meeste pinguïns wordt m.a.w. correct voorspeld tot welke soort ze behoren. Deze nauwkeurigheid wordt bepaald door de resultaten van de 10 “overblijvende” delen te combineren. Elke pinguïn heeft m.a.w. negen keer als trainingsvoorbeeld gediend en één keer als testvoorbeeld.</p>
+</section>
+<section id="stap-6-nauwkeurigere-evaluatie-m.b.v.-de-verwarringsmatrix" class="level4">
+<h4 class="anchored" data-anchor-id="stap-6-nauwkeurigere-evaluatie-m.b.v.-de-verwarringsmatrix">Stap 6: nauwkeurigere evaluatie m.b.v. de verwarringsmatrix</h4>
+<p>Een percentage zegt weinig over <em>welke</em> fouten het model maakt. Verbind daarom <em>Test and Score</em> met een <em>Confusion Matrix</em>-widget (kanaal “Evaluation Results”).</p>
+<p>De matrix toont voor elke werkelijke soort (rijen) welke soort het model voorspelde (kolommen). Op de diagonaal staan de juiste voorspellingen, alles daarbuiten zijn foute voorspellingen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="orange_confusion.png" class="img-fluid figure-img"></p>
+<figcaption>De confusion matrix</figcaption>
+</figure>
+</div>
+<p>We zien dat <code>Chinstrap</code> het vaakst wordt verward met een andere soort en dan nog meestal met <code>Adelie</code>. Aangezien <code>Chinstrap</code> in de minderheid is, is het niet zo verrassend dat het model het meest moeite heeft met deze klasse, zeker gezien het feit dat <code>Chinstrap</code> ook qua flipperlengte lijkt op <code>Adelie</code>. Dit is niet in strijd met het feit dat de Tukey-test een significant verschil aangaf tussen de flipperlengtes van <code>Chinstrap</code> en <code>Adelie</code>.</p>
+</section>
+<section id="stap-7-de-beslissingsboom-inspecteren" class="level4">
+<h4 class="anchored" data-anchor-id="stap-7-de-beslissingsboom-inspecteren">Stap 7: de beslissingsboom inspecteren</h4>
+<p>Een beslissingsboom is op zich een interpreteerbaar model, maar tot nu toe hebben we er niet naar gekeken.</p>
+<p>Sleep een <em>Tree Viewer</em> op het canvas en verbind hem met <em>Tree</em>, nu met het kanaal “Model”. Verbind ook <em>Select Columns</em> met <em>Tree</em>, zodat de widget data heeft om op te trainen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="orange_tree.png" class="img-fluid figure-img"></p>
+<figcaption>De beslissingsboom in Tree Viewer</figcaption>
+</figure>
+</div>
+<p>Elke knoop toont een splitsingsregel en de verdeling van de soorten in die knoop. De eerste splitsing gebruikt <code>flipper_length_mm</code>: die variabele scheidt <code>Gentoo</code> bijna perfect van de andere soorten. Dat sluit aan bij de ANOVA in JASP, waar de flipperlengte sterk verschilde per soort.</p>
+<p>Let wel op het volgende: de boom in de viewer is getraind op <strong>alle</strong> data, terwijl de nauwkeurigheid uit <em>Test and Score</em> komt van tien andere bomen. Je kijkt m.a.w. naar de boom om te begrijpen <em>welke variabelen onderscheiden</em>, en naar <em>Test and Score</em> om te weten <em>hoe goed</em> zo’n boom presteert.</p>
+</section>
+<section id="orange-samenvatting" class="level4">
+<h4 class="anchored" data-anchor-id="orange-samenvatting">Orange samenvatting</h4>
+<p>In zeven stappen en zonder één regel code hebben we:</p>
+<ul>
+<li>de data bekeken en gecontroleerd;</li>
+<li>een model laten leren om de soort te voorspellen;</li>
+<li>beoordeeld hoe goed het model werkt, m.b.v. cross-validatie;</li>
+<li>gezien welke fouten het model maakt;</li>
+<li>de beslisregels zelf bekeken.</li>
+</ul>
+<p>Bij Orange zie je de hele analyse in één oogopslag. Wil je een ander algoritme proberen, bijvoorbeeld <em>Logistic Regression</em>, sluit dan gewoon een tweede learner aan op dezelfde <em>Test and Score</em>. De resultaten verschijnen naast elkaar.</p>
+</section>
+</section>
+</section>
+<section id="conclusie" class="level2">
+<h2 class="anchored" data-anchor-id="conclusie">Conclusie</h2>
+<p>Je hoeft geen programmeur te zijn om je data serieus te onderzoeken. Met één en dezelfde dataset beantwoordden we in dit voorbeeld twee verschillende vragen, zonder één regel code:</p>
+<ul>
+<li><strong>In JASP</strong> toetsten we of de pinguïnsoorten verschillen: de soort blijkt ruim drie vierde van de variatie in flipperlengte te verklaren.</li>
+<li><strong>In Orange</strong> bouwden we een model dat de soort voorspelt: de beslissingsboom splitst eerst op flipperlengte en voorspelt de soort in bijna 94% van de gevallen juist.</li>
+</ul>
+<p>Wel een waarschuwing: <strong>zonder code is niet hetzelfde als zonder nadenken</strong>. De software voert een toets of een model met één klik uit, maar of het resultaat betrouwbaar is, hangt van jou af. Heb je de aannames van de ANOVA gecontroleerd? Heb je het model beoordeeld op data die het niet heeft gezien? Zeggen de effectgrootte en de verwarringsmatrix meer dan een p-waarde of een percentage? En klopt je data wel? Daar kan geen enkele tool je mee helpen.</p>
+<p>Kom je op een punt waarop je analyses wilt automatiseren, met zeer grote datasets werkt of een niet-standaard model nodig hebt, dan is het tijd voor R of Python. Voor een eerste verkenning, een snelle controle van een idee of om te leren wat statistiek en machine learning doen, zijn JASP en Orange vaak meer dan voldoende.</p>
+<p><strong>Probeer het zelf.</strong> <a href="https://raw.githubusercontent.com/allisonhorst/palmerpenguins/refs/heads/main/inst/extdata/penguins.csv">Download de pinguïndata</a> en volg de stappen hierboven. Daarna kan je dezelfde aanpak toepassen op je eigen dataset. Ga met je eigen vragen aan de slag en kijk wat je ontdekt.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/hogent-cads\.github\.io\/blog\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
