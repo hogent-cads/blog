@@ -334,4 +334,4 @@ Wel een waarschuwing: **zonder code is niet hetzelfde als zonder nadenken**. De 
 
 Kom je op een punt waarop je analyses wilt automatiseren, met zeer grote datasets werkt of een niet-standaard model nodig hebt, dan is het tijd voor R of Python. Voor een eerste verkenning, een snelle controle van een idee of om te leren wat statistiek en machine learning doen, zijn JASP en Orange vaak meer dan voldoende.
 
-**Probeer het zelf.** Download de pinguïndata en volg de stappen hierboven. Daarna kan je dezelfde aanpak toepassen op je eigen dataset. Ga met je eigen vragen aan de slag en kijk wat je ontdekt.
+**Probeer het zelf.** [Download de pinguïndata](https://raw.githubusercontent.com/allisonhorst/palmerpenguins/refs/heads/main/inst/extdata/penguins.csv) en volg de stappen hierboven. Daarna kan je dezelfde aanpak toepassen op je eigen dataset. Ga met je eigen vragen aan de slag en kijk wat je ontdekt.
